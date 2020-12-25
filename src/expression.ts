@@ -1,8 +1,8 @@
-import {Scale} from "./scale";
+import {Scalar, Scale, ScaleId, UnresolvedScale} from "./interfaces";
 
 export interface UnitExpression {
-  readonly scalar: number;
-  readonly scale: Scale;
+  readonly scalar: Scalar;
+  readonly scale: Scale|ScaleId|UnresolvedScale;
 }
 export interface AddExpression {
   readonly operator: '+';
@@ -10,19 +10,19 @@ export interface AddExpression {
 }
 export interface SubExpression {
   readonly operator: '-';
-  readonly operands: [Expression, Expression];
+  readonly operands: Expression[];
 }
 export interface MulExpression {
   readonly operator: '*';
-  readonly operands: [Expression, ...(Expression | number)[]];
+  readonly operands: [Expression, ...(Expression | Scalar)[]];
 }
 export interface DivExpression {
   readonly operator: '/';
-  readonly operands: [Expression, Expression | number];
+  readonly operands: [Expression, ...(Expression | Scalar)[]];
 }
 export interface PowExpression {
   readonly operator: '^';
-  readonly operands: [Expression, number];
+  readonly operands: [Expression, Scalar];
 }
 export type Expression = UnitExpression | AddExpression | SubExpression | MulExpression | DivExpression | PowExpression;
 

@@ -1,104 +1,117 @@
-import {AddExpression, DivExpression, Expression, MulExpression, SubExpression} from "./expression";
-import {ScalePower} from "./scale";
+import {Expression, UnitExpression} from "./expression";
+import {Scalar, ScaleDefinition, ScaleId, UnresolvedScale} from "./interfaces";
+import {isScale, isUnresolvedScale} from "./utils";
+import {chain, Chainable, fromScalar} from "./chainable";
+import {equal, mul, pow, simplify, stringify} from "./scale-definition";
 
-export interface CompiledExpression {
-  readonly scale: Record<string, ScalePower>;
-  to(scalar: number): number;
-  from(scalar: number): number;
+export interface CompiledExpression extends Chainable{
+  readonly definition: ScaleDefinition;
 }
 
-function compileAdd(expr: AddExpression) {
-  const [first, ...operands] = expr.operands.map(compile);
+interface Resolver {
+  (scale: ScaleId|UnresolvedScale): CompiledExpression;
+}
 
-  const {scale} = first;
-  for (let {scale: _} of operands) {
-    if (!equal(_, scale)) {
-      throw new Error(`Can not add units of '${stringify(scale)}' to '${stringify(_)}'`)
+function compileAdd(expr: Expression[], resolver?: Resolver): CompiledExpression {
+  const [first, ...operands] = expr.map(x => compile(x, resolver));
+
+  const {definition} = first;
+  for (let {definition: _} of operands) {
+    if (!equal(_, definition)) {
+      throw new Error(`Can not add units of '${stringify(definition)}' to '${stringify(_)}'`)
     }
   }
   const scalar = operands.reduce((x, {to}) => x + to(1), first.to(1));
   return {
-    scale,
-    to(x) {
-      return x * scalar
-    },
-    from(x) {
-      return x / scalar
-    },
+    definition: simplify(definition),
+    ...fromScalar(scalar),
   }
 }
 
-function compileSub(expr: SubExpression) {
-  const [first, ...operands] = expr.operands.map(compile);
+function compileSub(expr: Expression[], resolver?: Resolver): CompiledExpression {
+  const [first, ...operands] = expr.map(x => compile(x, resolver));
 
-  const {scale} = first;
-  for (let {scale: _} of operands) {
-    if (!equal(_, scale)) {
-      throw new Error(`Can not sub units of '${stringify(scale)}' to '${stringify(_)}'`)
+  const {definition} = first;
+  for (let {definition: _} of operands) {
+    if (!equal(_, definition)) {
+      throw new Error(`Can not sub units of '${stringify(definition)}' to '${stringify(_)}'`)
     }
   }
   const scalar = operands.reduce((x, {to}) => x - to(1), first.to(1));
   return {
-    scale,
-    to(x) {
-      return x * scalar
-    },
-    from(x) {
-      return x / scalar
-    },
+    definition: simplify(definition),
+    ...fromScalar(scalar),
   }
 }
 
-function compileMul(expr: MulExpression) {
-  const [first, ...operands] = expr.operands.map(compile);
-
-  const scale = clone(first.scale);
-  for (let {scale: _} of operands) {
-    for(let key of Object.keys(_)) {
-      scale[key] = (scale[key] ?? 0) + _[key];
-    }
-  }
-  simplify(scale);
+function wrapMul(first: CompiledExpression, ...operands: CompiledExpression[]) {
+  const definition = mul(first.definition, ...operands.map(_ => _.definition));
   const scalar = operands.reduce((x, {to}) => x * to(1), first.to(1));
   return {
-    scale,
-    to(x) {
-      return x * scalar
-    },
-    from(x) {
-      return x / scalar
-    },
+    definition,
+    ...fromScalar(scalar),
   }
 }
 
-function compileDiv(expr: DivExpression) {
-  const [first, ...operands] = expr.operands.map(compile);
+function compileMul(expr: [Expression, ...(Expression | Scalar)[]], resolver?: Resolver): CompiledExpression {
+  const [first, ...operands] = expr.map(x => compile(x, resolver));
 
-  const scale = clone(first.scale);
-  for (let {scale: _} of operands) {
-    for(let key of Object.keys(_)) {
-      scale[key] = (scale[key] ?? 0) - _[key];
-    }
-  }
-  simplify(scale);
+  return wrapMul(first, ...operands);
+}
+
+function compileDiv(expr: [Expression, ...(Expression | Scalar)[]], resolver?: Resolver): CompiledExpression {
+  const [first, ...operands] = expr.map(x => compile(x, resolver));
+
+  const definition = mul(first.definition, ...operands.map(_ => pow(_.definition, -1)));
   const scalar = operands.reduce((x, {to}) => x / to(1), first.to(1));
   return {
-    scale,
+    definition,
+    ...fromScalar(scalar),
+  }
+}
+
+function wrapPow(op: CompiledExpression, power: number): CompiledExpression {
+  const definition = pow(op.definition, power);
+  return {
+    definition,
     to(x) {
-      return x * scalar
+      return x * Math.pow(op.to(1), power);
     },
     from(x) {
-      return x / scalar
+      return x / Math.pow(op.from(1), -power);
     },
   }
 }
 
-export function compile(expr: Expression | number): CompiledExpression {
+function compilePow(expr: Expression, power: Scalar) {
+  return wrapPow(compile(expr), power);
+}
+
+function compileUnit({scalar, scale: unresolved}: UnitExpression, resolver: Resolver | undefined) {
+  let scale: CompiledExpression;
+  if (typeof unresolved === 'string' || isUnresolvedScale(unresolved)) {
+    if (typeof resolver !== 'function') {
+      throw new Error(`Please provide resolver to use ScaleId refs`);
+    }
+
+    scale = resolver(unresolved);
+  } else if (isScale(unresolved)) {
+    scale = unresolved
+  } else {
+    throw new Error(`Unexpected scale value ${JSON.stringify(unresolved)}`);
+  }
+
+  return {
+    definition: simplify(scale.definition),
+    ...chain(scale, fromScalar(scalar)),
+  }
+}
+
+export function compile(expr: Expression | number, resolver?: Resolver): CompiledExpression {
   if (typeof expr === 'number') {
     return {
-      scale: {},
-      to(x) { return expr * x },
-      from(x) { return x / expr },
+      definition: {},
+      ...fromScalar(expr),
     }
   }
 
@@ -107,88 +120,29 @@ export function compile(expr: Expression | number): CompiledExpression {
   }
 
   if ('scalar' in expr) {
-    const {scalar, scale} = expr;
-
-    if (typeof scale === 'string') {
-      return {
-        scale: {
-          [scale]: 1,
-        },
-        to(x) { return scalar * x },
-        from(x) { return x / scalar },
-      }
-    }
-
-    return {
-      scale: clone(scale.scale),
-      to(x) { return scale.to(scalar * x) },
-      from(x) { return scale.from(x) / scalar },
-    }
+    return compileUnit(expr, resolver);
   }
 
   switch (expr.operator) {
-    case '+': return compileAdd(expr);
-    case '-': return compileSub(expr);
-    case '*': return compileMul(expr);
-    case '/': return compileDiv(expr);
-    case '^':
-      const op = compile(expr.operands[0]);
-      const power = expr.operands[1];
-      const scale = clone(op.scale);
-      for(let key of Object.keys(scale)) {
-        scale[key] *= power;
-      }
-      simplify(scale);
-      return {
-        scale,
-        to(x) {
-          return x * Math.pow(op.to(1), power);
-        },
-        from(x) {
-          return x / Math.pow(op.from(1), -power);
-        },
-      }
+    case '+': return compileAdd(expr.operands, resolver);
+    case '-': return compileSub(expr.operands, resolver);
+    case '*': return compileMul(expr.operands, resolver);
+    case '/': return compileDiv(expr.operands, resolver);
+    case '^': return compilePow(...expr.operands);
   }
 
   throw new Error();
 }
 
-function power(x: number) {
-  switch (x) {
-    case 1: return '';
-    case 2: return '²';
-    case 3: return '³';
-    default:
-      return `^${x}`
-  }
-}
-function stringify(x) {
-  return Object.keys(x).map(key => `${key}${power(x[key])}`).join(' × ') || JSON.stringify(x);
-}
-
-function equal(a, b) {
-  const keys = Object.keys(a);
-  if (keys.length !== Object.keys(b).length) {
-    return false;
+export function compileDefinition(definition: ScaleDefinition, resolver: Resolver): CompiledExpression {
+  const keys = Object.keys(definition);
+  if (keys.length > 0) {
+    const operands = keys.map(key => wrapPow(resolver(key), definition[key]));
+    return wrapMul(...(operands as [CompiledExpression, ...CompiledExpression[]]));
   }
 
-  for(let key of keys) {
-    if (a[key] !== b[key]) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-function clone<T>(x:T): T {
-  return JSON.parse(JSON.stringify(x));
-}
-
-function simplify(x: Record<string, number>) {
-  for (let key of Object.keys(x)) {
-    if (x[key] === 0) {
-      delete x[key];
-    }
+  return {
+    definition,
+    ...fromScalar(0),
   }
 }

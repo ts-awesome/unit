@@ -1,41 +1,8 @@
-import {scale} from "../scale";
-import {
-  measureOfCurrent,
-  measureOfLength,
-  measureOfLuminousIntensity,
-  measureOfMass,
-  measureOfSubstance,
-  measureOfThermodynamicTemperature
-} from "../fundamentals";
-import {unit} from "../unit";
+import {scale, unit} from "../scale";
 import {mul} from "../operators";
-import {second} from "../common/time";
 
-export const meter = scale('meter', 'm', 1, measureOfLength);
-export const kilogram = scale('kilogram', 'kg', 1, measureOfMass);
-export const ampere = scale('ampere', 'A', 1, measureOfCurrent);
-export const kelvin = scale('kelvin', 'K', 'K', 1, measureOfThermodynamicTemperature);
-export const mole = scale('mole', 'mol', 1, measureOfSubstance);
-export const candela = scale('candela', 'cd', 1, measureOfLuminousIntensity);
-
-export const kilometer = scale('kilometer', 'km', 1000, meter);
-export const decimeter = scale('decimeter', 'dm', 1/10, meter);
-export const centimeter = scale('centimeter', 'cm', 1/100, meter);
-export const millimeter = scale('millimeter', 'mm', 1/1000, meter);
-
-export const gram = scale('gram', 'g', 1/1000, kilogram);
-export const metricTon = scale('metric ton', 1000, kilogram);
-
-export const hectare = scale('hectare', 'ha', unit(1, decimeter).pow(2));
-
-export const liter = scale('liter', 'l', unit(1, decimeter).pow(3));
-export const milliliter = scale('milliliter', 'ml', 1/1000, liter);
-
-export const degreeCelsius = scale('degree Celsius', '°C', {
-  scale: kelvin,
-  to: (x: number) => x + 273.15,
-  from: (x: number) => x - 273.15,
-});
+import {ampere, candela, kilogram, meter, mole, second} from "../common/fundamentals";
+import {scaleSystemNameSymbol} from "../symbols";
 
 export const radian = scale('radian', 'rad', mul(unit(1, meter), unit(1, meter).pow(-1))); // m / m
 export const steradian = scale('steradian', 'sr', mul(unit(1, meter).pow(1), unit(1, meter).pow(-2))); // m² / m²
@@ -59,4 +26,29 @@ export const gray = scale('gray', 'Gy', mul(unit(1, joule), unit(1, kilogram).po
 export const sievert = scale('sievert', 'Sv', mul(unit(1, joule), unit(1, kilogram).pow(-1))); // J / kg
 export const katal = scale('katal', 'kat', mul(unit(1, second).pow(-1), unit(1, mole))); // mol / s²
 
-export * from '../common/time';
+export const SI_PHYSICS = {
+  radian,
+  steradian,
+  hertz,
+  newton,
+  pascal,
+  joule,
+  watt,
+  coulomb,
+  volt,
+  farad,
+  ohm,
+  siemens,
+  weber,
+  tesla,
+  henry,
+  lumen,
+  lux,
+  becquerel,
+  sievert,
+  katal,
+
+  [scaleSystemNameSymbol]: 'SI physics',
+}
+
+export default SI_PHYSICS;

@@ -1,4 +1,12 @@
-export function parse(str: string): any {
+import {Scalar, ScaleDefinition} from "./interfaces";
+
+export interface ParsedExpression {
+  readonly scalar: Scalar;
+  readonly definition: ScaleDefinition;
+  readonly name: string;
+}
+
+export function parse(str: string): ParsedExpression {
   // noinspection ES6ConvertVarToLetConst
   var i = 0; // WARN: MUST be var to be captured by reference
 
@@ -50,8 +58,15 @@ export function parse(str: string): any {
     let term: any = readIdentifier();
     skipSpaces();
     let power = 1;
-    if (test('^²³')) {
-      if (test('²')) {
+    if (test('^²³⁻')) {
+      if (test('⁻')) {
+        next();
+        mul *= -1;
+      }
+      if (test('ⁱ')) {
+        next();
+        power = 1
+      } else if (test('²')) {
         next();
         power = 2
       } else if (test('³')) {
@@ -80,7 +95,7 @@ export function parse(str: string): any {
     return terms;
   }
 
-  function parseScale() {
+  function parseScale(): ScaleDefinition {
     let scale: any = parseMul(1);
     if (test('/')) {
       next();
@@ -93,30 +108,16 @@ export function parse(str: string): any {
   }
 
   const scalar = parseScalar();
-  const scale = parseScale();
+  let defStart = i;
+  const definition = parseScale();
 
   if (!eol()) {
-    error('expected end of scale definition');
+    error('expected end of definition definition');
   }
 
   return {
     scalar,
-    scale,
+    definition,
+    name: str.substr(defStart),
   }
 }
-
-// console.log(parse('9.8m'));
-// console.log(parse('10 sq ft'));
-// console.log(parse('-9.8 m'));
-// console.log(parse('-9.8 m²'));
-// console.log(parse('-9.8 m ²'));
-// console.log(parse('-9.8 m² '));
-// console.log(parse('+9.8e-2 m'));
-// console.log(parse('9.8 m/s²'));
-// console.log(parse('5 lbs / sq ft'));
-// console.log(parse('9.8 m / s²'));
-// console.log(parse('9.8 m / s ²'));
-// console.log(parse('6.6743e-11 m³/kg×s²'));
-// console.log(parse('6.6743e-11 m³ / kg × s²'));
-// console.log(parse('6.6743e-11 m ^ 3 * kg ^ -1 * s ^ -2'));
-// try { parse('6.6743e-11 m ^ 3 / kg / s ^ 2') } catch (e) {console.log(e)};

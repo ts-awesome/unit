@@ -1,53 +1,25 @@
-import {ScaleSystem} from "../scale";
-import {
-  ampere,
-  candela,
-  centimeter,
-  decimeter,
-  gram,
-  hectare,
-  kelvin,
-  kilogram,
-  kilometer,
-  liter,
-  meter,
-  metricTon,
-  milliliter,
-  millimeter,
-  mole
-} from "./units";
-import {hour, millisecond, minute, second} from "../common/time";
+import FUNDAMENTALS from "../common/fundamentals";
+import SI_LENGTH from "./length";
+import SI_MASS from "./mass";
+import SI_AREA from "./area";
+import SI_VOLUME from "./volume";
+import TIME from "../common/time";
+import SI_TEMPERATURE from "./temperature";
+import SI_PHYSICS from "./physics";
+import {ScaleSystem} from "../interfaces";
+import {scaleSystemNameSymbol} from "../symbols";
 
 export const SI: ScaleSystem = {
-  meter,
-  second,
-  kilogram,
-  ampere,
-  kelvin,
-  mole,
-  candela,
+  ...FUNDAMENTALS,
+  ...TIME,
+  ...SI_LENGTH,
+  ...SI_AREA,
+  ...SI_VOLUME,
+  ...SI_MASS,
+  ...SI_TEMPERATURE,
+  ...SI_PHYSICS,
 
-  // Extra length
-  kilometer,
-  decimeter,
-  centimeter,
-  millimeter,
-
-  // Extra mass
-  gram,
-  metricTon,
-
-  // Extra time
-  millisecond,
-  minute,
-  hour,
-
-  // area
-  hectare,
-
-  // volume
-  liter,
-  milliliter,
+  [scaleSystemNameSymbol]: 'SI',
 }
 
 export default SI;

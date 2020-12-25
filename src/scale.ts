@@ -1,70 +1,75 @@
-import {FundamentalScale} from "./fundamentals";
-import {Unit} from "./interfaces";
+import {Convert, Scalar, Scale, ScaleDefinition, ScaleId, Unit} from "./interfaces";
 import {compile} from "./compiler";
 import {Expression} from "./expression";
+import {chain, fromScalar} from "./chainable";
+import {clone, isScale} from "./utils";
+import {simplify} from "./scale-definition";
+import {UnitWrapper} from "./operations";
+import {scaleSymbol} from "./symbols";
 
-export type ScalePower = number;
-
-export type Scale = FundamentalScale | {
-  readonly name: string;
-  readonly aliases: string[];
-  readonly scale: Record<string, ScalePower>;
-  to(scalar: number): number;
-  from(scalar: number): number;
-};
-
-export interface Convert {
-  readonly scale: Scale;
-  to(scalar: number): number;
-  from(scalar: number): number;
-}
-
-export function scale(name: string, unit: Unit): Scale;
-export function scale(name: string, convert: Convert): Scale;
-export function scale(name: string, scalar: number, scale: Scale | string): Scale;
-export function scale(name: string, fundamental: true): Scale;
-export function scale(name: string, short: string, unit: Unit): Scale;
-export function scale(name: string, short: string, convert: Convert): Scale;
-export function scale(name: string, short: string, scalar: number, scale: Scale | string): Scale;
-export function scale(name: string, short: string, fundamental: true): Scale;
-export function scale(name: string, short: string, alt: string, unit: Unit): Scale;
-export function scale(name: string, short: string, alt: string, convert: Convert): Scale;
-export function scale(name: string, short: string, alt: string, scalar: number, scale: Scale | string): Scale;
-export function scale(name: string, short: string, alt: string, fundamental: true): Scale;
+export function scale(name: ScaleId, fundamental: true): Scale;
+export function scale(name: ScaleId, unit: Unit): Scale;
+export function scale(name: ScaleId, convert: Convert): Scale;
+export function scale(name: ScaleId, scalar: Scalar, scale: Scale): Scale;
+export function scale(name: ScaleId, scalar: Scalar, definition: ScaleDefinition): Scale;
+export function scale(name: ScaleId, short: ScaleId, fundamental: true): Scale;
+export function scale(name: ScaleId, short: ScaleId, unit: Unit): Scale;
+export function scale(name: ScaleId, short: ScaleId, convert: Convert): Scale;
+export function scale(name: ScaleId, short: ScaleId, scalar: Scalar, scale: Scale): Scale;
+export function scale(name: ScaleId, short: ScaleId, scalar: Scalar, definition: ScaleDefinition): Scale;
+export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, fundamental: true): Scale;
+export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, unit: Unit): Scale;
+export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, convert: Convert): Scale;
+export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, scalar: Scalar, scale: Scale): Scale;
+export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, scalar: Scalar, definition: ScaleDefinition): Scale;
 export function scale(name: string, ...params: any[]): Scale {
   const aliases: string[] = [];
   while (typeof params[0] === 'string') {
     aliases.push(params.shift());
   }
 
+  if (params[0] === true) {
+    return {
+      [scaleSymbol]: true,
+      name,
+      aliases,
+      definition: { [name]: 1 },
+      fundamental: true,
+
+      ...fromScalar(1),
+    }
+  }
+
   if (typeof params[0] === 'number') {
-    const [scalar, scale] = params as [number, Scale | string];
+    const [scalar, scale] = params as [number, Scale | ScaleDefinition];
 
     if (scalar === 0) {
       throw Error('Scale scalar should be non-zero');
     }
 
-    if (typeof scale === 'string') {
-      // based on fundamental
+    if (!scale || typeof scale !== 'object') {
+      throw new Error('Param scale expected to be Scale or ScaleDefinition');
+    }
+
+    if (isScale(scale)) {
       return {
+        [scaleSymbol]: true,
         name,
         aliases,
-        scale: {
-          [scale]: 1
-        },
+        definition: simplify(scale.definition),
+        fundamental: false,
 
-        to(x) { return scalar * x },
-        from(x) { return x / scalar },
+        ...chain(scale, fromScalar(scalar)),
       }
     }
 
     return {
+      [scaleSymbol]: true,
       name,
       aliases,
-      scale: clone(scale.scale),
-
-      to(x) { return scale.to(scalar * x) },
-      from(x) { return scale.from(x) / scalar },
+      definition: scale as ScaleDefinition,
+      fundamental: false,
+      ...fromScalar(scalar),
     }
   }
 
@@ -72,39 +77,26 @@ export function scale(name: string, ...params: any[]): Scale {
     const [convert] = params as [Convert];
     const {scale} = convert;
 
-    if (typeof scale === 'string') {
-      // based on fundamental
-      return {
-        name,
-        aliases,
-        scale: {
-          [scale]: 1
-        },
-
-        to: convert.to,
-        from: convert.from,
-      }
-    }
-
     return {
+      [scaleSymbol]: true,
       name,
       aliases,
-      scale: clone(scale.scale),
+      definition: clone(scale.definition),
+      fundamental: false,
 
-      to(x) { return scale.to(convert.to(x)) },
-      from(x) { return convert.from(scale.from(x)) },
+      ...chain(scale, convert),
     }
   }
 
   return {
+    [scaleSymbol]: true,
     name,
     aliases,
+    fundamental: false,
     ...compile(params[0] as Expression),
   }
 }
 
-export type ScaleSystem = Record<string, Scale>;
-
-function clone<T>(x:T): T {
-  return JSON.parse(JSON.stringify(x));
+export function unit(scalar: Scalar, scale: Scale): Unit {
+  return new UnitWrapper(scalar, scale) as any;
 }
