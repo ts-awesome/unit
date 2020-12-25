@@ -135,3 +135,17 @@ describe('invalid syntax', () => {
     }
   })
 })
+
+describe('non latin scale names', () => {
+  it('ohm', () => {
+    const {scalar, definition} = parse(`1 Ω`);
+    expect(scalar).toBe(1);
+    expect(definition).toStrictEqual({'Ω': 1});
+  })
+
+  it('degree Fahrenheit', () => {
+    const {scalar, definition} = parse(`1 °F`);
+    expect(scalar).toBe(1);
+    expect(definition).toStrictEqual({'°F': 1});
+  })
+})

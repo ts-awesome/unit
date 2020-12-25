@@ -41,7 +41,7 @@ export function parse(str: string): ParsedExpression {
   function readIdentifier() {
     skipSpaces();
     let start = i;
-    while (!eol() && test(/[a-z ]/i)) {
+    while (!eol() && !test('^ⁱ²³⁻*×./')) {
       next();
     }
     return str.substring(start, i).trim();
@@ -58,7 +58,7 @@ export function parse(str: string): ParsedExpression {
     let term: any = readIdentifier();
     skipSpaces();
     let power = 1;
-    if (test('^²³⁻')) {
+    if (test('^ⁱ²³⁻')) {
       if (test('⁻')) {
         next();
         mul *= -1;
