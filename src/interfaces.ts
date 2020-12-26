@@ -23,6 +23,7 @@ export interface Scale extends Chainable {
   readonly aliases: ScaleId[];
   readonly definition: ScaleDefinition;
   readonly fundamental: boolean;
+  readonly absolute: boolean;
 }
 
 export interface UnresolvedScale {
@@ -32,6 +33,7 @@ export interface UnresolvedScale {
 }
 
 export interface Convert extends Chainable {
+  readonly absolute?: true;
   readonly scale: Scale;
 }
 

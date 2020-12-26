@@ -85,6 +85,12 @@ describe('parse', () => {
     expect(definition).toStrictEqual({'N': 1, 'm': 1});
   });
 
+  it('multiply ·', () => {
+    const {scalar, definition} = parse('-9.8e-2 N · m');
+    expect(scalar).toBe(-0.098);
+    expect(definition).toStrictEqual({'N': 1, 'm': 1});
+  });
+
   it('divide /', () => {
     const {scalar, definition} = parse('-9.8e-2 m / s');
     expect(scalar).toBe(-0.098);
@@ -109,7 +115,7 @@ describe('G constant', () => {
   const definition = {'m': 3, 'kg': -1, 's': -2};
 
   it('v1', () => {
-    const G = parse(`66.743e-12 m.m.m / kg * s.s`);
+    const G = parse(`66.743e-12 m.m.m / kg · s.s`);
     expect(G.scalar).toBe(scalar);
     expect(G.definition).toStrictEqual(definition);
   })
@@ -143,9 +149,9 @@ describe('non latin scale names', () => {
     expect(definition).toStrictEqual({'Ω': 1});
   })
 
-  it('degree Fahrenheit', () => {
-    const {scalar, definition} = parse(`1 °F`);
+  it('delta degree Fahrenheit', () => {
+    const {scalar, definition} = parse(`1 Δ°F`);
     expect(scalar).toBe(1);
-    expect(definition).toStrictEqual({'°F': 1});
+    expect(definition).toStrictEqual({'Δ°F': 1});
   })
 })

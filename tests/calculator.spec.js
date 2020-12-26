@@ -35,7 +35,7 @@ describe('compile unit expression', () => {
       kbpht
     );
 
-    const test = calc(div(unit`2000 base`, unit`.4 kilobase / tick`), `hypertick`, 2);
+    const test = calc(div(unit`2000 b`, unit`.4 kb / t`), `ht`, 2);
 
     expect(test).toBe(.05);
   })

@@ -1,28 +1,20 @@
 import {Scalar} from "./interfaces";
 
 export interface Chainable {
-  to(scalar: Scalar): Scalar;
-  from(scalar: Scalar): Scalar;
+  to(x: Scalar): Scalar;
+  from(y: Scalar): Scalar;
 }
 
 export function chain(...convert: Chainable[]): Chainable {
   return {
-    to(x) {
-      return convert.reduceRight((_, {to}) => to(_), x)
-    },
-    from(x) {
-      return convert.reduce((_, {from}) => from(_), x)
-    },
+    to: (x) => convert.reduceRight((_, {to}) => to(_), x),
+    from: (y) => convert.reduce((_, {from}) => from(_), y),
   }
 }
 
-export function fromScalar(scalar: Scalar): Chainable {
+export function fromLinear(k: Scalar = 1, b: Scalar = 0): Chainable {
   return {
-    to(x) {
-      return scalar * x
-    },
-    from(x) {
-      return x / scalar
-    },
+    to: (x) =>  k * x + b,
+    from: (y) => (y - b) / k,
   }
 }

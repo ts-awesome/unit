@@ -1,7 +1,7 @@
 import {Convert, Scalar, Scale, ScaleDefinition, ScaleId, Unit} from "./interfaces";
 import {compile} from "./compiler";
 import {Expression} from "./expression";
-import {chain, fromScalar} from "./chainable";
+import {chain, fromLinear} from "./chainable";
 import {clone, isScale} from "./utils";
 import {simplify} from "./scale-definition";
 import {UnitWrapper} from "./operations";
@@ -32,11 +32,11 @@ export function scale(name: string, ...params: any[]): Scale {
     return {
       [scaleSymbol]: true,
       name,
-      aliases,
+      aliases: aliases.length < 1 ? [name] : aliases,
+      absolute: false,
       definition: { [name]: 1 },
       fundamental: true,
-
-      ...fromScalar(1),
+      ...fromLinear(1),
     }
   }
 
@@ -56,10 +56,10 @@ export function scale(name: string, ...params: any[]): Scale {
         [scaleSymbol]: true,
         name,
         aliases,
+        absolute: false,
         definition: simplify(scale.definition),
         fundamental: false,
-
-        ...chain(scale, fromScalar(scalar)),
+        ...chain(scale, fromLinear(scalar)),
       }
     }
 
@@ -67,20 +67,22 @@ export function scale(name: string, ...params: any[]): Scale {
       [scaleSymbol]: true,
       name,
       aliases,
+      absolute: false,
       definition: scale as ScaleDefinition,
       fundamental: false,
-      ...fromScalar(scalar),
+      ...fromLinear(scalar),
     }
   }
 
   if (typeof params[0]?.to === 'function') {
     const [convert] = params as [Convert];
-    const {scale} = convert;
+    const {scale, absolute = false} = convert;
 
     return {
       [scaleSymbol]: true,
       name,
       aliases,
+      absolute,
       definition: clone(scale.definition),
       fundamental: false,
 
@@ -92,6 +94,7 @@ export function scale(name: string, ...params: any[]): Scale {
     [scaleSymbol]: true,
     name,
     aliases,
+    absolute: false,
     fundamental: false,
     ...compile(params[0] as Expression),
   }

@@ -1,7 +1,7 @@
 import {Expression, UnitExpression} from "./expression";
 import {Scalar, ScaleDefinition, ScaleId, UnresolvedScale} from "./interfaces";
 import {isScale, isUnresolvedScale} from "./utils";
-import {chain, Chainable, fromScalar} from "./chainable";
+import {chain, Chainable, fromLinear} from "./chainable";
 import {equal, mul, pow, simplify, stringify} from "./scale-definition";
 
 export interface CompiledExpression extends Chainable{
@@ -24,7 +24,7 @@ function compileAdd(expr: Expression[], resolver?: Resolver): CompiledExpression
   const scalar = operands.reduce((x, {to}) => x + to(1), first.to(1));
   return {
     definition: simplify(definition),
-    ...fromScalar(scalar),
+    ...fromLinear(scalar),
   }
 }
 
@@ -40,7 +40,7 @@ function compileSub(expr: Expression[], resolver?: Resolver): CompiledExpression
   const scalar = operands.reduce((x, {to}) => x - to(1), first.to(1));
   return {
     definition: simplify(definition),
-    ...fromScalar(scalar),
+    ...fromLinear(scalar),
   }
 }
 
@@ -49,7 +49,7 @@ function wrapMul(first: CompiledExpression, ...operands: CompiledExpression[]) {
   const scalar = operands.reduce((x, {to}) => x * to(1), first.to(1));
   return {
     definition,
-    ...fromScalar(scalar),
+    ...fromLinear(scalar),
   }
 }
 
@@ -66,7 +66,7 @@ function compileDiv(expr: [Expression, ...(Expression | Scalar)[]], resolver?: R
   const scalar = operands.reduce((x, {to}) => x / to(1), first.to(1));
   return {
     definition,
-    ...fromScalar(scalar),
+    ...fromLinear(scalar),
   }
 }
 
@@ -77,8 +77,8 @@ function wrapPow(op: CompiledExpression, power: number): CompiledExpression {
     to(x) {
       return x * Math.pow(op.to(1), power);
     },
-    from(x) {
-      return x / Math.pow(op.from(1), -power);
+    from(y) {
+      return y / Math.pow(op.from(1), -power);
     },
   }
 }
@@ -103,7 +103,7 @@ function compileUnit({scalar, scale: unresolved}: UnitExpression, resolver: Reso
 
   return {
     definition: simplify(scale.definition),
-    ...chain(scale, fromScalar(scalar)),
+    ...chain(scale, fromLinear(scalar)),
   }
 }
 
@@ -111,7 +111,7 @@ export function compile(expr: Expression | number, resolver?: Resolver): Compile
   if (typeof expr === 'number') {
     return {
       definition: {},
-      ...fromScalar(expr),
+      ...fromLinear(expr),
     }
   }
 
@@ -143,6 +143,6 @@ export function compileDefinition(definition: ScaleDefinition, resolver: Resolve
 
   return {
     definition,
-    ...fromScalar(0),
+    ...fromLinear(0),
   }
 }

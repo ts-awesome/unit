@@ -41,7 +41,7 @@ export function parse(str: string): ParsedExpression {
   function readIdentifier() {
     skipSpaces();
     let start = i;
-    while (!eol() && !test('^ⁱ²³⁻*×./')) {
+    while (!eol() && !test('^ⁱ²³⁻*×.·/')) {
       next();
     }
     return str.substring(start, i).trim();
@@ -87,8 +87,8 @@ export function parse(str: string): ParsedExpression {
       terms.push(parsePower(mul));
       skipSpaces();
       if (test('/') || eol()) break;
-      if (!test('*×.')) {
-        error('expected operation * or × or .');
+      if (!test('*×.·')) {
+        error('expected operation * or × or . or ·');
       }
       next();
     }
@@ -118,6 +118,6 @@ export function parse(str: string): ParsedExpression {
   return {
     scalar,
     definition,
-    name: str.substr(defStart),
+    name: str.substr(defStart).trim(),
   }
 }

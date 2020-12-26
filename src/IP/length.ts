@@ -19,7 +19,7 @@ export const fathom = scale('fathom', 2.02667, yard);
 export const cable = scale('cable', 100, fathom);
 export const nauticalMile = scale('nautical mile', 10, cable);
 
-export const link = scale('link', 66 / 100, foot);
+export const link = scale('link', 'lnk', 66 / 100, foot);
 export const rod = scale('rod', 25, link);  // 25 links
 
 export const IMPERIAL_LENGTH: ScaleSystem = {

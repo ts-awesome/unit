@@ -5,7 +5,7 @@ describe('definition names', () => {
   it('named', async () => {
     const test = scale('test', true);
     expect(test.name).toBe('test');
-    expect(test.aliases).toStrictEqual([]);
+    expect(test.aliases).toStrictEqual(['test']);
   });
 
   it('short', async () => {
@@ -74,8 +74,8 @@ describe('definition based on convert', () => {
   it('twisted based on kelvin', async () => {
     const test = scale('degree Fahrenheit', {
       scale: kelvin,
-      to: x => (x + 459.67) * 5 / 9,
-      from: x => x * 9 / 5 - 459.67,
+      to: x => (x - 32) * 5 / 9 + 273.15,
+      from: x => (x - 273.15) * 9 / 5 + 32,
     });
 
     expect(test.definition).toStrictEqual({'kelvin': 1});

@@ -1,43 +1,49 @@
 import {Calculator, Scale, ScaleId, ScaleSystem, UnresolvedScale} from "./interfaces";
 import {compile as compileExpr, compileDefinition, CompiledExpression} from './compiler';
 import {Expression} from "./expression";
-import {equal, stringify} from "./scale-definition";
+import {equal, simplify, stringify} from "./scale-definition";
 import {isScale, isUnresolvedScale} from "./utils";
 import {scaleSystemNameSymbol} from "./symbols";
 
 export function compile(...scales: (Scale | ScaleSystem)[]): Calculator {
   const names: ScaleSystem = {};
 
-  function define(name: string, scale: Scale, scaleSystem?: string): void {
+  function define(name: string, scale: Scale, scaleSystem: string): void {
     if (names[name] && names[name] !== scale) {
-      throw new Error(`Scale ${JSON.stringify(name)} is ambiguous${scaleSystem ? ' in ' + scaleSystem : ''}`);
+      throw new Error(`Scale alias ${JSON.stringify(name)} defined by ${names[name].name} is redefined by ${scale.name} of ${scaleSystem}`);
     }
     names[name] = scale;
   }
 
-  function use(aliases: string[], scale: Scale, scaleSystem?: string): void {
+  function use(scale: Scale, scaleSystem: string): void {
+    const {aliases} = scale;
     for (let alias of aliases) {
       define(alias, scale, scaleSystem);
     }
   }
 
+  let idx = 0;
   for(let scaleOrSystem of scales) {
+    idx++;
     if (isScale(scaleOrSystem)) {
-      const {name, aliases} = scaleOrSystem;
-      use([name, ...aliases], scaleOrSystem);
+      use(scaleOrSystem, `@${idx - 1}`);
     } else {
       const scaleSystemName: string = (scaleOrSystem as any)[scaleSystemNameSymbol];
       for(let key of Object.keys(scaleOrSystem)) {
         const scale = scaleOrSystem[key];
-        const {name, aliases} = scale;
-        use([key, name, ...aliases], scale, `${scaleSystemName ?? 'Unknown'}.${key}`);
+        use(scale, `${scaleSystemName ?? 'Unknown'}.${key}`);
       }
     }
   }
 
   function resolver(name: ScaleId|UnresolvedScale): CompiledExpression {
     if (isUnresolvedScale(name)) {
-      const {definition} = name;
+      const definition = simplify(name.definition);
+      const [first, ...others] = Object.keys(definition);
+      if (others.length === 0 && definition[first] === 1) {
+        return resolver(first);
+      }
+
       return compileDefinition(definition, resolver);
     }
     if (!names[name]) {
