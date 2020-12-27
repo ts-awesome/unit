@@ -1,9 +1,9 @@
 import {scale, unit} from "../scale";
-import {mul, pow} from '../operators';
+import {mul} from '../operators';
 import {ScaleSystem} from "../interfaces";
 import {scaleSystemNameSymbol} from "../symbols";
 
-import {meter, second} from './SI'
+import {meter} from './SI'
 
 /**
  * @summary 1 Å = 1e-10 m
@@ -153,11 +153,11 @@ export const Kilometre = scale("Kilometre", "km", mul(unit(1, meter), 1000));
 export const LeagueLand = scale("League (land)", "lea", mul(unit(1, Foot_US_Survey), 5280));
 
 /**
- * @summary 1 light-second = 299792458.8 m × s⁻¹ = Distance light travels in one second in vacuum
+ * @summary 1 light-second = 299792458.8 m × s⁻¹ × s = Distance light travels in one second in vacuum
  * @description <b>Light-second</b> is  <a>length</a> unit. Definition of 1 light-second ≡ 299792458.8 m × s⁻¹ ≡ Distance light travels in one second in vacuum . .
  * @link http://conversion.org/length/light-second/
  */
-export const LightSecond = scale("Light-second", "light-second", mul(unit(1, meter), pow(unit(1, second), -1), 299792458.8));
+export const LightSecond = scale("Light-second", "light-second", unit(299792458.8, meter));
 
 /**
  * @summary 1 ly =
@@ -299,7 +299,7 @@ export const NauticalMileInternational__nmi = scale("Nautical mile (internationa
  * @description <b>Nautical mile (US pre 1954)</b> is  <a>length</a> unit. Definition of 1 nautical mile (US pre 1954) ≡ 1853.248 m . .
  * @link http://conversion.org/length/nautical-mile-us-pre-1954/
  */
-export const NauticalMile_USPre_1954 = scale("Nautical mile (US pre 1954)", "nautical mile (US pre 1954)", mul(unit(1, meter), 1853.248));
+export const NauticalMile_USPre_1954 = scale("Nautical mile (US pre 1954)", "nmi (US pre 1954)", mul(unit(1, meter), 1853.248));
 
 /**
  * @summary 1 pace = 2.5 ft
@@ -446,21 +446,21 @@ export const Barleycorn = scale("Barleycorn", "barleycorn", mul(unit(1, Inch_Int
  * @description <b>Cable length (imperial)</b> is  <a>length</a> unit. Definition of 1 cable length (imperial) ≡ 608 ft . .
  * @link http://conversion.org/length/cable-length-imperial/
  */
-export const CableLengthImperial = scale("Cable length (imperial)", "cable length (imperial)", mul(unit(1, Foot_International), 608));
+export const CableLengthImperial = scale("Cable length (imperial)", "cable (imp)", mul(unit(1, Foot_International), 608));
 
 /**
  * @summary 1 cable length (International) = 1⁄10 nmi
  * @description <b>Cable length (International)</b> is  <a>length</a> unit. Definition of 1 cable length (International) ≡  1⁄10 nmi . .
  * @link http://conversion.org/length/cable-length-international/
  */
-export const CableLength_International = scale("Cable length (International)", "cable length (International)", mul(unit(1, NauticalMileInternational__nmi), 0.1));
+export const CableLength_International = scale("Cable length (International)", "cable", mul(unit(1, NauticalMileInternational__nmi), 0.1));
 
 /**
  * @summary 1 cable length (US) = 720 ft
  * @description <b>Cable length (US)</b> is  <a>length</a> unit. Definition of 1 cable length (US) ≡ 720 ft . .
  * @link http://conversion.org/length/cable-length-us/
  */
-export const CableLength_US = scale("Cable length (US)", "cable length (US)", mul(unit(1, Foot_International), 720));
+export const CableLength_US = scale("Cable length (US)", "cable (US)", mul(unit(1, Foot_International), 720));
 
 /**
  * @summary 1 ch = 66 ft (US) = 4 rods

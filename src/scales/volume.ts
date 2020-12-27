@@ -278,7 +278,7 @@ export const Tablespoon_USCustomary = scale("Tablespoon (US customary)", "tbsp (
  * @description <b>Tablespoon (US food nutrition labeling)</b> is  <a>volume</a> unit, symbol: [tbsp]. Definition of 1 tablespoon (US food nutrition labeling) ≡ 15 mL. Tablespoon for US food nutrition labeling is same as metric tablespoon, 15 mL ≡ 1.5×10<sup>-5</sup> m³.
  * @link http://conversion.org/volume/tablespoon-us-food-nutrition-labeling/
  */
-export const Tablespoon_USFoodNutritionLabeling = scale("Tablespoon (US food nutrition labeling)", "tbsp", mul(unit(1, Millilitre), 15));
+export const Tablespoon_USFoodNutritionLabeling = scale("Tablespoon (US food nutrition labeling)", "tbsp (US food)", mul(unit(1, Millilitre), 15));
 
 /**
  * @summary 1 tsp (metric) = 5 ml
@@ -299,7 +299,7 @@ export const Teaspoon_USCustomary = scale("Teaspoon (US customary)", "tsp (US)",
  * @description <b>Teaspoon (US food nutrition labeling)</b> is  <a>volume</a> unit, symbol: [tsp]. Definition of 1 teaspoon (US food nutrition labeling) ≡ 5 mL. Teaspoon (US food nutrition labeling) have same capacity as metric teaspoon ≡ 5 mL ≡ 5×10<sup>-6</sup> m³.
  * @link http://conversion.org/volume/teaspoon-us-food-nutrition-labeling/
  */
-export const Teaspoon_USFoodNutritionLabeling = scale("Teaspoon (US food nutrition labeling)", "tsp", mul(unit(1, Millilitre), 5));
+export const Teaspoon_USFoodNutritionLabeling = scale("Teaspoon (US food nutrition labeling)", "tsp (US food)", mul(unit(1, Millilitre), 5));
 
 /**
  * @summary 1 timber foot = 1 cu ft
@@ -752,7 +752,7 @@ export const Seam = scale("Seam", "seam", mul(unit(1, BushelImperial), 8));
  * @description <b>Strike (imperial)</b> is  <a>volume</a> unit. Definition of 1 strike (imperial) ≡ 2 bu (imp). Imperial strike unit of volume equivalent to two imperial bushels ≡ 0.07273744 m³.
  * @link http://conversion.org/volume/strike-imperial/
  */
-export const StrikeImperial = scale("Strike (imperial)", "strike (imperial)", mul(unit(1, BushelImperial), 2));
+export const StrikeImperial = scale("Strike (imperial)", "strike (imp)", mul(unit(1, BushelImperial), 2));
 
 /**
  * @summary 1 tsp (imp) = 1⁄24 gi (imp)
@@ -773,14 +773,14 @@ export const TonWater = scale("Ton (water)", "ton (water)", mul(unit(1, BushelIm
  * @description <b>Dash (imperial)</b> is  <a>volume</a> unit. Definition of 1 dash (imperial) ≡  1⁄384 gi (imp) ≡  1⁄2 pinch (imp).  ≡ 5 × 0.0000284130625 / 384 ≡ 369.96175130208(3)×10<sup>-9</sup> m³.
  * @link http://conversion.org/volume/dash-imperial/
  */
-export const DashImperial = scale("Dash (imperial)", "dash (imperial)", mul(unit(1, GillImperial_Noggin), 0.0026041666666666665));
+export const DashImperial = scale("Dash (imperial)", "dash (imp)", mul(unit(1, GillImperial_Noggin), 0.0026041666666666665));
 
 /**
  * @summary 1 dessertspoon (imperial) = 1⁄12 gi (imp)
  * @description <b>Dessertspoon (imperial)</b> is  <a>volume</a> unit. Definition of 1 dessertspoon (imperial) ≡  1⁄12 gi (imp). A dessertspoon unit of volume based on a spoon designed specifically for eating dessert. ≡ 11.8387760416×10<sup>-6</sup> m³.
  * @link http://conversion.org/volume/dessertspoon-imperial/
  */
-export const DessertspoonImperial = scale("Dessertspoon (imperial)", "dessertspoon (imperial)", mul(unit(1, GillImperial_Noggin), 0.08333333333333333));
+export const DessertspoonImperial = scale("Dessertspoon (imperial)", "dessertspoon (imp)", mul(unit(1, GillImperial_Noggin), 0.08333333333333333));
 
 
 export const VOLUME_UNITS: ScaleSystem = {

@@ -124,7 +124,7 @@ export const PoundMetric = scale("Pound (metric)", "pound (metric)", mul(unit(1,
  * @description <b>Quarter (imperial)</b> is  <a>mass</a> unit. Definition of 1 quarter (imperial) ≡  1⁄4 long cwt ≡ 2 st ≡ 28 lb av . 28 × 0.45359237 kg.
  * @link http://conversion.org/mass/quarter-imperial/
  */
-export const QuarterImperial = scale("Quarter (imperial)", "quarter (imperial)", mul(unit(1, PoundAvoirdupois), 28));
+export const QuarterImperial = scale("Quarter (imperial)", "quarter (imp)", mul(unit(1, PoundAvoirdupois), 28));
 
 /**
  * @summary 1 q = 100 kg
