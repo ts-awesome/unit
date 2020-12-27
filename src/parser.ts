@@ -4,6 +4,7 @@ export interface ParsedExpression {
   readonly scalar: Scalar;
   readonly definition: ScaleDefinition;
   readonly name: string;
+  readonly def: string;
 }
 
 export function parse(str: string): ParsedExpression {
@@ -14,6 +15,15 @@ export function parse(str: string): ParsedExpression {
   function test(x: string | RegExp) { return typeof x === 'string' ? x.split('').indexOf(current()) >= 0 : x.test('' + current()); }
   function eol() { return i >= str.length; }
   function next() { ++i; return current(); }
+  function match(...args: string[]): string | false {
+    for(let arg of args) {
+      if (str.substr(i, arg.length) === arg) {
+        i += arg.length;
+        return arg;
+      }
+    }
+    return false;
+  }
 
   function skipSign() { test('+-') && next() }
   function skipDigits() { while (!eol() && test('0123456789')) next() }
@@ -22,8 +32,43 @@ export function parse(str: string): ParsedExpression {
   function error(desc: string) { throw new Error(`ParseError @${i}: ${desc}`) }
 
   function parseScalar() {
+    const sign = test('-') ? -1 : 1;
     skipSign();
-    skipDigits();
+
+    let whole;
+    if (match('PI', 'π')) {
+      whole = Math.PI * sign;
+    } else {
+      skipDigits();
+      whole = parseInt(str.substring(0, i), 10);
+    }
+
+    if (test('/⁄')) {
+      next();
+      return whole / readFloat();
+    }
+
+    if (test(' ')) {
+      // maybe fractions
+
+      skipSpaces();
+
+      if (test('0123456789')) {
+        const top = readInteger();
+        skipSpaces();
+        if (!test('/⁄')) {
+          error('expected fractions divider /');
+        }
+        next();
+        skipSpaces();
+        const bottom = readInteger();
+
+        return whole + (top / bottom);
+      }
+
+      return whole;
+    }
+
     if (test('.')) {
       next();
       skipDigits();
@@ -40,10 +85,16 @@ export function parse(str: string): ParsedExpression {
 
   function readIdentifier() {
     skipSpaces();
+
+    if (test('0123456789')) {
+      error('unexpected scalar')
+    }
+
     let start = i;
-    while (!eol() && !test('^ⁱ²³⁻*×.·/')) {
+    while (!eol() && !test('^¹²³⁻*×.·/')) {
       next();
     }
+
     return str.substring(start, i).trim();
   }
 
@@ -54,16 +105,33 @@ export function parse(str: string): ParsedExpression {
     return parseInt(str.substring(start, i + 1), 10);
   }
 
+  function readFloat() {
+    if (match('PI', 'π')) {
+      return Math.PI;
+    }
+
+    let start = i;
+    if (test('-+')) {
+      error('unexpected ' + current());
+    }
+    skipDigits();
+    if (test('.')) {
+      next();
+      skipDigits();
+    }
+    return parseFloat(str.substring(start, i + 1));
+  }
+
   function parsePower(mul = 1): [string, number] {
     let term: any = readIdentifier();
     skipSpaces();
     let power = 1;
-    if (test('^ⁱ²³⁻')) {
+    if (test('^¹²³⁻')) {
       if (test('⁻')) {
         next();
         mul *= -1;
       }
-      if (test('ⁱ')) {
+      if (test('¹')) {
         next();
         power = 1
       } else if (test('²')) {
@@ -119,5 +187,6 @@ export function parse(str: string): ParsedExpression {
     scalar,
     definition,
     name: str.substr(defStart).trim(),
+    def: str,
   }
 }

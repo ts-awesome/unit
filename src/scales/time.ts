@@ -8,7 +8,7 @@ export {second};
 export const minute = scale('minute', 'min', 60, second);
 export const hour = scale('hour', 'h', 3600, second);
 
-export const TIME: ScaleSystem = {
+export const TIME_UNITS: ScaleSystem = {
   millisecond,
   second,
   minute,
@@ -16,4 +16,4 @@ export const TIME: ScaleSystem = {
 
   [scaleSystemNameSymbol]: 'Common time',
 }
-export default TIME;
+export default TIME_UNITS;

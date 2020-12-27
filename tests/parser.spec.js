@@ -44,7 +44,7 @@ describe('parse', () => {
   });
 
   it('negative one', () => {
-    const {scalar, definition} = parse('-9.8 s⁻ⁱ ');
+    const {scalar, definition} = parse('-9.8 s⁻¹ ');
     expect(scalar).toBe(-9.8);
     expect(definition).toStrictEqual({'s': -1});
   });
@@ -108,6 +108,12 @@ describe('parse', () => {
     expect(scalar).toBe(-0.098);
     expect(definition).toStrictEqual({'m': 1, 's': -2});
   });
+
+  it('5280 foot (US Survey)', () => {
+    const {scalar, definition} = parse('5280 foot (US Survey)');
+    expect(scalar).toBe(5280);
+    expect(definition).toStrictEqual({'foot (US Survey)': 1});
+  })
 });
 
 describe('G constant', () => {
@@ -120,7 +126,7 @@ describe('G constant', () => {
     expect(G.definition).toStrictEqual(definition);
   })
   it('v2', () => {
-    const G = parse(`6.6743e-11 m³ × kg⁻ⁱ × s⁻²`);
+    const G = parse(`6.6743e-11 m³ × kg⁻¹ × s⁻²`);
     expect(G.scalar).toBe(scalar);
     expect(G.definition).toStrictEqual(definition);
   })
@@ -140,6 +146,22 @@ describe('invalid syntax', () => {
       expect(e.message).toBe('ParseError @22: expected end of definition definition')
     }
   })
+  it('unexpected number', () => {
+    try {
+      parse('6.6743e-11 m ^ 3 / 1 kg');
+      fail('expected to throw');
+    } catch (e) {
+      expect(e.message).toBe('ParseError @19: unexpected scalar')
+    }
+  })
+  it('unexpected sign', () => {
+    try {
+      parse('1/-3 kg');
+      fail('expected to throw');
+    } catch (e) {
+      expect(e.message).toBe('ParseError @2: unexpected -');
+    }
+  })
 })
 
 describe('non latin scale names', () => {
@@ -153,5 +175,48 @@ describe('non latin scale names', () => {
     const {scalar, definition} = parse(`1 Δ°F`);
     expect(scalar).toBe(1);
     expect(definition).toStrictEqual({'Δ°F': 1});
+  })
+})
+
+describe('scalar fractions', () => {
+  it('16 1⁄2 ft', () => {
+    const {scalar, definition} = parse(`16 1⁄2 ft`);
+    expect(scalar.toFixed(3)).toBe(16.5.toFixed(3));
+    expect(definition).toStrictEqual({'ft': 1});
+  })
+  it('16 1/2 ft', () => {
+    const {scalar, definition} = parse(`16 1/2 ft`);
+    expect(scalar.toFixed(3)).toBe(16.5.toFixed(3));
+    expect(definition).toStrictEqual({'ft': 1});
+  })
+
+  it('1⁄14 in', () => {
+    const {scalar, definition} = parse(`1⁄14 in`);
+    expect(scalar.toFixed(3)).toBe((1 / 14).toFixed(3));
+    expect(definition).toStrictEqual({'in': 1});
+  })
+
+  it('1/14 ft', () => {
+    const {scalar, definition} = parse(`1/14 ft`);
+    expect(scalar.toFixed(3)).toBe((1 / 14).toFixed(3));
+    expect(definition).toStrictEqual({'ft': 1});
+  })
+
+  it('1/72.12 in', () => {
+    const {scalar, definition} = parse(`1/72.12 in`);
+    expect(scalar.toFixed(8)).toBe((1 / 72.12).toFixed(8));
+    expect(definition).toStrictEqual({'in': 1});
+  })
+
+  it('π/4 sq in', () => {
+    const {scalar, definition} = parse(`π/4 sq in`);
+    expect(scalar.toFixed(8)).toBe((Math.PI / 4).toFixed(8));
+    expect(definition).toStrictEqual({'sq in': 1});
+  })
+
+  it('PI/4 sq in', () => {
+    const {scalar, definition} = parse(`PI/4 sq in`);
+    expect(scalar.toFixed(8)).toBe((Math.PI / 4).toFixed(8));
+    expect(definition).toStrictEqual({'sq in': 1});
   })
 })

@@ -1,4 +1,4 @@
-const { degreeCelsius } =require('../dist/SI/temperature');
+const { degreeCelsius } =require('../dist/scales/temperature');
 
 const {calculate, unit, add} = require('../dist');
 

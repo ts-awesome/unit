@@ -1,8 +1,11 @@
 import {scale, unit} from "../scale";
 import {mul} from "../operators";
 
-import {ampere, candela, kilogram, meter, mole, second} from "../common/fundamentals";
+import FUNDAMENTALS, {ampere, candela, kilogram, meter, mole, second} from "./fundamentals";
 import {scaleSystemNameSymbol} from "../symbols";
+import {degreeCelsius, deltaDegreeCelsius} from "./temperature";
+
+export * from './fundamentals';
 
 export const radian = scale('radian', 'rad', mul(unit(1, meter), unit(1, meter).pow(-1))); // m / m
 export const steradian = scale('steradian', 'sr', mul(unit(1, meter).pow(1), unit(1, meter).pow(-2))); // m² / m²
@@ -26,7 +29,18 @@ export const gray = scale('gray', 'Gy', mul(unit(1, joule), unit(1, kilogram).po
 export const sievert = scale('sievert', 'Sv', mul(unit(1, joule), unit(1, kilogram).pow(-1))); // J / kg
 export const katal = scale('katal', 'kat', mul(unit(1, second).pow(-1), unit(1, mole))); // mol / s²
 
-export const SI_PHYSICS = {
+/**
+ * @summary 1 g₀ = 1 Standard gravity = 9.80665 m / s²
+ * @description <b>Standard gravity</b>. The standard acceleration due to gravity (or standard acceleration of free fall), sometimes abbreviated as standard gravity, usually denoted by ɡ0 or ɡn, is the nominal gravitational acceleration of an object in a vacuum near the surface of the Earth. It is defined by standard as 9.80665 m/s2 (about 32.17405 ft/s2).
+ * @link https://en.wikipedia.org/wiki/Standard_gravity
+ */
+export const g0 = scale('g₀', 'g0', 'g₀', mul(unit(1, meter), unit(1, second).pow(-2), 9.80665));
+
+export const degree = scale('degree', 'deg', Math.PI / 180, radian);
+
+export const SI = {
+  ...FUNDAMENTALS,
+
   radian,
   steradian,
   hertz,
@@ -45,10 +59,17 @@ export const SI_PHYSICS = {
   lumen,
   lux,
   becquerel,
+  gray,
   sievert,
   katal,
 
-  [scaleSystemNameSymbol]: 'SI physics',
+  degreeCelsius,
+  deltaDegreeCelsius,
+
+  g0,
+  degree,
+
+  [scaleSystemNameSymbol]: 'SI',
 }
 
-export default SI_PHYSICS;
+export default SI;

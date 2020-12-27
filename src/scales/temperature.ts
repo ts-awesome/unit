@@ -1,7 +1,15 @@
 import {scale} from "../scale";
 import {scaleSystemNameSymbol} from "../symbols";
 import {fromLinear} from "../chainable";
-import {degreeCelsius, kelvin} from "../SI/temperature";
+import {kelvin} from "./fundamentals";
+
+export const degreeCelsius = scale('degree Celsius', '°C', {
+  absolute: true,
+  scale: kelvin,
+  ...fromLinear(1, +273.15),
+});
+
+export const deltaDegreeCelsius = scale('delta degree Celsius', 'Δ°C','d°C', 1, kelvin);
 
 export const degreeFahrenheit = scale('degree Fahrenheit', '°F', {
   absolute: true,
@@ -11,11 +19,11 @@ export const degreeFahrenheit = scale('degree Fahrenheit', '°F', {
 
 export const deltaDegreeFahrenheit = scale('delta degree Fahrenheit', 'Δ°F', 'd°F', 5/9, kelvin);
 
-export const IMPERIAL_TEMPERATURE = {
+export const TEMPERATURE_UNITS = {
   degreeFahrenheit,
   deltaDegreeFahrenheit,
 
-  [scaleSystemNameSymbol]: 'Imperial temperature',
+  [scaleSystemNameSymbol]: 'Temperature units',
 };
 
-export default IMPERIAL_TEMPERATURE;
+export default TEMPERATURE_UNITS;

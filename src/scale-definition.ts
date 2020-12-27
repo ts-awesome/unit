@@ -33,7 +33,7 @@ export function powerToString(x: Power) {
     case -2:
       return '⁻²';
     case -1:
-      return '⁻ⁱ';
+      return '⁻¹';
     case 0:
       return '⁰';
     case 1:

@@ -22,6 +22,11 @@ export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, unit: Unit): 
 export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, convert: Convert): Scale;
 export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, scalar: Scalar, scale: Scale): Scale;
 export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, scalar: Scalar, definition: ScaleDefinition): Scale;
+export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, extra: ScaleId, fundamental: true): Scale;
+export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, extra: ScaleId, unit: Unit): Scale;
+export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, extra: ScaleId, convert: Convert): Scale;
+export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, extra: ScaleId, scalar: Scalar, scale: Scale): Scale;
+export function scale(name: ScaleId, short: ScaleId, alt: ScaleId, extra: ScaleId, scalar: Scalar, definition: ScaleDefinition): Scale;
 export function scale(name: string, ...params: any[]): Scale {
   const aliases: string[] = [];
   while (typeof params[0] === 'string') {
@@ -77,6 +82,10 @@ export function scale(name: string, ...params: any[]): Scale {
   if (typeof params[0]?.to === 'function') {
     const [convert] = params as [Convert];
     const {scale, absolute = false} = convert;
+
+    if (!scale) {
+      throw new Error(`Convert.scale is required`);
+    }
 
     return {
       [scaleSymbol]: true,
