@@ -156,10 +156,11 @@ export const Lambda = scale("Lambda", "λ", mul(pow(unit(1, Millimetre), 3), 1))
 
 /** 
  * @summary 1 L = 1 dm³
- * @description <b>Litre</b> is  <i>volume</i> unit, symbol: [L]. Definition of 1 litre ≡ 1 dm³. Litre (or Liter spelling in American English) is very popular unit of volume equal to 10 cm × 0 cm × 0 cm cube ≡ 0.001 m³.
+ * @description <b>Litre</b> is  <i>volume</i> unit, symbol: [L; l]. Definition of 1 litre ≡ 1 dm³. Litre (or Liter spelling in American English) is very popular unit of volume equal to 10 cm × 0 cm × 0 cm cube ≡ 0.001 m³.
  * @link http://conversion.org/volume/litre/
  */
 export const Litre = scale("Litre", "L", mul(pow(unit(1, Decimetre), 3), 1));
+export const Litre__l = scale("Litre", "l", mul(pow(unit(1, Decimetre), 3), 1));
 
 /** 
  * @summary 1 load = 50 cu ft
@@ -170,17 +171,19 @@ export const Load = scale("Load", "load", mul(unit(1, CubicFoot), 50));
 
 /** 
  * @summary 1 µL = 1e-6 L
- * @description <b>Microlitre</b> is metric <i>volume</i> unit, symbol: [µL]. Definition of 1 microlitre  ≡ 1e-6 L. One microlitre volume is equivalent to one millionth of Litre ≡ 1 cubic millimetre.
+ * @description <b>Microlitre</b> is metric <i>volume</i> unit, symbol: [µL; µl]. Definition of 1 microlitre  ≡ 1e-6 L. One microlitre volume is equivalent to one millionth of Litre ≡ 1 cubic millimetre.
  * @link http://conversion.org/volume/microlitre/
  */
 export const Microlitre = scale("Microlitre", "µL", mul(unit(1, Litre), 0.000001));
+export const Microlitre__mkl = scale("Microlitre", "µl", mul(unit(1, Litre), 0.000001));
 
 /** 
  * @summary 1 mL = 0.001 L
- * @description <b>Millilitre</b> is metric <i>volume</i> unit, symbol: [mL]. Definition of 1 millilitre  ≡ 0.001 L. One millilitre is volume equivalent to one cubic centimetre.
+ * @description <b>Millilitre</b> is metric <i>volume</i> unit, symbol: [mL; ml]. Definition of 1 millilitre  ≡ 0.001 L. One millilitre is volume equivalent to one cubic centimetre.
  * @link http://conversion.org/volume/millilitre/
  */
 export const Millilitre = scale("Millilitre", "mL", mul(unit(1, Litre), 0.001));
+export const Millilitre__ml = scale("Millilitre", "ml", mul(unit(1, Litre), 0.001));
 
 /** 
  * @summary 1 US fl oz = 1⁄128 gal (US)
@@ -207,10 +210,11 @@ export const Perch = scale("Perch", "per", mul(pow(unit(1, metre), 3), 0.7008419
 
 /** 
  * @summary 1 pL = 1e-9 L
- * @description <b>Picolitre</b> is metric <i>volume</i> unit, symbol: [pL]. Definition of 1 picolitre  ≡ 1e-9 L. One picolitre is very small unit. 1 mL contains million picolitres..
+ * @description <b>Picolitre</b> is metric <i>volume</i> unit, symbol: [pL; pl]. Definition of 1 picolitre  ≡ 1e-9 L. One picolitre is very small unit. 1 mL contains million picolitres..
  * @link http://conversion.org/volume/picolitre/
  */
 export const Picolitre = scale("Picolitre", "pL", mul(unit(1, Litre), 1e-9));
+export const Picolitre__pl = scale("Picolitre", "pl", mul(unit(1, Litre), 1e-9));
 
 /** 
  * @summary 1 pinch (US) = 1⁄48 US fl oz = 1/16 US tsp
@@ -375,11 +379,11 @@ export const Bushel_USDryLevel = scale("Bushel (US dry level)", "bu (US lvl)", m
 export const ButtPipe = scale("Butt, pipe", "butt, pipe", mul(unit(1, Gallon_USFluid_Wine), 126));
 
 /** 
- * @summary 1 cL = 0.01 L
- * @description <b>Centilitre</b> is metric <i>volume</i> unit, symbol: [cL]. Definition of 1 centilitre  ≡ 0.01 L. One centilitre is volume equivalent to hundreds of Litre (L/100).
+ * @summary 1 cL, cl = 0.01 L
+ * @description <b>Centilitre</b> is metric <i>volume</i> unit, symbol: [cL, cl]. Definition of 1 centilitre  ≡ 0.01 L. One centilitre is volume equivalent to hundreds of Litre (L/100).
  * @link http://conversion.org/volume/centilitre/
  */
-export const Centilitre = scale("Centilitre", "cL", mul(unit(1, Litre), 0.01));
+export const Centilitre = scale("Centilitre", "cL, cl", mul(unit(1, Litre), 0.01));
 
 /** 
  * @summary 1 cord-foot = 16 cu ft
@@ -411,17 +415,19 @@ export const Dash_US = scale("Dash (US)", "dash (US)", mul(unit(1, OunceFluid_US
 
 /** 
  * @summary 1 dL = 0.1 L
- * @description <b>Decilitre</b> is metric <i>volume</i> unit, symbol: [dL]. Definition of 1 decilitre  ≡ 0.1 L. Decilitre is volume equivalent to one tenth of a liter (L/10).
+ * @description <b>Decilitre</b> is metric <i>volume</i> unit, symbol: [dL; dl]. Definition of 1 decilitre  ≡ 0.1 L. Decilitre is volume equivalent to one tenth of a liter (L/10).
  * @link http://conversion.org/volume/decilitre/
  */
 export const Decilitre = scale("Decilitre", "dL", mul(unit(1, Litre), 0.1));
+export const Decilitre__dl = scale("Decilitre", "dl", mul(unit(1, Litre), 0.1));
 
 /** 
  * @summary 1 daL = 10 L
- * @description <b>Dekalitre</b> is metric <i>volume</i> unit, symbol: [daL]. Definition of 1 dekalitre  ≡ 10 L. Dekalitre is equivalent to volume of ten litres.
+ * @description <b>Dekalitre</b> is metric <i>volume</i> unit, symbol: [daL; dal]. Definition of 1 dekalitre  ≡ 10 L. Dekalitre is equivalent to volume of ten litres.
  * @link http://conversion.org/volume/dekalitre/
  */
 export const Dekalitre = scale("Dekalitre", "daL", mul(unit(1, Litre), 10));
+export const Dekalitre__dal = scale("Dekalitre", "dal", mul(unit(1, Litre), 10));
 
 /** 
  * @summary 1 gtt (med.) = 1⁄12 ml
@@ -481,10 +487,11 @@ export const Gill_US = scale("Gill (US)", "gi (US)", mul(unit(1, OunceFluid_USCu
 
 /** 
  * @summary 1 hL = 100 L
- * @description <b>Hectolitre</b> is metric <i>volume</i> unit, symbol: [hL]. Definition of 1 hectolitre  ≡ 100 L. Hectolitre is equivalent to volume of hundred litres.
+ * @description <b>Hectolitre</b> is metric <i>volume</i> unit, symbol: [hL; hl]. Definition of 1 hectolitre  ≡ 100 L. Hectolitre is equivalent to volume of hundred litres.
  * @link http://conversion.org/volume/hectolitre/
  */
 export const Hectolitre = scale("Hectolitre", "hL", mul(unit(1, Litre), 100));
+export const Hectolitre__hl = scale("Hectolitre", "hl", mul(unit(1, Litre), 100));
 
 /** 
  * @summary 1 hhd (US) = 2 fl bl (US)
@@ -807,15 +814,19 @@ export const VOLUME_UNITS: ScaleSystem = {
   Gallon_USFluid_Wine,
   Lambda,
   Litre,
+  Litre__l,
   Load,
   Microlitre,
+  Microlitre__mkl,
   Millilitre,
+  Millilitre__ml,
   OunceFluid_USCustomary,
   OunceFluid_USCustomary__flOz_US,
   OunceFluid_USFoodNutritionLabeling,
   OunceFluid_USFoodNutritionLabeling__flOz_USFood,
   Perch,
   Picolitre,
+  Picolitre__pl,
   Pinch_US,
   Pint_USFluid,
   Pony,
@@ -846,7 +857,9 @@ export const VOLUME_UNITS: ScaleSystem = {
   Cup_USFoodNutritionLabeling,
   Dash_US,
   Decilitre,
+  Decilitre__dl,
   Dekalitre,
+  Dekalitre__dal,
   DropMedical,
   DropMetric,
   Drop_US,
@@ -856,6 +869,7 @@ export const VOLUME_UNITS: ScaleSystem = {
   Gallon_USDry,
   Gill_US,
   Hectolitre,
+  Hectolitre__hl,
   Hogshead_US,
   JiggerBartending,
   Kilderkin,

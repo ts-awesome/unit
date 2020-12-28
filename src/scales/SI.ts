@@ -29,7 +29,7 @@ export const gray = scale('gray', 'Gy', mul(unit(1, joule), unit(1, kilogram).po
 export const sievert = scale('sievert', 'Sv', mul(unit(1, joule), unit(1, kilogram).pow(-1))); // J / kg
 export const katal = scale('katal', 'kat', mul(unit(1, second).pow(-1), unit(1, mole))); // mol / s²
 
-export const degree = scale('degree', 'deg', Math.PI / 180, radian);
+export const degree = scale('degree', 'deg', '°', Math.PI / 180, radian);
 
 export const SI = {
   ...FUNDAMENTALS,
