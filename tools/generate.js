@@ -165,12 +165,12 @@ const MAPPINGS = {
 const ALIASES = {
   'lb av': ['lb', 'lbs'],
   'oz av': ['oz'],
+  'dr av': ['dr'],
   'om (old)': ['bicron', 'stigma'],
+  "long cwt": ['cwt']
 }
 
 const SHORTS = {
-  "Link (Ramsden's; Engineer's)": 'lnk (eng)',
-  "Nautical mile (US pre 1954)": 'nmi (US pre 1954)',
   "Cable length (imperial)": 'cable (imp)',
   "Cable length (International)": "cable",
   "Cable length (US)": "cable (US)",
@@ -181,6 +181,8 @@ const SHORTS = {
 
   "Quarter (imperial)": "quarter (imp)",
   "Quarter; pail": "pail",
+
+  "Hundredweight (long)": "long cwt"
 }
 
 const otherModules = {

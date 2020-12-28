@@ -39,7 +39,7 @@
 <link>http://conversion.org/length/light-year/</link><b>Light-year</b> is  <a>length</a> unit, symbol: [ly]. Definition of 1 light-year = 365.25 light-days ≡ Distance light travels in vacuum in 365.25 days. .
 <link>http://conversion.org/length/line/</link><b>Line</b> is  <a>length</a> unit, symbol: [ln]. Definition of 1 line ≡  1⁄12 in. .
 <link>http://conversion.org/length/link-gunters-surveyors/</link><b>Link (Gunter's; Surveyor's)</b> is  <a>length</a> unit, symbol: [lnk]. Definition of 1 link (Gunter's; Surveyor's) ≡  1⁄100 ch ≡ 0.66 ft (US) ≡ 7.92 in . .
-<link>http://conversion.org/length/link-ramsdens-engineers/</link><b>Link (Ramsden's; Engineer's)</b> is  <a>length</a> unit, symbol: [lnk]. Definition of 1 link (Ramsden's; Engineer's) ≡ 1 ft. .
+<link>http://conversion.org/length/link-ramsdens-engineers/</link><b>Link (Ramsden's; Engineer's)</b> is  <a>length</a> unit, symbol: [lnk (Ramsden)]. Definition of 1 link (Ramsden's; Engineer's) ≡ 1 ft. .
 <link>http://conversion.org/length/metre/</link><b>Metre</b> is metric <a>length</a> unit, symbol: [m]. Definition of 1 metre  =1 m. Distance light travels in  1⁄299792458 of a second in vacuum. Old def:  1⁄10000000 of the distance from equator to pole. .
 <link>http://conversion.org/length/mickey/</link><b>Mickey</b> is  <a>length</a> unit. Definition of 1 mickey ≡  1⁄200 in . .
 <link>http://conversion.org/length/micrometre/</link><b>Micrometre</b> is metric <a>length</a> unit, symbol: [µm]. Definition of 1 micrometre  =1x10<sup>-6</sup> m. .
@@ -57,7 +57,7 @@
 <link>http://conversion.org/length/nautical-league/</link><b>Nautical league</b> is  <a>length</a> unit, symbol: [NL; nl]. Definition of 1 nautical league ≡ 3 nmi. .
 <link>http://conversion.org/length/nautical-mile-admiralty/</link><b>Nautical mile (Admiralty)</b> is  <a>length</a> unit, symbol: [NM (Adm); nmi (Adm)]. Definition of 1 nautical mile (Admiralty) = 6080 ft . .
 <link>http://conversion.org/length/nautical-mile-international/</link><b>Nautical mile (international)</b> is  <a>length</a> unit, symbol: [NM; nmi]. Definition of 1 nautical mile (international) ≡ 1852 m. .
-<link>http://conversion.org/length/nautical-mile-us-pre-1954/</link><b>Nautical mile (US pre 1954)</b> is  <a>length</a> unit. Definition of 1 nautical mile (US pre 1954) ≡ 1853.248 m . .
+<link>http://conversion.org/length/nautical-mile-us-pre-1954/</link><b>Nautical mile (US pre 1954)</b> is  <a>length</a> unit. Definition of 1 nautical mile (US pre 1954) ≡ 1853.248 m . of chiefly historical interest..
 <link>http://conversion.org/length/pace/</link><b>Pace</b> is  <a>length</a> unit. Definition of 1 pace ≡ 2.5 ft. .
 <link>http://conversion.org/length/palm/</link><b>Palm</b> is  <a>length</a> unit. Definition of 1 palm ≡ 3 in. .
 <link>http://conversion.org/length/parsec/</link><b>Parsec</b> is  <a>length</a> unit, symbol: [pc]. Definition of 1 parsec ≈ 3.085677581x10<sup>16</sup> m. Distance of star with parallax shift of one arc second from a base of one astronomical unit .

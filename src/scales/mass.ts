@@ -233,11 +233,11 @@ export const Gamma = scale("Gamma", "γ", mul(unit(1, Microgram), 1));
 export const Grain = scale("Grain", "gr", mul(unit(1, PoundAvoirdupois), 0.00014285714285714287));
 
 /** 
- * @summary 1 long cwt or cwt = 112 lb av
+ * @summary 1 long cwt = 112 lb av
  * @description <b>Hundredweight (long)</b> is  <i>mass</i> unit, symbol: [long cwt or cwt]. Definition of 1 hundredweight (long) ≡ 112 lb av . ≡112 × 0.45359237 kg ≡ 50.80234544 kg.
  * @link http://conversion.org/mass/hundredweight-long/
  */
-export const HundredweightLong = scale("Hundredweight (long)", "long cwt or cwt", mul(unit(1, PoundAvoirdupois), 112));
+export const HundredweightLong = scale("Hundredweight (long)", "long cwt", "cwt", mul(unit(1, PoundAvoirdupois), 112));
 
 /** 
  * @summary 1 sh cwt = 100 lb av
@@ -321,7 +321,7 @@ export const DramApothecaryTroy = scale("Dram (apothecary; troy)", "dr t", mul(u
  * @description <b>Dram (avoirdupois)</b> is  <i>mass</i> unit, symbol: [dr av]. Definition of 1 dram (avoirdupois) ≡  27 11⁄32 gr ≡ 27.34375 gr. The dram was originally both a coin and a weight in ancient Greece. ≡ 875/32 grain ≡ 1.7718451953125 g.
  * @link http://conversion.org/mass/dram-avoirdupois/
  */
-export const DramAvoirdupois = scale("Dram (avoirdupois)", "dr av", mul(unit(1, Grain), 27.34375));
+export const DramAvoirdupois = scale("Dram (avoirdupois)", "dr av", "dr", mul(unit(1, Grain), 27.34375));
 
 /** 
  * @summary 1 oz t = 1⁄12 lb t

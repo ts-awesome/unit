@@ -20,6 +20,9 @@ export const degreeFahrenheit = scale('degree Fahrenheit', '°F', {
 export const deltaDegreeFahrenheit = scale('delta degree Fahrenheit', 'Δ°F', 'd°F', 5/9, kelvin);
 
 export const TEMPERATURE_UNITS = {
+  kelvin,
+  degreeCelsius,
+  deltaDegreeCelsius,
   degreeFahrenheit,
   deltaDegreeFahrenheit,
 

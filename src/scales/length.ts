@@ -146,11 +146,11 @@ export const Line = scale("Line", "ln", mul(unit(1, Inch_International), 0.08333
 export const Link_GunterS_SurveyorS = scale("Link (Gunter's; Surveyor's)", "lnk", mul(unit(1, Inch_International), 7.92));
 
 /** 
- * @summary 1 lnk (eng) = 1 ft
- * @description <b>Link (Ramsden's; Engineer's)</b> is  <i>length</i> unit, symbol: [lnk]. Definition of 1 link (Ramsden's; Engineer's) ≡ 1 ft. .
+ * @summary 1 lnk (Ramsden) = 1 ft
+ * @description <b>Link (Ramsden's; Engineer's)</b> is  <i>length</i> unit, symbol: [lnk (Ramsden)]. Definition of 1 link (Ramsden's; Engineer's) ≡ 1 ft. .
  * @link http://conversion.org/length/link-ramsdens-engineers/
  */
-export const Link_RamsdenS_EngineerS = scale("Link (Ramsden's; Engineer's)", "lnk (eng)", mul(unit(1, Foot_International), 1));
+export const Link_RamsdenS_EngineerS = scale("Link (Ramsden's; Engineer's)", "lnk (Ramsden)", mul(unit(1, Foot_International), 1));
 
 /** 
  * @summary 1 mickey = 1⁄200 in
@@ -244,13 +244,6 @@ export const NauticalMile_Admiralty__nmi_Adm = scale("Nautical mile (Admiralty)"
  */
 export const NauticalMileInternational = scale("Nautical mile (international)", "NM", mul(unit(1, metre), 1852));
 export const NauticalMileInternational__nmi = scale("Nautical mile (international)", "nmi", mul(unit(1, metre), 1852));
-
-/** 
- * @summary 1 nmi (US pre 1954) = 1853.248 m
- * @description <b>Nautical mile (US pre 1954)</b> is  <i>length</i> unit. Definition of 1 nautical mile (US pre 1954) ≡ 1853.248 m . .
- * @link http://conversion.org/length/nautical-mile-us-pre-1954/
- */
-export const NauticalMile_USPre_1954 = scale("Nautical mile (US pre 1954)", "nmi (US pre 1954)", mul(unit(1, metre), 1853.248));
 
 /** 
  * @summary 1 pace = 2.5 ft
@@ -501,7 +494,6 @@ export const LENGTH_UNITS: ScaleSystem = {
   NauticalMile_Admiralty__nmi_Adm,
   NauticalMileInternational,
   NauticalMileInternational__nmi,
-  NauticalMile_USPre_1954,
   Pace,
   Palm,
   Parsec,
