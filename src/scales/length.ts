@@ -3,7 +3,7 @@ import {mul, pow} from '../operators';
 import {ScaleSystem} from "../interfaces";
 import {scaleSystemNameSymbol} from "../symbols";
 
-import {metre} from './SI'
+import {metre, SpeedOfLight, second} from './SI'
 
 /** 
  * @summary 1 Å = 1e-10 m
@@ -125,11 +125,11 @@ export const Kilometre = scale("Kilometre", "km", mul(unit(1, metre), 1000));
 export const LeagueLand = scale("League (land)", "lea", mul(unit(1, Foot_US_Survey), 5280));
 
 /** 
- * @summary 1 light-second = 299792458.8 m = Distance light travels in one second in vacuum
- * @description <b>Light-second</b> is  <i>length</i> unit. Definition of 1 light-second ≡ 299792458.8 m ≡ Distance light travels in one second in vacuum . .
+ * @summary 1 light-second = 1 c₀ × s = Distance light travels in one second in vacuum
+ * @description <b>Light-second</b> is  <i>length</i> unit. Definition of 1 light-second ≡ 1 c₀ × s ≡ Distance light travels in one second in vacuum . .
  * @link http://conversion.org/length/light-second/
  */
-export const LightSecond = scale("Light-second", "light-second", mul(unit(1, metre), 299792458.8));
+export const LightSecond = scale("Light-second", "light-second", mul(unit(1, SpeedOfLight), unit(1, second), 1));
 
 /** 
  * @summary 1 ln = 1⁄12 in

@@ -35,7 +35,7 @@
 <link>http://conversion.org/length/light-day/</link><b>Light-day</b> is  <a>length</a> unit. Definition of 1 light-day ≡ 24 light-hours . .
 <link>http://conversion.org/length/light-hour/</link><b>Light-hour</b> is  <a>length</a> unit. Definition of 1 light-hour ≡ 60 light-minutes . .
 <link>http://conversion.org/length/light-minute/</link><b>Light-minute</b> is  <a>length</a> unit. Definition of 1 light-minute ≡ 60 light-seconds . .
-<link>http://conversion.org/length/light-second/</link><b>Light-second</b> is  <a>length</a> unit. Definition of 1 light-second ≡ 299792458.8 m ≡ Distance light travels in one second in vacuum . .
+<link>http://conversion.org/length/light-second/</link><b>Light-second</b> is  <a>length</a> unit. Definition of 1 light-second ≡ 1 c₀ × s ≡ Distance light travels in one second in vacuum . .
 <link>http://conversion.org/length/light-year/</link><b>Light-year</b> is  <a>length</a> unit, symbol: [ly]. Definition of 1 light-year = 365.25 light-days ≡ Distance light travels in vacuum in 365.25 days. .
 <link>http://conversion.org/length/line/</link><b>Line</b> is  <a>length</a> unit, symbol: [ln]. Definition of 1 line ≡  1⁄12 in. .
 <link>http://conversion.org/length/link-gunters-surveyors/</link><b>Link (Gunter's; Surveyor's)</b> is  <a>length</a> unit, symbol: [lnk]. Definition of 1 link (Gunter's; Surveyor's) ≡  1⁄100 ch ≡ 0.66 ft (US) ≡ 7.92 in . .

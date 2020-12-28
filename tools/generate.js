@@ -33,6 +33,8 @@ const SI = {
 
   g0: 'ɡ0',
 
+  SpeedOfLight: 'c₀',
+
   degreeCelsius: '°C',
 }
 
