@@ -4,6 +4,7 @@ import {Expression} from "./expression";
 import {equal, simplify, stringify} from "./scale-definition";
 import {isScale, isUnresolvedScale} from "./utils";
 import {scaleSystemNameSymbol} from "./symbols";
+import {fromLinear} from "./chainable";
 
 export function compile(...scales: (Scale | ScaleSystem)[]): Calculator {
   const names: ScaleSystem = {};
@@ -55,7 +56,7 @@ export function compile(...scales: (Scale | ScaleSystem)[]): Calculator {
   return (expr, scale, precision = 3) => {
     const e = compileExpr(expr as any as Expression, resolver);
 
-    let res = typeof scale === 'string' ? resolver(scale) : scale;
+    let res = scale === '' ? {definition: {}, ...fromLinear(1)} : typeof scale === 'string' ? resolver(scale) : scale;
 
     if (!equal(e.definition, res.definition)) {
       throw new Error(`Calculation expected '${stringify(res.definition)}' and resulting '${stringify(e.definition)}' scales not match`);

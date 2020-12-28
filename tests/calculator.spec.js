@@ -39,4 +39,18 @@ describe('compile unit expression', () => {
 
     expect(test).toBe(.05);
   })
+
+  it('scalar result', () => {
+    const calc = compile(
+      base,
+      kilobase,
+      tick,
+      hypertick,
+      kbpht
+    );
+
+    const test = calc(div(unit`2000 b`, unit`.4 kb`), '', 2);
+
+    expect(test).toBe(5);
+  })
 });
