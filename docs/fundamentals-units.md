@@ -102,7 +102,6 @@ kelvin
 
 ##### Symbols:
 - ```[K]```
-- ```[K]```
 
 ##### Definition:
 ```LaTex
@@ -111,7 +110,7 @@ kelvin
 
 ##### Code:
 ```ts
-export const kelvin = scale('kelvin', 'K', 'K', true);
+export const kelvin = scale('kelvin', 'K', true);
 ```
 
 

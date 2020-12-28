@@ -37,7 +37,7 @@ export const ampere = scale('ampere', 'A', true);
  * @description <b>Kelvin</b> is the base unit of temperature in SI. The kelvin is now defined by fixing the numerical value of the Boltzmann constant k to 1.380 649×10−23 J⋅K−1. This unit is equal to kg⋅m2⋅s−2⋅K−1, where the kilogram, metre and second are defined in terms of the Planck constant, the speed of light, and the duration of the caesium-133 ground-state hyperfine transition respectively.
  * @link https://en.wikipedia.org/wiki/Kelvin
  */
-export const kelvin = scale('kelvin', 'K', 'K', true);
+export const kelvin = scale('kelvin', 'K', true);
 
 /**
  * @summary 1 mol = The amount of substance of exactly 6.02214076×10^23 elementary entities. This number is the fixed numerical value of the Avogadro constant, when expressed in the unit 1⁄mol.
