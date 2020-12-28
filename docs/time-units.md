@@ -17,7 +17,7 @@ Blink
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const blink = scale('Blink', 'blink', 1 / 4, second);
 ```
 
@@ -40,7 +40,7 @@ Century
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const century = scale('Century', 'century', 365.2425 * 100 * 86400, second);
 ```
 
@@ -63,7 +63,7 @@ Day
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const day = scale('Day', 'day', 86400, second);
 ```
 
@@ -86,7 +86,7 @@ Decade
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const decade = scale('Decade', 'decade', 365.2425 * 10 * 86400, second);
 ```
 
@@ -109,7 +109,7 @@ millisecond
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const millisecond = scale('millisecond', 'ms', 1 / 1000, second);
 ```
 
@@ -132,7 +132,7 @@ minute
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const minute = scale('minute', 'min', 60, second);
 ```
 
@@ -155,7 +155,7 @@ hour
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const hour = scale('hour', 'h', 3600, second);
 ```
 

@@ -18,7 +18,7 @@ Atomic mass unit, unified
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const AtomicMassUnitUnified = scale("Atomic mass unit, unified", "u", mul(unit(1, kilogram), 1.66053904e-27));
 ```
 
@@ -41,7 +41,7 @@ Atomic unit of mass, electron rest mass
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const AtomicUnitOfMassElectronRestMass = scale("Atomic unit of mass, electron rest mass", "me", mul(unit(1, kilogram), 9.10938356e-31));
 ```
 
@@ -64,7 +64,7 @@ Bag (coffee)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const BagCoffee = scale("Bag (coffee)", "bag (coffee)", mul(unit(1, kilogram), 60));
 ```
 
@@ -87,7 +87,7 @@ Centigram
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Centigram = scale("Centigram", "cg", mul(unit(1, kilogram), 0.00001));
 ```
 
@@ -110,7 +110,7 @@ Dalton
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Dalton = scale("Dalton", "Da", mul(unit(1, kilogram), 1.66053904e-27));
 ```
 
@@ -133,7 +133,7 @@ Decagram
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Decagram = scale("Decagram", "dag", mul(unit(1, kilogram), 0.01));
 ```
 
@@ -156,7 +156,7 @@ Gram
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Gram = scale("Gram", "g", mul(unit(1, kilogram), 0.001));
 ```
 
@@ -179,7 +179,7 @@ Grave
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Grave = scale("Grave", "gv.", mul(unit(1, kilogram), 1));
 ```
 
@@ -202,7 +202,7 @@ Hectogram
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Hectogram = scale("Hectogram", "hg", mul(unit(1, kilogram), 0.1));
 ```
 
@@ -225,7 +225,7 @@ Microgram
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Microgram = scale("Microgram", "µg", mul(unit(1, kilogram), 1e-9));
 ```
 
@@ -248,7 +248,7 @@ Milligram
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Milligram = scale("Milligram", "mg", mul(unit(1, kilogram), 0.000001));
 ```
 
@@ -271,7 +271,7 @@ Mite (metric)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const MiteMetric = scale("Mite (metric)", "mite (metric)", mul(unit(1, Gram), 0.05));
 ```
 
@@ -294,7 +294,7 @@ Nanogram
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Nanogram = scale("Nanogram", "ng", mul(unit(1, kilogram), 1e-12));
 ```
 
@@ -317,7 +317,7 @@ Ounce (US food nutrition labelling)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Ounce_USFoodNutritionLabelling = scale("Ounce (US food nutrition labelling)", "oz (US)", mul(unit(1, Gram), 28));
 ```
 
@@ -342,7 +342,7 @@ Pound (avoirdupois)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const PoundAvoirdupois = scale("Pound (avoirdupois)", "lb av", "lb", "lbs", mul(unit(1, kilogram), 0.45359237));
 ```
 
@@ -365,7 +365,7 @@ Pound (metric)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const PoundMetric = scale("Pound (metric)", "pound (metric)", mul(unit(1, Gram), 500));
 ```
 
@@ -388,7 +388,7 @@ Quarter (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const QuarterImperial = scale("Quarter (imperial)", "quarter (imp)", mul(unit(1, PoundAvoirdupois), 28));
 ```
 
@@ -411,7 +411,7 @@ Quintal (metric)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const QuintalMetric = scale("Quintal (metric)", "q", mul(unit(1, kilogram), 100));
 ```
 
@@ -434,7 +434,7 @@ Sheet
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Sheet = scale("Sheet", "sheet", mul(unit(1, PoundAvoirdupois), 0.0014285714285714286));
 ```
 
@@ -457,7 +457,7 @@ Slug; geepound; hyl
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SlugGeepoundHyl = scale("Slug; geepound; hyl", "slug", mul(unit(1, g0), unit(1, PoundAvoirdupois), pow(unit(1, second), 2), pow(unit(1, Foot_International), -1), 1));
 ```
 
@@ -480,7 +480,7 @@ Stone
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Stone = scale("Stone", "st", mul(unit(1, PoundAvoirdupois), 14));
 ```
 
@@ -504,7 +504,7 @@ Ton, long
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TonLong = scale("Ton, long", "ton", mul(unit(1, PoundAvoirdupois), 2240));
 ```
 
@@ -527,7 +527,7 @@ Ton, short
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TonShort = scale("Ton, short", "sh tn", mul(unit(1, PoundAvoirdupois), 2000));
 ```
 
@@ -550,7 +550,7 @@ Tonne
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Tonne = scale("Tonne", "t", mul(unit(1, kilogram), 1000));
 ```
 
@@ -573,7 +573,7 @@ Wey
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Wey = scale("Wey", "wey", mul(unit(1, Stone), 18));
 ```
 
@@ -596,7 +596,7 @@ Bag (Portland cement)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Bag_PortlandCement = scale("Bag (Portland cement)", "bag (Portland cement)", mul(unit(1, PoundAvoirdupois), 94));
 ```
 
@@ -619,7 +619,7 @@ Barge
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Barge = scale("Barge", "barge", mul(unit(1, TonShort), 22.5));
 ```
 
@@ -642,7 +642,7 @@ Carat (metric)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CaratMetric = scale("Carat (metric)", "ct", mul(unit(1, Milligram), 200));
 ```
 
@@ -665,7 +665,7 @@ Clove
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Clove = scale("Clove", "clove", mul(unit(1, PoundAvoirdupois), 8));
 ```
 
@@ -688,7 +688,7 @@ Crith
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Crith = scale("Crith", "crith", mul(unit(1, Milligram), 89.9349));
 ```
 
@@ -711,7 +711,7 @@ Gamma
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Gamma = scale("Gamma", "γ", mul(unit(1, Microgram), 1));
 ```
 
@@ -734,7 +734,7 @@ Grain
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Grain = scale("Grain", "gr", mul(unit(1, PoundAvoirdupois), 0.00014285714285714287));
 ```
 
@@ -758,7 +758,7 @@ Hundredweight (long)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const HundredweightLong = scale("Hundredweight (long)", "long cwt", "cwt", mul(unit(1, PoundAvoirdupois), 112));
 ```
 
@@ -781,7 +781,7 @@ Hundredweight (short); cental
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const HundredweightShortCental = scale("Hundredweight (short); cental", "sh cwt", mul(unit(1, PoundAvoirdupois), 100));
 ```
 
@@ -804,7 +804,7 @@ Kip
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Kip = scale("Kip", "kip", mul(unit(1, PoundAvoirdupois), 1000));
 ```
 
@@ -827,7 +827,7 @@ Mite
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Mite = scale("Mite", "mite", mul(unit(1, Grain), 0.05));
 ```
 
@@ -851,7 +851,7 @@ Ounce (avoirdupois)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const OunceAvoirdupois = scale("Ounce (avoirdupois)", "oz av", "oz", mul(unit(1, PoundAvoirdupois), 0.0625));
 ```
 
@@ -874,7 +874,7 @@ Point
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Point = scale("Point", "point", mul(unit(1, CaratMetric), 0.01));
 ```
 
@@ -897,7 +897,7 @@ Pound (troy)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const PoundTroy = scale("Pound (troy)", "lb t", mul(unit(1, Grain), 5760));
 ```
 
@@ -920,7 +920,7 @@ Quarter (informal)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const QuarterInformal = scale("Quarter (informal)", "quarter (informal)", mul(unit(1, TonShort), 0.25));
 ```
 
@@ -943,7 +943,7 @@ Quarter, long (informal)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const QuarterLongInformal = scale("Quarter, long (informal)", "quarter, long (informal)", mul(unit(1, TonLong), 0.25));
 ```
 
@@ -966,7 +966,7 @@ Scruple (apothecary)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const ScrupleApothecary = scale("Scruple (apothecary)", "s ap", mul(unit(1, Grain), 20));
 ```
 
@@ -989,7 +989,7 @@ Carat
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Carat = scale("Carat", "kt", mul(unit(1, Grain), 3.1666666666666665));
 ```
 
@@ -1012,7 +1012,7 @@ Dram (apothecary; troy)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const DramApothecaryTroy = scale("Dram (apothecary; troy)", "dr t", mul(unit(1, Grain), 60));
 ```
 
@@ -1036,7 +1036,7 @@ Dram (avoirdupois)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const DramAvoirdupois = scale("Dram (avoirdupois)", "dr av", "dr", mul(unit(1, Grain), 27.34375));
 ```
 
@@ -1059,7 +1059,7 @@ Ounce (apothecary; troy)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const OunceApothecaryTroy = scale("Ounce (apothecary; troy)", "oz t", mul(unit(1, PoundTroy), 0.08333333333333333));
 ```
 
@@ -1083,7 +1083,7 @@ Pennyweight
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Pennyweight = scale("Pennyweight", "dwt", mul(unit(1, OunceApothecaryTroy), 0.05));
 ```
 
@@ -1107,7 +1107,7 @@ Ton, assay (long)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TonAssayLong = scale("Ton, assay (long)", "AT", mul(unit(1, Milligram), unit(1, TonLong), pow(unit(1, OunceApothecaryTroy), -1), 1));
 ```
 
@@ -1130,7 +1130,7 @@ Ton, assay (short)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TonAssayShort = scale("Ton, assay (short)", "sh AT", mul(unit(1, Milligram), unit(1, TonShort), pow(unit(1, OunceApothecaryTroy), -1), 1));
 ```
 
@@ -1153,7 +1153,7 @@ Mark
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Mark = scale("Mark", "mark", mul(unit(1, OunceApothecaryTroy), 8));
 ```
 

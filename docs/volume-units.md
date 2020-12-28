@@ -17,7 +17,7 @@ Acre-foot
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const AcreFoot = scale("Acre-foot", "ac ft", mul(unit(1, Acre), unit(1, Foot_International), 1));
 ```
 
@@ -40,7 +40,7 @@ Acre-inch
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const AcreInch = scale("Acre-inch", "ac in", mul(unit(1, Acre), unit(1, Inch_International), 1));
 ```
 
@@ -63,7 +63,7 @@ Cord (firewood)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CordFirewood = scale("Cord (firewood)", "cord (firewood)", mul(pow(unit(1, metre), 3), 3.624556363776));
 ```
 
@@ -86,7 +86,7 @@ Cubic centimetre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicCentimetre = scale("Cubic centimetre", "cm³", mul(pow(unit(1, Centimetre), 3), 1));
 ```
 
@@ -109,7 +109,7 @@ Cubic decimetre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicDecimetre = scale("Cubic decimetre", "dm³", mul(pow(unit(1, Decimetre), 3), 1));
 ```
 
@@ -132,7 +132,7 @@ Cubic dekametre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicDekametre = scale("Cubic dekametre", "dam³", mul(pow(unit(1, Dekametre), 3), 1));
 ```
 
@@ -155,7 +155,7 @@ Cubic fathom
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicFathom = scale("Cubic fathom", "cu fm", mul(pow(unit(1, Fermi), 3), 1));
 ```
 
@@ -178,7 +178,7 @@ Cubic foot
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicFoot = scale("Cubic foot", "cu ft", mul(pow(unit(1, Foot_International), 3), 1));
 ```
 
@@ -201,7 +201,7 @@ Cubic hectometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicHectometre = scale("Cubic hectometre", "hm³", mul(pow(unit(1, Hectometre), 3), 1));
 ```
 
@@ -224,7 +224,7 @@ Cubic inch
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicInch = scale("Cubic inch", "cu in", mul(pow(unit(1, Inch_International), 3), 1));
 ```
 
@@ -247,7 +247,7 @@ Cubic kilometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicKilometre = scale("Cubic kilometre", "km³", mul(pow(unit(1, Kilometre), 3), 1));
 ```
 
@@ -270,7 +270,7 @@ Cubic metre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicMetre = scale("Cubic metre", "m³", mul(pow(unit(1, metre), 3), 1));
 ```
 
@@ -293,7 +293,7 @@ Cubic micrometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicMicrometre = scale("Cubic micrometre", "µm³", mul(pow(unit(1, Micrometre), 3), 1));
 ```
 
@@ -316,7 +316,7 @@ Cubic mile
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicMile = scale("Cubic mile", "cu mi", mul(pow(unit(1, MileInternational), 3), 1));
 ```
 
@@ -339,7 +339,7 @@ Cubic millimetre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicMillimetre = scale("Cubic millimetre", "mm³", mul(pow(unit(1, Millimetre), 3), 1));
 ```
 
@@ -362,7 +362,7 @@ Cubic nanometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicNanometre = scale("Cubic nanometre", "nm³", mul(pow(unit(1, Nanometre), 3), 1));
 ```
 
@@ -385,7 +385,7 @@ Cubic yard
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CubicYard = scale("Cubic yard", "cu yd", mul(unit(1, CubicFoot), 27));
 ```
 
@@ -408,7 +408,7 @@ Cup (metric)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CupMetric = scale("Cup (metric)", "c", mul(pow(unit(1, metre), 3), 0.00025));
 ```
 
@@ -431,7 +431,7 @@ Gallon (beer)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const GallonBeer = scale("Gallon (beer)", "beer gal", mul(unit(1, CubicInch), 282));
 ```
 
@@ -454,7 +454,7 @@ Gallon (US fluid; Wine)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Gallon_USFluid_Wine = scale("Gallon (US fluid; Wine)", "gal (US)", mul(unit(1, CubicInch), 231));
 ```
 
@@ -477,7 +477,7 @@ Lambda
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Lambda = scale("Lambda", "λ", mul(pow(unit(1, Millimetre), 3), 1));
 ```
 
@@ -501,7 +501,7 @@ Litre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Litre = scale("Litre", "L", mul(pow(unit(1, Decimetre), 3), 1));
 ```
 
@@ -524,7 +524,7 @@ Load
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Load = scale("Load", "load", mul(unit(1, CubicFoot), 50));
 ```
 
@@ -548,7 +548,7 @@ Microlitre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Microlitre = scale("Microlitre", "µL", mul(unit(1, Litre), 0.000001));
 ```
 
@@ -572,7 +572,7 @@ Millilitre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Millilitre = scale("Millilitre", "mL", mul(unit(1, Litre), 0.001));
 ```
 
@@ -596,7 +596,7 @@ Ounce (fluid US customary)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const OunceFluid_USCustomary = scale("Ounce (fluid US customary)", "US fl oz", mul(unit(1, Gallon_USFluid_Wine), 0.0078125));
 ```
 
@@ -620,7 +620,7 @@ Ounce (fluid US food nutrition labeling)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const OunceFluid_USFoodNutritionLabeling = scale("Ounce (fluid US food nutrition labeling)", "US fl oz (food)", mul(unit(1, Millilitre), 30));
 ```
 
@@ -643,7 +643,7 @@ Perch
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Perch = scale("Perch", "per", mul(pow(unit(1, metre), 3), 0.700841953152));
 ```
 
@@ -667,7 +667,7 @@ Picolitre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Picolitre = scale("Picolitre", "pL", mul(unit(1, Litre), 1e-9));
 ```
 
@@ -690,7 +690,7 @@ Pinch (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Pinch_US = scale("Pinch (US)", "pinch (US)", mul(unit(1, OunceFluid_USCustomary), 0.020833333333333332));
 ```
 
@@ -713,7 +713,7 @@ Pint (US fluid)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Pint_USFluid = scale("Pint (US fluid)", "pt (US fl)", mul(unit(1, Gallon_USFluid_Wine), 0.125));
 ```
 
@@ -736,7 +736,7 @@ Pony
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Pony = scale("Pony", "pony", mul(unit(1, OunceFluid_USCustomary), 0.75));
 ```
 
@@ -759,7 +759,7 @@ Quart (US fluid)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Quart_USFluid = scale("Quart (US fluid)", "qt (US)", mul(unit(1, Gallon_USFluid_Wine), 0.25));
 ```
 
@@ -782,7 +782,7 @@ Register ton
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const RegisterTon = scale("Register ton", "register ton", mul(unit(1, CubicFoot), 100));
 ```
 
@@ -805,7 +805,7 @@ Shot (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Shot_US = scale("Shot (US)", "shot (US)", mul(unit(1, OunceFluid_USCustomary), 1.5));
 ```
 
@@ -828,7 +828,7 @@ Tablespoon (Australian metric)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Tablespoon_AustralianMetric = scale("Tablespoon (Australian metric)", "tablespoon (Australian metric)", mul(unit(1, Millilitre), 20));
 ```
 
@@ -851,7 +851,7 @@ Tablespoon (metric)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TablespoonMetric = scale("Tablespoon (metric)", "tbsp (metric)", mul(unit(1, Millilitre), 15));
 ```
 
@@ -874,7 +874,7 @@ Tablespoon (US customary)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Tablespoon_USCustomary = scale("Tablespoon (US customary)", "tbsp (US)", mul(unit(1, OunceFluid_USCustomary), 0.5));
 ```
 
@@ -897,7 +897,7 @@ Tablespoon (US food nutrition labeling)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Tablespoon_USFoodNutritionLabeling = scale("Tablespoon (US food nutrition labeling)", "tbsp (US food)", mul(unit(1, Millilitre), 15));
 ```
 
@@ -920,7 +920,7 @@ Teaspoon (metric)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TeaspoonMetric = scale("Teaspoon (metric)", "tsp (metric)", mul(unit(1, Millilitre), 5));
 ```
 
@@ -943,7 +943,7 @@ Teaspoon (US customary)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Teaspoon_USCustomary = scale("Teaspoon (US customary)", "tsp (US)", mul(unit(1, OunceFluid_USCustomary), 0.16666666666666666));
 ```
 
@@ -966,7 +966,7 @@ Teaspoon (US food nutrition labeling)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Teaspoon_USFoodNutritionLabeling = scale("Teaspoon (US food nutrition labeling)", "tsp (US food)", mul(unit(1, Millilitre), 5));
 ```
 
@@ -989,7 +989,7 @@ Timber foot
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TimberFoot = scale("Timber foot", "timber foot", mul(unit(1, CubicFoot), 1));
 ```
 
@@ -1012,7 +1012,7 @@ Ton (displacement)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TonDisplacement = scale("Ton (displacement)", "DT", mul(unit(1, CubicFoot), 35));
 ```
 
@@ -1035,7 +1035,7 @@ Ton (freight)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TonFreight = scale("Ton (freight)", "ton (freight)", mul(unit(1, CubicFoot), 40));
 ```
 
@@ -1058,7 +1058,7 @@ Tun
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Tun = scale("Tun", "tun", mul(unit(1, Gallon_USFluid_Wine), 252));
 ```
 
@@ -1082,7 +1082,7 @@ Barrel (petroleum); archaic blue-barrel
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const BarrelPetroleumArchaicBlueBarrel = scale("Barrel (petroleum); archaic blue-barrel", "bl", mul(unit(1, Gallon_USFluid_Wine), 42));
 ```
 
@@ -1105,7 +1105,7 @@ Barrel (US dry)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Barrel_USDry = scale("Barrel (US dry)", "bl (US)", mul(unit(1, Quart_USFluid), 105));
 ```
 
@@ -1128,7 +1128,7 @@ Barrel (US fluid)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Barrel_USFluid = scale("Barrel (US fluid)", "fl bl (US)", mul(unit(1, Gallon_USFluid_Wine), 31.5));
 ```
 
@@ -1151,7 +1151,7 @@ Board-foot
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const BoardFoot = scale("Board-foot", "fbm", mul(unit(1, CubicInch), 144));
 ```
 
@@ -1174,7 +1174,7 @@ Bushel (US dry level)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Bushel_USDryLevel = scale("Bushel (US dry level)", "bu (US lvl)", mul(unit(1, CubicInch), 2150.42));
 ```
 
@@ -1197,7 +1197,7 @@ Butt, pipe
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const ButtPipe = scale("Butt, pipe", "butt, pipe", mul(unit(1, Gallon_USFluid_Wine), 126));
 ```
 
@@ -1220,7 +1220,7 @@ Centilitre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Centilitre = scale("Centilitre", "cL, cl", mul(unit(1, Litre), 0.01));
 ```
 
@@ -1243,7 +1243,7 @@ Cord-foot
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CordFoot = scale("Cord-foot", "cord-foot", mul(unit(1, CubicFoot), 16));
 ```
 
@@ -1266,7 +1266,7 @@ Cup (US customary)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Cup_USCustomary = scale("Cup (US customary)", "c (US)", mul(unit(1, Gallon_USFluid_Wine), 0.0625));
 ```
 
@@ -1289,7 +1289,7 @@ Cup (US food nutrition labeling)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Cup_USFoodNutritionLabeling = scale("Cup (US food nutrition labeling)", "c (US food)", mul(unit(1, Millilitre), 240));
 ```
 
@@ -1312,7 +1312,7 @@ Dash (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Dash_US = scale("Dash (US)", "dash (US)", mul(unit(1, OunceFluid_USCustomary), 0.010416666666666666));
 ```
 
@@ -1336,7 +1336,7 @@ Decilitre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Decilitre = scale("Decilitre", "dL", mul(unit(1, Litre), 0.1));
 ```
 
@@ -1360,7 +1360,7 @@ Dekalitre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Dekalitre = scale("Dekalitre", "daL", mul(unit(1, Litre), 10));
 ```
 
@@ -1383,7 +1383,7 @@ Drop (medical)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const DropMedical = scale("Drop (medical)", "gtt (med.)", mul(unit(1, Millilitre), 0.08333333333333333));
 ```
 
@@ -1406,7 +1406,7 @@ Drop (metric)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const DropMetric = scale("Drop (metric)", "gtt (metric)", mul(unit(1, Millilitre), 0.05));
 ```
 
@@ -1429,7 +1429,7 @@ Drop (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Drop_US = scale("Drop (US)", "gtt (US)", mul(unit(1, OunceFluid_USCustomary), 0.002777777777777778));
 ```
 
@@ -1452,7 +1452,7 @@ Fifth
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Fifth = scale("Fifth", "fifth", mul(unit(1, Gallon_USFluid_Wine), 0.2));
 ```
 
@@ -1475,7 +1475,7 @@ Fluid dram (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const FluidDram_US = scale("Fluid dram (US)", "fl dr (US)", mul(unit(1, OunceFluid_USCustomary), 0.125));
 ```
 
@@ -1498,7 +1498,7 @@ Gallon (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const GallonImperial = scale("Gallon (imperial)", "gal (imp)", mul(unit(1, Litre), 4.54609));
 ```
 
@@ -1521,7 +1521,7 @@ Gallon (US dry)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Gallon_USDry = scale("Gallon (US dry)", "gal (US dry)", mul(unit(1, Bushel_USDryLevel), 0.125));
 ```
 
@@ -1544,7 +1544,7 @@ Gill (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Gill_US = scale("Gill (US)", "gi (US)", mul(unit(1, OunceFluid_USCustomary), 4));
 ```
 
@@ -1568,7 +1568,7 @@ Hectolitre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Hectolitre = scale("Hectolitre", "hL", mul(unit(1, Litre), 100));
 ```
 
@@ -1591,7 +1591,7 @@ Hogshead (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Hogshead_US = scale("Hogshead (US)", "hhd (US)", mul(unit(1, Barrel_USFluid), 2));
 ```
 
@@ -1614,7 +1614,7 @@ Jigger (bartending)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const JiggerBartending = scale("Jigger (bartending)", "jigger (bartending)", mul(unit(1, OunceFluid_USCustomary), 1.5));
 ```
 
@@ -1637,7 +1637,7 @@ Kilderkin
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Kilderkin = scale("Kilderkin", "kilderkin", mul(unit(1, GallonImperial), 18));
 ```
 
@@ -1660,7 +1660,7 @@ Minim (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Minim_US = scale("Minim (US)", "min (US)", mul(unit(1, OunceFluid_USCustomary), 0.0020833333333333333));
 ```
 
@@ -1683,7 +1683,7 @@ Ounce (fluid imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const OunceFluidImperial = scale("Ounce (fluid imperial)", "fl oz (imp)", mul(unit(1, GallonImperial), 0.00625));
 ```
 
@@ -1706,7 +1706,7 @@ Peck (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const PeckImperial = scale("Peck (imperial)", "pk (imp)", mul(unit(1, GallonImperial), 2));
 ```
 
@@ -1729,7 +1729,7 @@ Peck (US dry)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Peck_USDry = scale("Peck (US dry)", "pk (US)", mul(unit(1, Bushel_USDryLevel), 0.25));
 ```
 
@@ -1752,7 +1752,7 @@ Pint (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const PintImperial = scale("Pint (imperial)", "pt (imp)", mul(unit(1, GallonImperial), 0.125));
 ```
 
@@ -1775,7 +1775,7 @@ Pint (US dry)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Pint_USDry = scale("Pint (US dry)", "pt (US dry)", mul(unit(1, Gallon_USDry), 0.125));
 ```
 
@@ -1799,7 +1799,7 @@ Pottle; quartern
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const PottleQuartern = scale("Pottle; quartern", "pottle", mul(unit(1, OunceFluidImperial), 80));
 ```
 
@@ -1822,7 +1822,7 @@ Quart (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const QuartImperial = scale("Quart (imperial)", "qt (imp)", mul(unit(1, GallonImperial), 0.25));
 ```
 
@@ -1845,7 +1845,7 @@ Quart (US dry)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Quart_USDry = scale("Quart (US dry)", "qt (US dry)", mul(unit(1, Gallon_USDry), 0.25));
 ```
 
@@ -1868,7 +1868,7 @@ Sack (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Sack_US = scale("Sack (US)", "sack (US)", mul(unit(1, Bushel_USDryLevel), 3));
 ```
 
@@ -1891,7 +1891,7 @@ Strike (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Strike_US = scale("Strike (US)", "strike (US)", mul(unit(1, Bushel_USDryLevel), 2));
 ```
 
@@ -1914,7 +1914,7 @@ Tablespoon (Canadian)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Tablespoon_Canadian = scale("Tablespoon (Canadian)", "tbsp", mul(unit(1, OunceFluidImperial), 0.5));
 ```
 
@@ -1937,7 +1937,7 @@ Tablespoon (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TablespoonImperial = scale("Tablespoon (imperial)", "tbsp (imp)", mul(unit(1, OunceFluidImperial), 0.625));
 ```
 
@@ -1960,7 +1960,7 @@ Teaspoon (Canadian)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Teaspoon_Canadian = scale("Teaspoon (Canadian)", "tsp", mul(unit(1, OunceFluidImperial), 0.16666666666666666));
 ```
 
@@ -1983,7 +1983,7 @@ Wey (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Wey_US = scale("Wey (US)", "wey (US)", mul(unit(1, Bushel_USDryLevel), 40));
 ```
 
@@ -2006,7 +2006,7 @@ Barrel (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const BarrelImperial = scale("Barrel (imperial)", "bl (imp)", mul(unit(1, GallonImperial), 36));
 ```
 
@@ -2029,7 +2029,7 @@ Bucket (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const BucketImperial = scale("Bucket (imperial)", "bkt", mul(unit(1, GallonImperial), 4));
 ```
 
@@ -2052,7 +2052,7 @@ Bushel (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const BushelImperial = scale("Bushel (imperial)", "bu (imp)", mul(unit(1, GallonImperial), 8));
 ```
 
@@ -2075,7 +2075,7 @@ Bushel (US dry heaped)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Bushel_USDryHeaped = scale("Bushel (US dry heaped)", "bu (US)", mul(unit(1, Bushel_USDryLevel), 1.25));
 ```
 
@@ -2098,7 +2098,7 @@ Coomb
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Coomb = scale("Coomb", "coomb", mul(unit(1, BushelImperial), 4));
 ```
 
@@ -2121,7 +2121,7 @@ Cup (breakfast)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CupBreakfast = scale("Cup (breakfast)", "cup (breakfast)", mul(unit(1, OunceFluidImperial), 10));
 ```
 
@@ -2144,7 +2144,7 @@ Cup (Canadian)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Cup_Canadian = scale("Cup (Canadian)", "c (CA)", mul(unit(1, OunceFluidImperial), 8));
 ```
 
@@ -2167,7 +2167,7 @@ Drop (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const DropImperial = scale("Drop (imperial)", "gtt (imp)", mul(unit(1, OunceFluidImperial), 0.003472222222222222));
 ```
 
@@ -2190,7 +2190,7 @@ Firkin
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Firkin = scale("Firkin", "firkin", mul(unit(1, GallonImperial), 9));
 ```
 
@@ -2213,7 +2213,7 @@ Fluid drachm (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const FluidDrachmImperial = scale("Fluid drachm (imperial)", "fl dr (imp)", mul(unit(1, OunceFluidImperial), 0.125));
 ```
 
@@ -2236,7 +2236,7 @@ Fluid scruple (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const FluidScrupleImperial = scale("Fluid scruple (imperial)", "fl s", mul(unit(1, OunceFluidImperial), 0.041666666666666664));
 ```
 
@@ -2260,7 +2260,7 @@ Gill (imperial); Noggin
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const GillImperial_Noggin = scale("Gill (imperial); Noggin", "gi (imp)", mul(unit(1, OunceFluidImperial), 5));
 ```
 
@@ -2283,7 +2283,7 @@ Hogshead (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const HogsheadImperial = scale("Hogshead (imperial)", "hhd (imp)", mul(unit(1, BarrelImperial), 2));
 ```
 
@@ -2306,7 +2306,7 @@ Last
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Last = scale("Last", "last", mul(unit(1, BushelImperial), 80));
 ```
 
@@ -2329,7 +2329,7 @@ Minim (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const MinimImperial = scale("Minim (imperial)", "min (imp)", mul(unit(1, FluidDrachmImperial), 0.016666666666666666));
 ```
 
@@ -2352,7 +2352,7 @@ Pinch (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const PinchImperial = scale("Pinch (imperial)", "pinch (imperial)", mul(unit(1, GillImperial_Noggin), 0.005208333333333333));
 ```
 
@@ -2375,7 +2375,7 @@ Quarter; pail
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const QuarterPail = scale("Quarter; pail", "pail", mul(unit(1, BushelImperial), 8));
 ```
 
@@ -2399,7 +2399,7 @@ Sack (imperial); bag
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SackImperialBag = scale("Sack (imperial); bag", "sack (imperial)", mul(unit(1, BushelImperial), 3));
 ```
 
@@ -2422,7 +2422,7 @@ Seam
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Seam = scale("Seam", "seam", mul(unit(1, BushelImperial), 8));
 ```
 
@@ -2445,7 +2445,7 @@ Strike (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const StrikeImperial = scale("Strike (imperial)", "strike (imp)", mul(unit(1, BushelImperial), 2));
 ```
 
@@ -2468,7 +2468,7 @@ Teaspoon (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TeaspoonImperial = scale("Teaspoon (imperial)", "tsp (imp)", mul(unit(1, GillImperial_Noggin), 0.041666666666666664));
 ```
 
@@ -2491,7 +2491,7 @@ Ton (water)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const TonWater = scale("Ton (water)", "ton (water)", mul(unit(1, BushelImperial), 28));
 ```
 
@@ -2514,7 +2514,7 @@ Dash (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const DashImperial = scale("Dash (imperial)", "dash (imp)", mul(unit(1, GillImperial_Noggin), 0.0026041666666666665));
 ```
 
@@ -2537,7 +2537,7 @@ Dessertspoon (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const DessertspoonImperial = scale("Dessertspoon (imperial)", "dessertspoon (imp)", mul(unit(1, GillImperial_Noggin), 0.08333333333333333));
 ```
 

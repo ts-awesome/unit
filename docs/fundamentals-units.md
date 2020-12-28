@@ -17,7 +17,7 @@ second
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const second = scale('second', 's', true);
 ```
 
@@ -40,7 +40,7 @@ metre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const metre = scale('metre', 'm', true);
 ```
 
@@ -63,7 +63,7 @@ kilogram
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const kilogram = scale('kilogram', 'kg', true);
 ```
 
@@ -86,7 +86,7 @@ ampere
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const ampere = scale('ampere', 'A', true);
 ```
 
@@ -110,7 +110,7 @@ kelvin
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const kelvin = scale('kelvin', 'K', 'K', true);
 ```
 
@@ -133,7 +133,7 @@ mole
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const mole = scale('mole', 'mol', true);
 ```
 
@@ -156,7 +156,7 @@ candela
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const candela = scale('candela', 'cd', true);
 ```
 
@@ -180,7 +180,7 @@ g₀
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const g0 = scale('g₀', 'g0', 'g₀', mul(unit(1, metre), unit(1, second).pow(-2), 9.80665));
 ```
 
@@ -204,7 +204,7 @@ Speed of light
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SpeedOfLight = scale('Speed of light', 'с0', 'с₀', mul(unit(1, metre), unit(1, second).pow(-1), 299792458));
 ```
 

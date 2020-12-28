@@ -61,7 +61,7 @@ ${summary ?? ''}
 \`\`\`
 
 ##### Code:
-\`\`\`TypeScript
+\`\`\`ts
 ${code}
 \`\`\`
 

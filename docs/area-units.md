@@ -17,7 +17,7 @@ Are
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Are = scale("Are", "a", mul(pow(unit(1, metre), 2), 100));
 ```
 
@@ -40,7 +40,7 @@ Barn
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Barn = scale("Barn", "b", mul(pow(unit(1, metre), 2), 1e-28));
 ```
 
@@ -63,7 +63,7 @@ Board
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Board = scale("Board", "bd", mul(unit(1, Inch_International), unit(1, Foot_International), 1));
 ```
 
@@ -86,7 +86,7 @@ Circular mil; circular thou
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CircularMilCircularThou = scale("Circular mil; circular thou", "circ mil", mul(pow(unit(1, MilThou), 2), 0.7853981633974483));
 ```
 
@@ -109,7 +109,7 @@ Cord
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Cord = scale("Cord", "cord", mul(unit(1, Board), 192));
 ```
 
@@ -132,7 +132,7 @@ Dunam
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Dunam = scale("Dunam", "dunam", mul(pow(unit(1, metre), 2), 1000));
 ```
 
@@ -155,7 +155,7 @@ Hectare
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Hectare = scale("Hectare", "ha", mul(pow(unit(1, metre), 2), 10000));
 ```
 
@@ -178,7 +178,7 @@ Section
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Section = scale("Section", "section", mul(pow(unit(1, MileInternational), 2), 1));
 ```
 
@@ -201,7 +201,7 @@ Shed
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Shed = scale("Shed", "shed", mul(pow(unit(1, metre), 2), 1e-52));
 ```
 
@@ -224,7 +224,7 @@ Square centimetre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareCentimetre = scale("Square centimetre", "cm²", mul(pow(unit(1, Centimetre), 2), 1));
 ```
 
@@ -247,7 +247,7 @@ Square decimetre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareDecimetre = scale("Square decimetre", "dm²", mul(pow(unit(1, Decimetre), 2), 1));
 ```
 
@@ -270,7 +270,7 @@ Square foot
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareFoot = scale("Square foot", "sq ft", mul(pow(unit(1, Foot_International), 2), 1));
 ```
 
@@ -293,7 +293,7 @@ Square inch
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareInch = scale("Square inch", "sq in", mul(pow(unit(1, Inch_International), 2), 1));
 ```
 
@@ -316,7 +316,7 @@ Square kilometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareKilometre = scale("Square kilometre", "km²", mul(pow(unit(1, Kilometre), 2), 1));
 ```
 
@@ -339,7 +339,7 @@ Square link (Gunters)(International)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareLink_GunterS_International = scale("Square link (Gunter's)(International)", "sq lnk", mul(pow(unit(1, Link_GunterS_SurveyorS), 2), 1));
 ```
 
@@ -362,7 +362,7 @@ Square link (Ramsdens)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareLink_RamsdenS = scale("Square link (Ramsden's)", "sq lnk (Ramsden)", mul(pow(unit(1, Foot_International), 2), 1));
 ```
 
@@ -385,7 +385,7 @@ Square metre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareMetre = scale("Square metre", "m²", mul(pow(unit(1, metre), 2), 1));
 ```
 
@@ -408,7 +408,7 @@ Square micrometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareMicrometre = scale("Square micrometre", "µm²", mul(pow(unit(1, Micrometre), 2), 1));
 ```
 
@@ -431,7 +431,7 @@ Square mil; square thou
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareMilSquareThou = scale("Square mil; square thou", "sq mil", mul(pow(unit(1, MilThou), 2), 1));
 ```
 
@@ -454,7 +454,7 @@ Square mile
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareMile = scale("Square mile", "sq mi", mul(pow(unit(1, MileInternational), 2), 1));
 ```
 
@@ -477,7 +477,7 @@ Square millimetre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareMillimetre = scale("Square millimetre", "mm²", mul(pow(unit(1, Millimetre), 2), 1));
 ```
 
@@ -500,7 +500,7 @@ Square nanometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareNanometre = scale("Square nanometre", "nm²", mul(pow(unit(1, Nanometre), 2), 1));
 ```
 
@@ -523,7 +523,7 @@ Square (roofing)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareRoofing = scale("Square (roofing)", "square (roofing)", mul(unit(1, SquareFoot), 100));
 ```
 
@@ -546,7 +546,7 @@ Square yard
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareYard = scale("Square yard", "sq yd", mul(pow(unit(1, Yard_International), 2), 1));
 ```
 
@@ -569,7 +569,7 @@ Stremma
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Stremma = scale("Stremma", "stremma", mul(pow(unit(1, metre), 2), 1000));
 ```
 
@@ -592,7 +592,7 @@ Township
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Township = scale("Township", "township", mul(pow(unit(1, Mile_US_Survey), 2), 36));
 ```
 
@@ -615,7 +615,7 @@ Acre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Acre = scale("Acre", "ac", mul(unit(1, SquareMile), 0.0015625));
 ```
 
@@ -638,7 +638,7 @@ Barony
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Barony = scale("Barony", "barony", mul(unit(1, Acre), 4000));
 ```
 
@@ -661,7 +661,7 @@ Circular inch
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CircularInch = scale("Circular inch", "circ in", mul(unit(1, SquareInch), 0.7853981633974483));
 ```
 
@@ -684,7 +684,7 @@ Cuerda (PR Survey)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Cuerda_PR_Survey = scale("Cuerda (PR Survey)", "cda", mul(unit(1, Acre), 0.971));
 ```
 
@@ -707,7 +707,7 @@ Guntha (India)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Guntha_India = scale("Guntha (India)", "guntha (India)", mul(unit(1, SquareYard), 121));
 ```
 
@@ -730,7 +730,7 @@ Hide
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Hide = scale("Hide", "hide", mul(unit(1, Acre), 120));
 ```
 
@@ -753,7 +753,7 @@ Rood
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Rood = scale("Rood", "ro", mul(unit(1, Acre), 0.25));
 ```
 
@@ -776,7 +776,7 @@ Square chain
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const SquareChain = scale("Square chain", "sq ch", mul(unit(1, Acre), 0.1));
 ```
 
@@ -799,7 +799,7 @@ Yardland
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Yardland = scale("Yardland", "yardland", mul(unit(1, Acre), 30));
 ```
 

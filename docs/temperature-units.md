@@ -17,7 +17,7 @@ degree Celsius
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const degreeCelsius = scale('degree Celsius', '°C', {
 ```
 
@@ -41,7 +41,7 @@ delta degree Celsius
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const deltaDegreeCelsius = scale('delta degree Celsius', 'Δ°C','d°C', 1, kelvin);
 ```
 
@@ -64,7 +64,7 @@ degree Fahrenheit
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const degreeFahrenheit = scale('degree Fahrenheit', '°F', {
 ```
 
@@ -88,7 +88,7 @@ delta degree Fahrenheit
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const deltaDegreeFahrenheit = scale('delta degree Fahrenheit', 'Δ°F', 'd°F', 5/9, kelvin);
 ```
 

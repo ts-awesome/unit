@@ -17,7 +17,7 @@ Units of length
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const angstrom = scale("ångström", "Å", mul(unit(1, metre), 1e-10));
 ```
 
@@ -40,7 +40,7 @@ Astronomical unit
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const AstronomicalUnit = scale("Astronomical unit", "AU", mul(unit(1, metre), 149597870700));
 ```
 
@@ -63,7 +63,7 @@ Bohr, atomic unit of length
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const BohrAtomicUnitOfLength = scale("Bohr, atomic unit of length", "a₀", mul(unit(1, metre), 5.29e-11));
 ```
 
@@ -86,7 +86,7 @@ Centimetre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Centimetre = scale("Centimetre", "cm", mul(unit(1, metre), 0.01));
 ```
 
@@ -109,7 +109,7 @@ Decimetre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Decimetre = scale("Decimetre", "dm", mul(unit(1, metre), 0.1));
 ```
 
@@ -132,7 +132,7 @@ Dekametre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Dekametre = scale("Dekametre", "dam", mul(unit(1, metre), 10));
 ```
 
@@ -155,7 +155,7 @@ Fermi
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Fermi = scale("Fermi", "fm", mul(unit(1, metre), 1e-15));
 ```
 
@@ -178,7 +178,7 @@ Foot (International)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Foot_International = scale("Foot (International)", "ft", mul(unit(1, metre), 0.3048));
 ```
 
@@ -201,7 +201,7 @@ Foot, metric
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const FootMetric = scale("Foot, metric", "mf", mul(unit(1, metre), 0.31622776601683794));
 ```
 
@@ -224,7 +224,7 @@ Foot, metric (long)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const FootMetricLong = scale("Foot, metric (long)", "lmf", mul(unit(1, metre), 0.3333333333333333));
 ```
 
@@ -247,7 +247,7 @@ Foot, metric (short)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const FootMetricShort = scale("Foot, metric (short)", "smf", mul(unit(1, metre), 0.3));
 ```
 
@@ -270,7 +270,7 @@ Foot (US Survey)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Foot_US_Survey = scale("Foot (US Survey)", "ft (US)", mul(unit(1, metre), 0.3048006096012192));
 ```
 
@@ -293,7 +293,7 @@ Furlong
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Furlong = scale("Furlong", "fur", mul(unit(1, Foot_International), 660));
 ```
 
@@ -316,7 +316,7 @@ Hectometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Hectometre = scale("Hectometre", "hm", mul(unit(1, metre), 100));
 ```
 
@@ -339,7 +339,7 @@ Inch (International)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Inch_International = scale("Inch (International)", "in", mul(unit(1, Foot_International), 0.08333333333333333));
 ```
 
@@ -362,7 +362,7 @@ Kilometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Kilometre = scale("Kilometre", "km", mul(unit(1, metre), 1000));
 ```
 
@@ -385,7 +385,7 @@ League (land)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const LeagueLand = scale("League (land)", "lea", mul(unit(1, Foot_US_Survey), 5280));
 ```
 
@@ -408,7 +408,7 @@ Light-second
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const LightSecond = scale("Light-second", "light-second", mul(unit(1, SpeedOfLight), unit(1, second), 1));
 ```
 
@@ -431,7 +431,7 @@ Line
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Line = scale("Line", "ln", mul(unit(1, Inch_International), 0.08333333333333333));
 ```
 
@@ -454,7 +454,7 @@ Link (Gunters; Surveyors)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Link_GunterS_SurveyorS = scale("Link (Gunter's; Surveyor's)", "lnk", mul(unit(1, Inch_International), 7.92));
 ```
 
@@ -477,7 +477,7 @@ Link (Ramsdens; Engineers)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Link_RamsdenS_EngineerS = scale("Link (Ramsden's; Engineer's)", "lnk (Ramsden)", mul(unit(1, Foot_International), 1));
 ```
 
@@ -500,7 +500,7 @@ Mickey
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Mickey = scale("Mickey", "mickey", mul(unit(1, Inch_International), 0.005));
 ```
 
@@ -523,7 +523,7 @@ Micrometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Micrometre = scale("Micrometre", "µm", mul(unit(1, metre), 0.000001));
 ```
 
@@ -546,7 +546,7 @@ Micron
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Micron = scale("Micron", "µ", mul(unit(1, metre), 0.000001));
 ```
 
@@ -569,7 +569,7 @@ Mil (Sweden and Norway)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Mil_SwedenAnd_Norway = scale("Mil (Sweden and Norway)", "mil (Sweden and Norway)", mul(unit(1, Kilometre), 10));
 ```
 
@@ -592,7 +592,7 @@ Mil; thou
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const MilThou = scale("Mil; thou", "mil", mul(unit(1, Inch_International), 0.001));
 ```
 
@@ -615,7 +615,7 @@ Mile (international)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const MileInternational = scale("Mile (international)", "mi", mul(unit(1, Foot_International), 5280));
 ```
 
@@ -638,7 +638,7 @@ Mile (tactical or data)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const MileTacticalOrData = scale("Mile (tactical or data)", "mile (tactical or data)", mul(unit(1, Foot_International), 6000));
 ```
 
@@ -661,7 +661,7 @@ Mile (US Survey)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Mile_US_Survey = scale("Mile (US Survey)", "mi (US)", mul(unit(1, Foot_US_Survey), 5280));
 ```
 
@@ -684,7 +684,7 @@ Millimetre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Millimetre = scale("Millimetre", "mm", mul(unit(1, metre), 0.001));
 ```
 
@@ -707,7 +707,7 @@ Nail (cloth)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const NailCloth = scale("Nail (cloth)", "nail (cloth)", mul(unit(1, Inch_International), 2.25));
 ```
 
@@ -730,7 +730,7 @@ Nanometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Nanometre = scale("Nanometre", "nm", mul(unit(1, metre), 1e-9));
 ```
 
@@ -754,7 +754,7 @@ Nautical mile (Admiralty)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const NauticalMile_Admiralty = scale("Nautical mile (Admiralty)", "NM (Adm)", mul(unit(1, Foot_International), 6080));
 ```
 
@@ -778,7 +778,7 @@ Nautical mile (international)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const NauticalMileInternational = scale("Nautical mile (international)", "NM", mul(unit(1, metre), 1852));
 ```
 
@@ -801,7 +801,7 @@ Pace
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Pace = scale("Pace", "pace", mul(unit(1, Foot_International), 2.5));
 ```
 
@@ -824,7 +824,7 @@ Palm
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Palm = scale("Palm", "palm", mul(unit(1, Inch_International), 3));
 ```
 
@@ -847,7 +847,7 @@ Parsec
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Parsec = scale("Parsec", "pc", mul(unit(1, metre), 30856775810000000));
 ```
 
@@ -870,7 +870,7 @@ Picometre (old: bicron, stigma)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const PicometreOldBicronStigma = scale("Picometre (old: bicron, stigma)", "pm (old)", mul(unit(1, metre), 1e-12));
 ```
 
@@ -893,7 +893,7 @@ Pikometre
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Pikometre = scale("Pikometre", "pm", mul(unit(1, metre), 1e-12));
 ```
 
@@ -916,7 +916,7 @@ Point (American, English)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Point_American_English = scale("Point (American, English)", "pt (US)", mul(unit(1, Inch_International), 0.013836617223821119));
 ```
 
@@ -939,7 +939,7 @@ Point (Didot; European)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Point_Didot_European = scale("Point (Didot; European)", "pt (Didot)", mul(unit(1, Centimetre), 0.03759398496240601));
 ```
 
@@ -962,7 +962,7 @@ Point (PostScript)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Point_PostScript = scale("Point (PostScript)", "pt", mul(unit(1, Inch_International), 0.013888888888888888));
 ```
 
@@ -985,7 +985,7 @@ Point (TeX)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Point_TeX = scale("Point (TeX)", "pt (TeX)", mul(unit(1, Inch_International), 0.013837000138370002));
 ```
 
@@ -1008,7 +1008,7 @@ Shaku (Japan)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Shaku_Japan = scale("Shaku (Japan)", "shaku (Japan)", mul(unit(1, metre), 0.30303030303030304));
 ```
 
@@ -1031,7 +1031,7 @@ Spat
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Spat = scale("Spat", "spat", mul(unit(1, metre), 1000000000000));
 ```
 
@@ -1054,7 +1054,7 @@ Twip
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Twip = scale("Twip", "twp", mul(unit(1, Inch_International), 0.0006944444444444445));
 ```
 
@@ -1077,7 +1077,7 @@ X unit; siegbahn
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const XUnitSiegbahn = scale("X unit; siegbahn", "xu", mul(unit(1, metre), 1.0021e-13));
 ```
 
@@ -1100,7 +1100,7 @@ Yard (International)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Yard_International = scale("Yard (International)", "yd", mul(unit(1, Inch_International), 36));
 ```
 
@@ -1123,7 +1123,7 @@ Zoll
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Zoll = scale("Zoll", "zoll", mul(unit(1, Millimetre), 25.4));
 ```
 
@@ -1146,7 +1146,7 @@ Cable length (imperial)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CableLengthImperial = scale("Cable length (imperial)", "cable (imp)", mul(unit(1, Foot_International), 608));
 ```
 
@@ -1169,7 +1169,7 @@ Cable length (International)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CableLength_International = scale("Cable length (International)", "cable", mul(unit(1, NauticalMileInternational__nmi), 0.1));
 ```
 
@@ -1192,7 +1192,7 @@ Cable length (US)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const CableLength_US = scale("Cable length (US)", "cable (US)", mul(unit(1, Foot_International), 720));
 ```
 
@@ -1215,7 +1215,7 @@ Chain
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Chain = scale("Chain", "ch", mul(unit(1, Foot_US_Survey), 66));
 ```
 
@@ -1238,7 +1238,7 @@ Fathom
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Fathom = scale("Fathom", "ftm", mul(unit(1, Foot_International), 6));
 ```
 
@@ -1261,7 +1261,7 @@ Finger
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Finger = scale("Finger", "finger", mul(unit(1, Inch_International), 0.875));
 ```
 
@@ -1284,7 +1284,7 @@ Finger (cloth)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const FingerCloth = scale("Finger (cloth)", "finger (cloth)", mul(unit(1, Inch_International), 4.5));
 ```
 
@@ -1307,7 +1307,7 @@ Hand
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Hand = scale("Hand", "hand", mul(unit(1, Inch_International), 4));
 ```
 
@@ -1330,7 +1330,7 @@ Light-minute
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const LightMinute = scale("Light-minute", "light-minute", mul(unit(1, LightSecond), 60));
 ```
 
@@ -1354,7 +1354,7 @@ Nautical league
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const NauticalLeague = scale("Nautical league", "NL", mul(unit(1, NauticalMileInternational__nmi), 3));
 ```
 
@@ -1377,7 +1377,7 @@ Pica (PostScript)
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Pica_PostScript = scale("Pica (PostScript)", "pica (PostScript)", mul(unit(1, Point_PostScript), 12));
 ```
 
@@ -1400,7 +1400,7 @@ Quarter
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const Quarter = scale("Quarter", "quarter", mul(unit(1, Yard_International), 0.25));
 ```
 
@@ -1423,7 +1423,7 @@ Light-hour
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const LightHour = scale("Light-hour", "light-hour", mul(unit(1, LightMinute), 60));
 ```
 
@@ -1446,7 +1446,7 @@ Light-day
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const LightDay = scale("Light-day", "light-day", mul(unit(1, LightHour), 24));
 ```
 
@@ -1469,7 +1469,7 @@ Light-year
 ```
 
 ##### Code:
-```TypeScript
+```ts
 export const LightYear = scale("Light-year", "ly", mul(unit(1, LightDay), 365.25));
 ```
 
