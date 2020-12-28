@@ -29,7 +29,7 @@
 <link>http://conversion.org/mass/nanogram/</link><b>Nanogram</b> is metric <a>mass</a> unit, symbol: [ng]. Definition of 1 Nanogram  =1x10<sup>-12</sup> kg. .
 <link>http://conversion.org/mass/ounce-apothecary-troy/</link><b>Ounce (apothecary; troy)</b> is  <a>mass</a> unit, symbol: [oz t]. Definition of 1 ounce (apothecary; troy) ≡  1⁄12 lb t . = 31.1034768 g.
 <link>http://conversion.org/mass/ounce-avoirdupois/</link><b>Ounce (avoirdupois)</b> is  <a>mass</a> unit, symbol: [oz av]. Definition of 1 ounce (avoirdupois) ≡  1⁄16 lb . = 0.45359237 kg /16 = 28.349523125 g.
-<link>http://conversion.org/mass/ounce-us-food-nutrition-labelling/</link><b>Ounce (US food nutrition labelling)</b> is  <a>mass</a> unit, symbol: [oz]. Definition of 1 ounce (US food nutrition labelling) ≡ 28 g. The ounce (abbreviated oz) is a unit of mass used in most British derived customary systems of measurement..
+<link>http://conversion.org/mass/ounce-us-food-nutrition-labelling/</link><b>Ounce (US food nutrition labelling)</b> is  <a>mass</a> unit, symbol: [oz (US)]. Definition of 1 ounce (US food nutrition labelling) ≡ 28 g. The ounce (abbreviated oz) is a unit of mass used in most British derived customary systems of measurement..
 <link>http://conversion.org/mass/pennyweight/</link><b>Pennyweight</b> is  <a>mass</a> unit, symbol: [dwt; pwt]. Definition of 1 pennyweight ≡  1⁄20 oz t . = 1.55517384 g.
 <link>http://conversion.org/mass/point/</link><b>Point</b> is  <a>mass</a> unit. Definition of 1 point ≡  1⁄100 ct . = 2 mg.
 <link>http://conversion.org/mass/pound-avoirdupois/</link><b>Pound (avoirdupois)</b> is  <a>mass</a> unit, symbol: [lb av]. Definition of 1 pound (avoirdupois) ≡ 0.45359237 kg = 7000 grains . By definition, 1 lb av ≡ exactly 0.45359237 kg.
@@ -43,9 +43,9 @@
 <link>http://conversion.org/mass/sheet/</link><b>Sheet</b> is  <a>mass</a> unit. Definition of 1 sheet ≡  1⁄700 lb av . = 0.45359237 kg / 700 = 647.9891 mg.
 <link>http://conversion.org/mass/slug-geepound-hyl/</link><b>Slug; geepound; hyl</b> is  <a>mass</a> unit, symbol: [slug]. Definition of 1 slug; geepound; hyl ≡ 1 ɡ0 × 1 lb av × 1 s²/ft .  = 9.80665 x 0.45359237 / 0.3048 ≈ 14.593903 kg.
 <link>http://conversion.org/mass/stone/</link><b>Stone</b> is  <a>mass</a> unit, symbol: [st]. Definition of 1 stone ≡ 14 lb av . =14 x 0.45359237 kg.
-<link>http://conversion.org/mass/ton-assay-long/</link><b>Ton, assay (long)</b> is  <a>mass</a> unit, symbol: [AT]. Definition of 1 ton, assay (long) ≡ 1 mg × 1 long ton ÷ 1 oz t .  = 32.(6) g.
-<link>http://conversion.org/mass/ton-assay-short/</link><b>Ton, assay (short)</b> is  <a>mass</a> unit, symbol: [AT]. Definition of 1 ton, assay (short) ≡ 1 mg × 1 short ton ÷ 1 oz t .  = 29.1(6) g.
-<link>http://conversion.org/mass/ton-long/</link><b>Ton, long</b> is  <a>mass</a> unit, symbol: [long tn or ton]. Definition of 1 ton, long ≡ 2240 lb . 2240 x 0.45359237 kg.
+<link>http://conversion.org/mass/ton-assay-long/</link><b>Ton, assay (long)</b> is  <a>mass</a> unit, symbol: [AT; ln AT]. Definition of 1 ton, assay (long) ≡ 1 mg × 1 long ton ÷ 1 oz t .  = 32.(6) g.
+<link>http://conversion.org/mass/ton-assay-short/</link><b>Ton, assay (short)</b> is  <a>mass</a> unit, symbol: [sh AT]. Definition of 1 ton, assay (short) ≡ 1 mg × 1 short ton ÷ 1 oz t .  = 29.1(6) g.
+<link>http://conversion.org/mass/ton-long/</link><b>Ton, long</b> is  <a>mass</a> unit, symbol: [ton; long tn]. Definition of 1 ton, long ≡ 2240 lb . 2240 x 0.45359237 kg.
 <link>http://conversion.org/mass/ton-short/</link><b>Ton, short</b> is  <a>mass</a> unit, symbol: [sh tn]. Definition of 1 ton, short ≡ 2000 lb . 2000 x 0.45359237 kg.
 <link>http://conversion.org/mass/tonne/</link><b>Tonne</b> is metric <a>mass</a> unit, symbol: [t]. Definition of 1 tonne ≡ 1000 kg . = 1 megagram (Mg) or 1 metric ton (tonne).
 <link>http://conversion.org/mass/wey/</link><b>Wey</b> is  <a>mass</a> unit. Definition of 1 wey ≡ 252 lb = 18 st . 252 0.45359237 kg. Some other variants may exist.

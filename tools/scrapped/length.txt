@@ -1,7 +1,7 @@
 <link>http://conversion.org/length/angstrom/</link><b>ångström</b> is metric <a>length</a> unit, symbol: [Å]. Definition of 1 ångström ≡ 1×10<sup>-10</sup> m . ≡ 0.1 nm.
 <link>http://conversion.org/length/astronomical-unit/</link><b>Astronomical unit</b> is  <a>length</a> unit, symbol: [AU]. Definition of 1 astronomical unit ≡ 149597870700 m. ≈ Distance from Earth to Sun .
 <link>http://conversion.org/length/barleycorn/</link><b>Barleycorn</b> is  <a>length</a> unit. Definition of 1 barleycorn =  1⁄3 in. of chiefly historical interest.
-<link>http://conversion.org/length/bohr-atomic-unit-of-length/</link><b>Bohr, atomic unit of length</b> is  <a>length</a> unit, symbol: [a<sub>0</sub>]. Definition of 1 bohr, atomic unit of length = Bohr radius of hydrogen . .
+<link>http://conversion.org/length/bohr-atomic-unit-of-length/</link><b>Bohr, atomic unit of length</b> is  <a>length</a> unit, symbol: [a<sub>0</sub>]. Definition of 1 bohr, atomic unit of length = 5.29x10<sup>-11</sup> m = Bohr radius of hydrogen . .
 <link>http://conversion.org/length/cable-length-imperial/</link><b>Cable length (imperial)</b> is  <a>length</a> unit. Definition of 1 cable length (imperial) ≡ 608 ft . .
 <link>http://conversion.org/length/cable-length-international/</link><b>Cable length (International)</b> is  <a>length</a> unit. Definition of 1 cable length (International) ≡  1⁄10 nmi . .
 <link>http://conversion.org/length/cable-length-us/</link><b>Cable length (US)</b> is  <a>length</a> unit. Definition of 1 cable length (US) ≡ 720 ft . .
@@ -15,15 +15,15 @@
 <link>http://conversion.org/length/fermi/</link><b>Fermi</b> is  <a>length</a> unit, symbol: [fm]. Definition of 1 fermi ≡ 1×10<sup>-15</sup> m. .
 <link>http://conversion.org/length/finger/</link><b>Finger</b> is  <a>length</a> unit. Definition of 1 finger ≡  7⁄8 in . .
 <link>http://conversion.org/length/finger-cloth/</link><b>Finger (cloth)</b> is  <a>length</a> unit. Definition of 1 finger (cloth) ≡  4 1⁄2 in . .
-<link>http://conversion.org/length/foot-benoit/</link><b>Foot (Benoît)</b> is  <a>length</a> unit, symbol: [ft (Ben)]. Definition of 1 foot (Benoît) ≈ 0.304799735. of chiefly historical interest.
-<link>http://conversion.org/length/foot-cape/</link><b>Foot (Cape)</b> is  <a>length</a> unit. Definition of 1 foot (Cape) 1.033 ft. Legally defined as 1.033 English feet in 1859 . It's of chiefly historical interest.
-<link>http://conversion.org/length/foot-clarkes/</link><b>Foot (Clarke's)</b> is  <a>length</a> unit, symbol: [ft (Cla)]. Definition of 1 foot (Clarke's) ≈ 0.3047972654. of chiefly historical interest.
-<link>http://conversion.org/length/foot-indian/</link><b>Foot (Indian)</b> is  <a>length</a> unit, symbol: [ft Ind]. Definition of 1 foot (Indian) ≈ 0.304799514. of chiefly historical interest.
+<link>http://conversion.org/length/foot-benoit/</link><b>Foot (Benoît)</b> is  <a>length</a> unit, symbol: [ft (Ben)]. Definition of 1 foot (Benoît) ≈ 0.304799735 m. of chiefly historical interest.
+<link>http://conversion.org/length/foot-cape/</link><b>Foot (Cape)</b> is  <a>length</a> unit. Definition of 1 foot (Cape) = 1.033 ft. Legally defined as 1.033 English feet in 1859 . It's of chiefly historical interest.
+<link>http://conversion.org/length/foot-clarkes/</link><b>Foot (Clarke's)</b> is  <a>length</a> unit, symbol: [ft (Cla)]. Definition of 1 foot (Clarke's) ≈ 0.3047972654 m. of chiefly historical interest.
+<link>http://conversion.org/length/foot-indian/</link><b>Foot (Indian)</b> is  <a>length</a> unit, symbol: [ft Ind]. Definition of 1 foot (Indian) ≈ 0.304799514 m. of chiefly historical interest.
 <link>http://conversion.org/length/foot-international/</link><b>Foot (International)</b> is  <a>length</a> unit, symbol: [ft]. Definition of 1 foot (International) ≡ 0.3048 m ≡  1⁄3 yd ≡ 12 inches . .
 <link>http://conversion.org/length/foot-metric/</link><b>Foot, metric</b> is  <a>length</a> unit, symbol: [mf]. Definition of 1 foot, metric ≡ √ 1⁄10 m . .
 <link>http://conversion.org/length/foot-metric-long/</link><b>Foot, metric (long)</b> is  <a>length</a> unit, symbol: [lmf]. Definition of 1 foot, metric (long) ≡  1⁄3 m . .
 <link>http://conversion.org/length/foot-metric-short/</link><b>Foot, metric (short)</b> is  <a>length</a> unit, symbol: [smf]. Definition of 1 foot, metric (short) ≡ 0.30 m . .
-<link>http://conversion.org/length/foot-sears/</link><b>Foot (Sear's)</b> is  <a>length</a> unit, symbol: [ft (Sear)]. Definition of 1 foot (Sear's) ≈ 0.30479947. of chiefly historical interest.
+<link>http://conversion.org/length/foot-sears/</link><b>Foot (Sear's)</b> is  <a>length</a> unit, symbol: [ft (Sear)]. Definition of 1 foot (Sear's) ≈ 0.30479947 m. of chiefly historical interest.
 <link>http://conversion.org/length/foot-us-survey/</link><b>Foot (US Survey)</b> is  <a>length</a> unit, symbol: [ft (US)]. Definition of 1 foot (US Survey) ≡  1200⁄3937 m. .
 <link>http://conversion.org/length/french-charriere/</link><b>French; charriere</b> is  <a>length</a> unit, symbol: [F]. Definition of 1 french; charriere ≡  1⁄3 mm . .
 <link>http://conversion.org/length/furlong/</link><b>Furlong</b> is  <a>length</a> unit, symbol: [fur]. Definition of 1 furlong ≡ 10 chains = 660 ft = 220 yd. .
@@ -35,8 +35,8 @@
 <link>http://conversion.org/length/light-day/</link><b>Light-day</b> is  <a>length</a> unit. Definition of 1 light-day ≡ 24 light-hours . .
 <link>http://conversion.org/length/light-hour/</link><b>Light-hour</b> is  <a>length</a> unit. Definition of 1 light-hour ≡ 60 light-minutes . .
 <link>http://conversion.org/length/light-minute/</link><b>Light-minute</b> is  <a>length</a> unit. Definition of 1 light-minute ≡ 60 light-seconds . .
-<link>http://conversion.org/length/light-second/</link><b>Light-second</b> is  <a>length</a> unit. Definition of 1 light-second ≡ Distance light travels in one second in vacuum . .
-<link>http://conversion.org/length/light-year/</link><b>Light-year</b> is  <a>length</a> unit, symbol: [ly]. Definition of 1 light-year ≡ Distance light travels in vacuum in 365.25 days. .
+<link>http://conversion.org/length/light-second/</link><b>Light-second</b> is  <a>length</a> unit. Definition of 1 light-second ≡ 299792458.8 m ≡ Distance light travels in one second in vacuum . .
+<link>http://conversion.org/length/light-year/</link><b>Light-year</b> is  <a>length</a> unit, symbol: [ly]. Definition of 1 light-year = 365.25 light-days ≡ Distance light travels in vacuum in 365.25 days. .
 <link>http://conversion.org/length/line/</link><b>Line</b> is  <a>length</a> unit, symbol: [ln]. Definition of 1 line ≡  1⁄12 in. .
 <link>http://conversion.org/length/link-gunters-surveyors/</link><b>Link (Gunter's; Surveyor's)</b> is  <a>length</a> unit, symbol: [lnk]. Definition of 1 link (Gunter's; Surveyor's) ≡  1⁄100 ch ≡ 0.66 ft (US) ≡ 7.92 in . .
 <link>http://conversion.org/length/link-ramsdens-engineers/</link><b>Link (Ramsden's; Engineer's)</b> is  <a>length</a> unit, symbol: [lnk]. Definition of 1 link (Ramsden's; Engineer's) ≡ 1 ft. .
@@ -44,13 +44,13 @@
 <link>http://conversion.org/length/mickey/</link><b>Mickey</b> is  <a>length</a> unit. Definition of 1 mickey ≡  1⁄200 in . .
 <link>http://conversion.org/length/micrometre/</link><b>Micrometre</b> is metric <a>length</a> unit, symbol: [µm]. Definition of 1 micrometre  =1x10<sup>-6</sup> m. .
 <link>http://conversion.org/length/micron/</link><b>Micron</b> is  <a>length</a> unit, symbol: [µ]. Definition of 1 micron ≡ 1×10<sup>-6</sup> m. Old name for micrometre.
-<link>http://conversion.org/length/mil-sweden-and-norway/</link><b>Mil (Sweden and Norway)</b> is  <a>length</a> unit, symbol: [mil]. Definition of 1 mil (Sweden and Norway) ≡ 10 km . .
+<link>http://conversion.org/length/mil-sweden-and-norway/</link><b>Mil (Sweden and Norway)</b> is  <a>length</a> unit, symbol: [mil (Sweden and Norway)]. Definition of 1 mil (Sweden and Norway) ≡ 10 km . .
 <link>http://conversion.org/length/mil-thou/</link><b>Mil; thou</b> is  <a>length</a> unit, symbol: [mil]. Definition of 1 mil; thou ≡ 1×10<sup>-3</sup> in . .
 <link>http://conversion.org/length/mile-geographical/</link><b>Mile (geographical)</b> is  <a>length</a> unit. Definition of 1 mile (geographical) ≡ 6082 ft . of chiefly historical interest.
 <link>http://conversion.org/length/mile-international/</link><b>Mile (international)</b> is  <a>length</a> unit, symbol: [mi]. Definition of 1 mile (international) ≡ 80 chains ≡ 5280 ft ≡ 1760 yd . .
 <link>http://conversion.org/length/mile-tactical-or-data/</link><b>Mile (tactical or data)</b> is  <a>length</a> unit. Definition of 1 mile (tactical or data) ≡ 6000 ft . .
 <link>http://conversion.org/length/mile-telegraph/</link><b>Mile (telegraph)</b> is  <a>length</a> unit, symbol: [mi]. Definition of 1 mile (telegraph) ≡ 6087 ft . of chiefly historical interest.
-<link>http://conversion.org/length/mile-us-survey/</link><b>Mile (US Survey)</b> is  <a>length</a> unit, symbol: [mi]. Definition of 1 mile (US Survey) ≡ 5280 US Survey feet ≡ (5280 ×  1200⁄3937) m . .
+<link>http://conversion.org/length/mile-us-survey/</link><b>Mile (US Survey)</b> is  <a>length</a> unit, symbol: [mi (US)]. Definition of 1 mile (US Survey) ≡ 5280 US Survey feet ≡ (5280 ×  1200⁄3937) m . .
 <link>http://conversion.org/length/millimetre/</link><b>Millimetre</b> is metric <a>length</a> unit, symbol: [mm]. Definition of 1 millimetre  =1x10<sup>-3</sup> m. .
 <link>http://conversion.org/length/nail-cloth/</link><b>Nail (cloth)</b> is  <a>length</a> unit. Definition of 1 nail (cloth) ≡  2 1⁄4 in. .
 <link>http://conversion.org/length/nanometre/</link><b>Nanometre</b> is metric <a>length</a> unit, symbol: [nm]. Definition of 1 nanometre  =1x10<sup>-9</sup> m. .
@@ -60,22 +60,22 @@
 <link>http://conversion.org/length/nautical-mile-us-pre-1954/</link><b>Nautical mile (US pre 1954)</b> is  <a>length</a> unit. Definition of 1 nautical mile (US pre 1954) ≡ 1853.248 m . .
 <link>http://conversion.org/length/pace/</link><b>Pace</b> is  <a>length</a> unit. Definition of 1 pace ≡ 2.5 ft. .
 <link>http://conversion.org/length/palm/</link><b>Palm</b> is  <a>length</a> unit. Definition of 1 palm ≡ 3 in. .
-<link>http://conversion.org/length/parsec/</link><b>Parsec</b> is  <a>length</a> unit, symbol: [pc]. Definition of 1 parsec ≈ 3.085677581x10<sup>16</sup>. Distance of star with parallax shift of one arc second from a base of one astronomical unit .
+<link>http://conversion.org/length/parsec/</link><b>Parsec</b> is  <a>length</a> unit, symbol: [pc]. Definition of 1 parsec ≈ 3.085677581x10<sup>16</sup> m. Distance of star with parallax shift of one arc second from a base of one astronomical unit .
 <link>http://conversion.org/length/pica-postscript/</link><b>Pica (PostScript)</b> is  <a>length</a> unit. Definition of 1 pica (PostScript) ≡ 12 points . .
-<link>http://conversion.org/length/picometre-old-bicron-stigma/</link><b>Picometre (old: bicron, stigma)</b> is  <a>length</a> unit, symbol: [pm]. Definition of 1 picometre (old: bicron, stigma) 10<sup>-12</sup> m. .
+<link>http://conversion.org/length/picometre-old-bicron-stigma/</link><b>Picometre (old: bicron, stigma)</b> is  <a>length</a> unit, symbol: [pm (old)]. Definition of 1 picometre (old: bicron, stigma) ≡ 10<sup>-12</sup> m. .
 <link>http://conversion.org/length/pikometre/</link><b>Pikometre</b> is metric <a>length</a> unit, symbol: [pm]. Definition of 1 pikometre  =1x10<sup>-12</sup> m. .
-<link>http://conversion.org/length/point-american-english/</link><b>Point (American, English)</b> is  <a>length</a> unit, symbol: [pt]. Definition of 1 point (American, English) ≡  1⁄72.272 in . .
-<link>http://conversion.org/length/point-didot-european/</link><b>Point (Didot; European)</b> is  <a>length</a> unit, symbol: [pt]. Definition of 1 point (Didot; European) ≡  5⁄133 cm . Defined after 1878 as 5/133 cm ≈ 0.00037593985 m.
+<link>http://conversion.org/length/point-american-english/</link><b>Point (American, English)</b> is  <a>length</a> unit, symbol: [pt (US)]. Definition of 1 point (American, English) ≡  1⁄72.272 in . .
+<link>http://conversion.org/length/point-didot-european/</link><b>Point (Didot; European)</b> is  <a>length</a> unit, symbol: [pt (Didot)]. Definition of 1 point (Didot; European) ≡  5⁄133 cm . Defined after 1878 as 5/133 cm ≈ 0.00037593985 m.
 <link>http://conversion.org/length/point-postscript/</link><b>Point (PostScript)</b> is  <a>length</a> unit, symbol: [pt]. Definition of 1 point (PostScript) ≡  1⁄72 in . .
-<link>http://conversion.org/length/point-tex/</link><b>Point (TeX)</b> is  <a>length</a> unit, symbol: [pt]. Definition of 1 point (TeX) ≡  1⁄72.27 in . .
+<link>http://conversion.org/length/point-tex/</link><b>Point (TeX)</b> is  <a>length</a> unit, symbol: [pt (TeX)]. Definition of 1 point (TeX) ≡  1⁄72.27 in . .
 <link>http://conversion.org/length/quarter/</link><b>Quarter</b> is  <a>length</a> unit. Definition of 1 quarter ≡  1⁄4 yd . .
 <link>http://conversion.org/length/rod-pole-perch/</link><b>Rod; pole; perch</b> is  <a>length</a> unit, symbol: [rd]. Definition of 1 rod; pole; perch ≡  16 1⁄2 ft . of chiefly historical interest.
 <link>http://conversion.org/length/rope/</link><b>Rope</b> is  <a>length</a> unit, symbol: [rope]. Definition of 1 rope ≡ 20 ft. of chiefly historical interest.
 <link>http://conversion.org/length/shaku-japan/</link><b>Shaku (Japan)</b> is  <a>length</a> unit. Definition of 1 shaku (Japan) ≡ 10/33 m . .
 <link>http://conversion.org/length/span/</link><b>Span</b> is  <a>length</a> unit, symbol: [　]. Definition of 1 span ≡ 9 in. of chiefly historical interest.
-<link>http://conversion.org/length/spat/</link><b>Spat</b> is  <a>length</a> unit. Definition of 1 spat 10<sup>12</sup> m. .
+<link>http://conversion.org/length/spat/</link><b>Spat</b> is  <a>length</a> unit. Definition of 1 spat ≡ 10<sup>12</sup> m. .
 <link>http://conversion.org/length/stick/</link><b>Stick</b> is  <a>length</a> unit. Definition of 1 stick ≡ 2 in . of chiefly historical interest.
 <link>http://conversion.org/length/twip/</link><b>Twip</b> is  <a>length</a> unit, symbol: [twp]. Definition of 1 twip ≡  1⁄1440 in . .
-<link>http://conversion.org/length/x-unit-siegbahn/</link><b>X unit; siegbahn</b> is  <a>length</a> unit, symbol: [xu]. Definition of 1 x unit; siegbahn ≈ 1.0021x10<sup>-13</sup>. .
+<link>http://conversion.org/length/x-unit-siegbahn/</link><b>X unit; siegbahn</b> is  <a>length</a> unit, symbol: [xu]. Definition of 1 x unit; siegbahn ≈ 1.0021x10<sup>-13</sup> m. .
 <link>http://conversion.org/length/yard-international/</link><b>Yard (International)</b> is  <a>length</a> unit, symbol: [yd]. Definition of 1 yard (International) ≡ 0.9144 m ≡ 3 ft ≡ 36 in . .
 <link>http://conversion.org/length/zoll/</link><b>Zoll</b> is  <a>length</a> unit, symbol: [ '']. Definition of 1 zoll ≡ 1 inch ≡ 25.4 mm. Zoll is length unit used in German-speaking countries, equivalent to inch = 0.0254 m (since 1956). .

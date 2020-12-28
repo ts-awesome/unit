@@ -1,10 +1,8 @@
 const {parse} = require('../dist/parser');
 
 const SI = {
-  metre: 'm', // alias
-
   second: 's',
-  meter: 'm',
+  metre: 'm',
   kilogram: 'kg',
   ampere: 'A',
   kelvin: 'K',
@@ -58,9 +56,8 @@ function parseUnitDefs(defs) {
 function parseDef(def) {
 
   def = def
-    .replaceAll('Distance light travels in one second in vacuum', '299792458.8 m × s⁻¹ = Distance light travels in one second in vacuum')
-    .replaceAll('Bohr radius of hydrogen', '5.29x10<sup>-11</sup> m = Bohr radius of hydrogen')
-    .replaceAll('sq mi (US)', 'sq mi (US) = mi (US)²')
+    .replaceAll('<a>', '<i>')
+    .replaceAll('</a>', '</i>')
     .replaceAll('≈', '≡')
     .replaceAll('=', '≡')
     .replaceAll('−', '-')
@@ -69,10 +66,16 @@ function parseDef(def) {
     .replaceAll('<sub>2</sub>', '₂')
     .replaceAll('<sup>2</sup>', '²')
     .replaceAll('<sup>3</sup>', '³')
+    .replaceAll(/ x 10<sup>([-+]?\d+)<\/sup>/g, (s, power) => `e${power}`)
+    .replaceAll(/x10<sup>([-+]?\d+)<\/sup>/g, (s, power) => `e${power}`)
+    .replaceAll(/ × 10<sup>([-+]?\d+)<\/sup>/g, (s, power) => `e${power}`)
+    .replaceAll(/×10<sup>([-+]?\d+)<\/sup>/g, (s, power) => `e${power}`)
+    .replaceAll(/10<sup>([-+]?\d+)<\/sup>/g, (s, power) => `1e${power}`)
     .replaceAll(' x ', ' × ')
-    .replaceAll(' × 1 ', ' × ')
-    .replaceAll(' ÷ 1 ', ' / ')
-    .replaceAll('in (In England usually)', 'in')
+    .replaceAll(' x 1', ' × ')
+    .replaceAll(' × 1', ' × ')
+    .replaceAll(' ÷ 1', ' / ')
+    .replaceAll('1×10', '10')
 
   let idx = 0;
 
@@ -104,14 +107,7 @@ function parseDef(def) {
     link,
     name,
     symbol,
-    def: parseUnitDefs(def.substring(definitionStart)
-      .replace('≡', '')
-      .replaceAll('1×10', '10')
-      .replaceAll(/x10<sup>([-+]?\d+)<\/sup>/g, (s, power) => `e${power}`)
-      .replaceAll(/10<sup>([-+]?\d+)<\/sup>/g, (s, power) => `1e${power}`)
-      .replace('. .', '')
-      .split('. ').shift()
-      .trim()
+    def: parseUnitDefs(def.substring(def.indexOf('≡', definitionStart) + 1, (def.length + def.indexOf('. ', definitionStart)) % def.length)
       .split('≡')
       .map(x => x.trim())),
   }
@@ -138,12 +134,15 @@ const FUNDAMENTALS = [
 ]
 
 const MAPPINGS = {
+  'in (In England usually)': 'in',
   'light-seconds': 'light-second',
   'light-minutes': 'light-minute',
   'light-hours': 'light-hour',
+  'light-days': 'light-day',
   'US Survey feet': 'ft (US)',
   'foot (US Survey)': 'ft (US)',
   'points': 'pt',
+  'inch': 'in',
 
   'acre': 'ac',
   'ac (variable)': 'ac',
@@ -164,14 +163,22 @@ const MAPPINGS = {
 const ALIASES = {
   'lb av': ['lb', 'lbs'],
   'oz av': ['oz'],
+  'om (old)': ['bicron', 'stigma'],
 }
 
 const SHORTS = {
   "Link (Ramsden's; Engineer's)": 'lnk (eng)',
+  "Nautical mile (US pre 1954)": 'nmi (US pre 1954)',
+  "Cable length (imperial)": 'cable (imp)',
+  "Cable length (International)": "cable",
+  "Cable length (US)": "cable (US)",
 
-  "Mile (US Survey)": 'mi (US)',
+  "Strike (imperial)": "strike (imp)",
+  "Dash (imperial)": "dash (imp)",
+  "Dessertspoon (imperial)": "dessertspoon (imp)",
 
-  "Ton, long": "ton",
+  "Quarter (imperial)": "quarter (imp)",
+  "Quarter; pail": "pail",
 }
 
 const otherModules = {
@@ -196,6 +203,10 @@ async function main() {
       .map(x => x.trim())
       .filter(x => x);
     for(let line of lines) {
+      if (line.indexOf('of chiefly historical interest.') >= 0) {
+        continue;
+      }
+
       defs.push(parseDef(line));
     }
 
@@ -213,41 +224,41 @@ async function main() {
       }
 
       let compiled = null;
-      if (def.length && FUNDAMENTALS.indexOf(name) < 0) {
-        let missing = [];
+      if (FUNDAMENTALS.indexOf(name) >= 0) {
+        compiled = 'true'
+      } else {
+        let missing = []
         outer: for (let {scalar, definition} of def) {
-          const units = [];
+          const units = []
           for (let scale of Object.keys(definition)) {
-            const power = definition[scale];
+            const power = definition[scale]
 
             if (MAPPINGS[safeKey(scale)]) {
-              scale = MAPPINGS[safeKey(scale)];
+              scale = MAPPINGS[safeKey(scale)]
             }
 
             if (!defined[safeKey(scale)]) {
               if (!otherModules[safeKey(scale)]) {
-                missing.push(scale);
+                missing.push(scale)
 
-                continue outer;
+                continue outer
               }
 
-              imports_.push(otherModules[safeKey(scale)]);
+              imports_.push(otherModules[safeKey(scale)])
             }
 
             const unit = `unit(1, ${defined[safeKey(scale)] ?? otherModules[safeKey(scale)][0]})`
-            units.push(power === 1 ? unit : `pow(${unit}, ${power})`);
+            units.push(power === 1 ? unit : `pow(${unit}, ${power})`)
           }
 
-          compiled = `mul(${units.join(', ')}, ${scalar})`;
+          compiled = `mul(${units.join(', ')}, ${scalar})`
         }
 
         if (!compiled) {
-          console.log(`delay compile`, JSON.stringify(link), JSON.stringify(primary), 'cause missing', JSON.stringify(missing));
-          defs.push(currentDef);
-          continue;
+          console.log(`delay compile`, JSON.stringify(link), JSON.stringify(primary), 'cause missing', JSON.stringify(missing), currentDef)
+          defs.push(currentDef)
+          continue
         }
-      } else {
-        compiled = 'true';
       }
 
       const primaryVar = varName(name);

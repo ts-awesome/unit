@@ -13,6 +13,12 @@ describe('parse', () => {
     expect(definition).toStrictEqual({'m': 1});
   });
 
+  it ('0.9144 m', () => {
+    const {scalar, definition} = parse('0.9144 m');
+    expect(scalar.toFixed(6)).toBe((0.9144).toFixed(6));
+    expect(definition).toStrictEqual({'m': 1});
+  })
+
   it('simple with spaces', () => {
     const {scalar, definition} = parse('9.8 sq ft');
     expect(scalar).toBe(9.8);
