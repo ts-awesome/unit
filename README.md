@@ -6,14 +6,14 @@ Library provides simple math for measuring units
 
 ### Units
 
-[fundamentals](./docs/fundamentals-units.md)
-[SI](./docs/SI-units.md)
-[Length](./docs/length-units.md)
-[Area](./docs/area-units.md)
-[Volume](./docs/volume-units.md)
-[Mass](./docs/mass-units.md)
-[Time](./docs/time-units.md)
-[Temperature](./docs/temperature-units.md)
+* [fundamentals](./docs/fundamentals-units.md)
+* [SI](./docs/SI-units.md)
+* [Length](./docs/length-units.md)
+* [Area](./docs/area-units.md)
+* [Volume](./docs/volume-units.md)
+* [Mass](./docs/mass-units.md)
+* [Time](./docs/time-units.md)
+* [Temperature](./docs/temperature-units.md)
 
 ### Example
 
