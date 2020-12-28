@@ -18,9 +18,11 @@ Library provides simple math for measuring units
 ### Example
 
 ```ts
-import {add, div, calculate, unit} from '@ts-awesome/unit';
+import {add, div, calculate, unit, metre} from '@ts-awesome/unit';
 
-console.log(calculate(div(add(unit`10 km`, unit`3 mi`), unit`10 ft / m`), `m / s`, 5)); // calculate speed in metre per second
+console.log(calculate(div(add(unit`10 km`, unit`3 mi`, unit(3, metre)), unit`10 ft / m`), `m / s`, 5)); // calculate speed in metre per second
 
 console.log(calculate(unit`104 °F`, `°C`, 1)); // convert to degree Celcius
+
+
 ```
