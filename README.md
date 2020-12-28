@@ -17,7 +17,7 @@ Library provides simple math for measuring units
 
 ### Example
 
-```TypeScript
+```ts
 import {add, div, calculate, unit} from '@ts-awesome/unit';
 
 console.log(calculate(div(add(unit`10 km`, unit`3 mi`), unit`10 ft / m`), `m / s`, 5)); // calculate speed in metre per second
