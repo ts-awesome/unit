@@ -1,0 +1,51 @@
+<link>http://conversion.org/mass/atomic-mass-unit-unified/</link><b>Atomic mass unit, unified</b> is  <a>mass</a> unit, symbol: [u; AMU]. Definition of 1 atomic mass unit, unified ≈ 1.66053904 x 10<sup>-27</sup> kg. The unified atomic mass unit or dalton is a standard unit of mass that quantifies mass on an atomic or molecular scale (atomic mass)..
+<link>http://conversion.org/mass/atomic-unit-of-mass-electron-rest-mass/</link><b>Atomic unit of mass, electron rest mass</b> is  <a>mass</a> unit, symbol: [me]. Definition of 1 atomic unit of mass, electron rest mass ≈ 9.10938356 x 10<sup>-31</sup> kg. .
+<link>http://conversion.org/mass/bag-coffee/</link><b>Bag (coffee)</b> is  <a>mass</a> unit. Definition of 1 bag (coffee) ≡ 60 kg . .
+<link>http://conversion.org/mass/bag-portland-cement/</link><b>Bag (Portland cement)</b> is  <a>mass</a> unit. Definition of 1 bag (Portland cement) ≡ 94 lb av . = 94 x 0.45359237 kg.
+<link>http://conversion.org/mass/barge/</link><b>Barge</b> is  <a>mass</a> unit. Definition of 1 barge ≡  22 1⁄2 short ton . = 20411.65665 kg.
+<link>http://conversion.org/mass/carat/</link><b>Carat</b> is  <a>mass</a> unit, symbol: [kt]. Definition of 1 carat ≡  3 1⁄6 gr . = 19/6 grain = 205.1965483 mg.
+<link>http://conversion.org/mass/carat-metric/</link><b>Carat (metric)</b> is  <a>mass</a> unit, symbol: [ct]. Definition of 1 carat (metric) ≡ 200 mg . The carat (ct) is a unit of mass equal to 200 mg and is used for measuring gemstones and pearls (metric carat).
+<link>http://conversion.org/mass/centigram/</link><b>Centigram</b> is metric <a>mass</a> unit, symbol: [cg]. Definition of 1 Centigram  =1x10<sup>-5</sup> kg. .
+<link>http://conversion.org/mass/clove/</link><b>Clove</b> is  <a>mass</a> unit. Definition of 1 clove ≡ 8 lb av . = 8 x 0.45359237 kg.
+<link>http://conversion.org/mass/crith/</link><b>Crith</b> is  <a>mass</a> unit. Definition of 1 crith ≈ 89.9349 mg. .
+<link>http://conversion.org/mass/dalton/</link><b>Dalton</b> is  <a>mass</a> unit, symbol: [Da]. Definition of 1 dalton ≈ 1.66053904 x 10<sup>-27</sup> kg. Dalton (Da) or the unified atomic mass unit is a standard unit of mass that quantifies mass on an atomic or molecular scale (atomic mass)..
+<link>http://conversion.org/mass/decagram/</link><b>Decagram</b> is metric <a>mass</a> unit, symbol: [dag]. Definition of 1 Decagram  =10<sup>-2</sup> kg. .
+<link>http://conversion.org/mass/dram-apothecary-troy/</link><b>Dram (apothecary; troy)</b> is  <a>mass</a> unit, symbol: [dr t]. Definition of 1 dram (apothecary; troy) ≡ 60 gr . The dram (alternative British spelling drachm) was originally both a coin and a weight in ancient Greece. = 60 grain = 3.8879346 g.
+<link>http://conversion.org/mass/dram-avoirdupois/</link><b>Dram (avoirdupois)</b> is  <a>mass</a> unit, symbol: [dr av]. Definition of 1 dram (avoirdupois) ≡  27 11⁄32 gr = 27.34375 gr. The dram was originally both a coin and a weight in ancient Greece. = 875/32 grain = 1.7718451953125 g.
+<link>http://conversion.org/mass/gamma/</link><b>Gamma</b> is  <a>mass</a> unit, symbol: [γ]. Definition of 1 gamma ≡ 1 μg . = 1 μg.
+<link>http://conversion.org/mass/grain/</link><b>Grain</b> is  <a>mass</a> unit, symbol: [gr]. Definition of 1 grain ≡  1⁄7000 lb av . The grain is the same in avoirdupois, troy, and apothecaries units of mass, ≡ 64.79891 mg.
+<link>http://conversion.org/mass/gram/</link><b>Gram</b> is metric <a>mass</a> unit, symbol: [g]. Definition of 1 Gram  =1x10<sup>-3</sup> kg. .
+<link>http://conversion.org/mass/grave/</link><b>Grave</b> is  <a>mass</a> unit, symbol: [gv.]. Definition of 1 grave ≡ 1 kg. grave was the original name of the kilogram .
+<link>http://conversion.org/mass/hectogram/</link><b>Hectogram</b> is metric <a>mass</a> unit, symbol: [hg]. Definition of 1 Hectogram  =10<sup>-1</sup> kg. .
+<link>http://conversion.org/mass/hundredweight-long/</link><b>Hundredweight (long)</b> is  <a>mass</a> unit, symbol: [long cwt or cwt]. Definition of 1 hundredweight (long) ≡ 112 lb av . =112 x 0.45359237 kg = 50.80234544 kg.
+<link>http://conversion.org/mass/hundredweight-short-cental/</link><b>Hundredweight (short); cental</b> is  <a>mass</a> unit, symbol: [sh cwt]. Definition of 1 hundredweight (short); cental ≡ 100 lb av . =100 x 0.45359237 kg = 45.359237 kg.
+<link>http://conversion.org/mass/kilogram/</link><b>Kilogram</b> is metric <a>mass</a> unit, symbol: [kg]. Definition of 1 Kilogram ≡ 1 kg. SI base unit. Mass of the prototype near Paris (≈ mass of 1 L of water) .
+<link>http://conversion.org/mass/kip/</link><b>Kip</b> is  <a>mass</a> unit, symbol: [kip]. Definition of 1 kip ≡ 1000 lb av . A kip is a unit of force, uncommon, it is occasionally also considered a unit of weight, equal to 1000 pounds. =1000 x 0.45359237 kg.
+<link>http://conversion.org/mass/mark/</link><b>Mark</b> is  <a>mass</a> unit. Definition of 1 mark ≡ 8 oz t . The Mark is originally a medieval weight or mass unit, which supplanted the pound weight as a precious metals and coinage weight from the 11th century = 248.8278144 g.
+<link>http://conversion.org/mass/microgram/</link><b>Microgram</b> is metric <a>mass</a> unit, symbol: [µg]. Definition of 1 Microgram  =1x10<sup>-9</sup> kg. .
+<link>http://conversion.org/mass/milligram/</link><b>Milligram</b> is metric <a>mass</a> unit, symbol: [mg]. Definition of 1 Milligram  =1x10<sup>-6</sup> kg. .
+<link>http://conversion.org/mass/mite/</link><b>Mite</b> is  <a>mass</a> unit. Definition of 1 mite ≡  1⁄20 gr . = 1 grain / 20 = 3.2399455 mg.
+<link>http://conversion.org/mass/mite-metric/</link><b>Mite (metric)</b> is  <a>mass</a> unit. Definition of 1 mite (metric) ≡  1⁄20 g . = 50 mg.
+<link>http://conversion.org/mass/nanogram/</link><b>Nanogram</b> is metric <a>mass</a> unit, symbol: [ng]. Definition of 1 Nanogram  =1x10<sup>-12</sup> kg. .
+<link>http://conversion.org/mass/ounce-apothecary-troy/</link><b>Ounce (apothecary; troy)</b> is  <a>mass</a> unit, symbol: [oz t]. Definition of 1 ounce (apothecary; troy) ≡  1⁄12 lb t . = 31.1034768 g.
+<link>http://conversion.org/mass/ounce-avoirdupois/</link><b>Ounce (avoirdupois)</b> is  <a>mass</a> unit, symbol: [oz av]. Definition of 1 ounce (avoirdupois) ≡  1⁄16 lb . = 0.45359237 kg /16 = 28.349523125 g.
+<link>http://conversion.org/mass/ounce-us-food-nutrition-labelling/</link><b>Ounce (US food nutrition labelling)</b> is  <a>mass</a> unit, symbol: [oz]. Definition of 1 ounce (US food nutrition labelling) ≡ 28 g. The ounce (abbreviated oz) is a unit of mass used in most British derived customary systems of measurement..
+<link>http://conversion.org/mass/pennyweight/</link><b>Pennyweight</b> is  <a>mass</a> unit, symbol: [dwt; pwt]. Definition of 1 pennyweight ≡  1⁄20 oz t . = 1.55517384 g.
+<link>http://conversion.org/mass/point/</link><b>Point</b> is  <a>mass</a> unit. Definition of 1 point ≡  1⁄100 ct . = 2 mg.
+<link>http://conversion.org/mass/pound-avoirdupois/</link><b>Pound (avoirdupois)</b> is  <a>mass</a> unit, symbol: [lb av]. Definition of 1 pound (avoirdupois) ≡ 0.45359237 kg = 7000 grains . By definition, 1 lb av ≡ exactly 0.45359237 kg.
+<link>http://conversion.org/mass/pound-metric/</link><b>Pound (metric)</b> is  <a>mass</a> unit. Definition of 1 pound (metric) ≡ 500 g . = 500 g = 0.5 kg.
+<link>http://conversion.org/mass/pound-troy/</link><b>Pound (troy)</b> is  <a>mass</a> unit, symbol: [lb t]. Definition of 1 pound (troy) ≡ 5760 grains . 64.79891 g x 5760 = 0.3732417216 kg.
+<link>http://conversion.org/mass/quarter-imperial/</link><b>Quarter (imperial)</b> is  <a>mass</a> unit. Definition of 1 quarter (imperial) ≡  1⁄4 long cwt = 2 st = 28 lb av . 28 x 0.45359237 kg.
+<link>http://conversion.org/mass/quarter-informal/</link><b>Quarter (informal)</b> is  <a>mass</a> unit. Definition of 1 quarter (informal) ≡  1⁄4 short ton . = 907.18474 kg / 4.
+<link>http://conversion.org/mass/quarter-long-informal/</link><b>Quarter, long (informal)</b> is  <a>mass</a> unit. Definition of 1 quarter, long (informal) ≡  1⁄4 long ton . = 1016.0469088 kg / 4.
+<link>http://conversion.org/mass/quintal-metric/</link><b>Quintal (metric)</b> is  <a>mass</a> unit, symbol: [q]. Definition of 1 quintal (metric) ≡ 100 kg . .
+<link>http://conversion.org/mass/scruple-apothecary/</link><b>Scruple (apothecary)</b> is  <a>mass</a> unit, symbol: [s ap]. Definition of 1 scruple (apothecary) ≡ 20 gr . 20 x 0.06479891 g = 1.2959782 g.
+<link>http://conversion.org/mass/sheet/</link><b>Sheet</b> is  <a>mass</a> unit. Definition of 1 sheet ≡  1⁄700 lb av . = 0.45359237 kg / 700 = 647.9891 mg.
+<link>http://conversion.org/mass/slug-geepound-hyl/</link><b>Slug; geepound; hyl</b> is  <a>mass</a> unit, symbol: [slug]. Definition of 1 slug; geepound; hyl ≡ 1 ɡ0 × 1 lb av × 1 s²/ft .  = 9.80665 x 0.45359237 / 0.3048 ≈ 14.593903 kg.
+<link>http://conversion.org/mass/stone/</link><b>Stone</b> is  <a>mass</a> unit, symbol: [st]. Definition of 1 stone ≡ 14 lb av . =14 x 0.45359237 kg.
+<link>http://conversion.org/mass/ton-assay-long/</link><b>Ton, assay (long)</b> is  <a>mass</a> unit, symbol: [AT]. Definition of 1 ton, assay (long) ≡ 1 mg × 1 long ton ÷ 1 oz t .  = 32.(6) g.
+<link>http://conversion.org/mass/ton-assay-short/</link><b>Ton, assay (short)</b> is  <a>mass</a> unit, symbol: [AT]. Definition of 1 ton, assay (short) ≡ 1 mg × 1 short ton ÷ 1 oz t .  = 29.1(6) g.
+<link>http://conversion.org/mass/ton-long/</link><b>Ton, long</b> is  <a>mass</a> unit, symbol: [long tn or ton]. Definition of 1 ton, long ≡ 2240 lb . 2240 x 0.45359237 kg.
+<link>http://conversion.org/mass/ton-short/</link><b>Ton, short</b> is  <a>mass</a> unit, symbol: [sh tn]. Definition of 1 ton, short ≡ 2000 lb . 2000 x 0.45359237 kg.
+<link>http://conversion.org/mass/tonne/</link><b>Tonne</b> is metric <a>mass</a> unit, symbol: [t]. Definition of 1 tonne ≡ 1000 kg . = 1 megagram (Mg) or 1 metric ton (tonne).
+<link>http://conversion.org/mass/wey/</link><b>Wey</b> is  <a>mass</a> unit. Definition of 1 wey ≡ 252 lb = 18 st . 252 0.45359237 kg. Some other variants may exist.

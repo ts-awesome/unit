@@ -32,6 +32,8 @@ export function parse(str: string): ParsedExpression {
   function error(desc: string) { throw new Error(`ParseError @${i}: ${desc}`) }
 
   function parseScalar() {
+    skipSpaces();
+    const start = i;
     const sign = test('-') ? -1 : 1;
     skipSign();
 
@@ -40,7 +42,7 @@ export function parse(str: string): ParsedExpression {
       whole = Math.PI * sign;
     } else {
       skipDigits();
-      whole = parseInt(str.substring(0, i), 10);
+      whole = parseInt(str.substring(start, i), 10);
     }
 
     if (test('/⁄')) {
@@ -80,7 +82,7 @@ export function parse(str: string): ParsedExpression {
       skipDigits();
     }
 
-    return parseFloat(str.substring(0, i));
+    return parseFloat(str.substring(start, i));
   }
 
   function readIdentifier() {
@@ -175,7 +177,7 @@ export function parse(str: string): ParsedExpression {
     }, {});
   }
 
-  const scalar = parseScalar();
+  const scalar = match('√') ? Math.sqrt(parseScalar()) : parseScalar();
   let defStart = i;
   const definition = parseScale();
 

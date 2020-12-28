@@ -220,3 +220,11 @@ describe('scalar fractions', () => {
     expect(definition).toStrictEqual({'sq in': 1});
   })
 })
+
+describe('square root scalar', () => {
+  it('√ 1⁄10 m', () => {
+    const {scalar, definition} = parse(`√ 1⁄10 m`);
+    expect(scalar.toFixed(8)).toBe(Math.sqrt(.1).toFixed(8));
+    expect(definition).toStrictEqual({'m': 1});
+  })
+})

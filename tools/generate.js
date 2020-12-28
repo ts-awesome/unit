@@ -190,7 +190,7 @@ async function main() {
   for(let area of areas) {
     const defs = [];
 
-    const lines = require('fs').readFileSync(`./${area}.txt`)
+    const lines = require('fs').readFileSync(`./scrapped/${area}.txt`)
       .toString()
       .split('\n')
       .map(x => x.trim())
@@ -218,13 +218,6 @@ async function main() {
         outer: for (let {scalar, definition} of def) {
           const units = [];
           for (let scale of Object.keys(definition)) {
-            if (scale === "√ 1⁄10 m") {
-              scale = 'm';
-              imports_.push(otherModules[scale]);
-              units.push(`unit(Math.sqrt(10) / 10, ${otherModules[scale][0]})`)
-              continue;
-            }
-
             const power = definition[scale];
 
             if (MAPPINGS[safeKey(scale)]) {

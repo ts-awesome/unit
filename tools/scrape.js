@@ -53,7 +53,7 @@ async function main() {
   for(let area of areas) {
     console.log(`Scrapping ${area}...`);
     const defs = await scrapeScales(`http://conversion.org/${area}/`);
-    require('fs').writeFileSync(`./${area}.txt`, defs.join('\n'));
+    require('fs').writeFileSync(`./scrapped/${area}.txt`, defs.join('\n'));
   }
 }
 
