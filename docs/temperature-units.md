@@ -4,92 +4,58 @@ Units of temperature
 degree Celsius
 ---
 
-> 
+##### Units:
 
-[Source](null) 
-
-##### Symbols:
 - ```[°C]```
 
-##### Definition:
-```LaTex
-
-```
-
 ##### Code:
+
 ```ts
-export const degreeCelsius = scale('degree Celsius', '°C', {
+const degreeCelsius = scale('degree Celsius', '°C', { /* definition */ });
 ```
-
-
-
-
-delta degree Celsius
----
-
-> 
-
-[Source](null) 
-
-##### Symbols:
-- ```[Δ°C]```
-- ```[d°C]```
-
-##### Definition:
-```LaTex
-
-```
-
-##### Code:
-```ts
-export const deltaDegreeCelsius = scale('delta degree Celsius', 'Δ°C','d°C', 1, kelvin);
-```
-
-
 
 
 degree Fahrenheit
 ---
 
-> 
+##### Units:
 
-[Source](null) 
-
-##### Symbols:
 - ```[°F]```
 
-##### Definition:
-```LaTex
+##### Code:
 
+```ts
+const degreeFahrenheit = scale('degree Fahrenheit', '°F', { /* definition */ });
 ```
+
+
+delta degree Celsius
+---
+
+##### Units:
+
+- ```[Δ°C]```
+
+- ```[d°C]```
 
 ##### Code:
+
 ```ts
-export const degreeFahrenheit = scale('degree Fahrenheit', '°F', {
+const deltaDegreeCelsius = scale('delta degree Celsius', 'Δ°C','d°C', 1, kelvin);
 ```
-
-
 
 
 delta degree Fahrenheit
 ---
 
-> 
+##### Units:
 
-[Source](null) 
-
-##### Symbols:
 - ```[Δ°F]```
+
 - ```[d°F]```
 
-##### Definition:
-```LaTex
-
-```
-
 ##### Code:
+
 ```ts
-export const deltaDegreeFahrenheit = scale('delta degree Fahrenheit', 'Δ°F', 'd°F', 5/9, kelvin);
+const deltaDegreeFahrenheit = scale('delta degree Fahrenheit', 'Δ°F', 'd°F', 5/9, kelvin);
 ```
-
-

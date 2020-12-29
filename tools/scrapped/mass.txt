@@ -15,7 +15,7 @@
 <link>http://conversion.org/mass/gamma/</link><b>Gamma</b> is  <a>mass</a> unit, symbol: [γ]. Definition of 1 gamma ≡ 1 μg . = 1 μg.
 <link>http://conversion.org/mass/grain/</link><b>Grain</b> is  <a>mass</a> unit, symbol: [gr]. Definition of 1 grain ≡  1⁄7000 lb av . The grain is the same in avoirdupois, troy, and apothecaries units of mass, ≡ 64.79891 mg.
 <link>http://conversion.org/mass/gram/</link><b>Gram</b> is metric <a>mass</a> unit, symbol: [g]. Definition of 1 Gram  =1x10<sup>-3</sup> kg. .
-<link>http://conversion.org/mass/grave/</link><b>Grave</b> is  <a>mass</a> unit, symbol: [gv.]. Definition of 1 grave ≡ 1 kg. grave was the original name of the kilogram .
+<link>http://conversion.org/mass/grave/</link><b>Grave</b> is  <a>mass</a> unit, symbol: [gv]. Definition of 1 grave ≡ 1 kg. grave was the original name of the kilogram .
 <link>http://conversion.org/mass/hectogram/</link><b>Hectogram</b> is metric <a>mass</a> unit, symbol: [hg]. Definition of 1 Hectogram  =10<sup>-1</sup> kg. .
 <link>http://conversion.org/mass/hundredweight-long/</link><b>Hundredweight (long)</b> is  <a>mass</a> unit, symbol: [long cwt or cwt]. Definition of 1 hundredweight (long) ≡ 112 lb av . =112 x 0.45359237 kg = 50.80234544 kg.
 <link>http://conversion.org/mass/hundredweight-short-cental/</link><b>Hundredweight (short); cental</b> is  <a>mass</a> unit, symbol: [sh cwt]. Definition of 1 hundredweight (short); cental ≡ 100 lb av . =100 x 0.45359237 kg = 45.359237 kg.

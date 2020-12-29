@@ -2,8 +2,9 @@ function parse(path) {
   const lines = require('fs').readFileSync(path)
     .toString()
     .split('\n')
-    .map(x => x.trim().replace(/^\* /, ''))
-    .filter(x => x.startsWith('@summary') || x.startsWith('@description') || x.startsWith('@link') || x.indexOf('scale(') >= 0);
+    .map(x => x.trim())
+    .filter(x => x.startsWith('* @') || x.indexOf('scale(') >= 0)
+    .map(x => x.replace(/^\* /, ''));
 
   function current() { return lines[0] ?? '' }
   function next() { return lines.shift() ?? '' }
@@ -11,11 +12,10 @@ function parse(path) {
   function extractScales() { return [current(), ... next().split('scale(').pop().replaceAll("'", '"').split('",').map(x => x.trim()).filter(x => x.startsWith('"') || x.startsWith("'")).map(x => x.replaceAll('"', '').replaceAll("'", ''))] }
 
   function parseOne() {
-    const summary = match('@summary');
-    const description = match('@description');
-    const link = match('@link');
-    while (current().indexOf('scale(') < 0) {
-      next();
+    const def = {};
+    while (current().startsWith('@')) {
+      const [key, ...rest] = next().substring(1).split(' ');
+      def[key] = rest.join(' ');
     }
     const [code, name, ...scales] = extractScales();
     while (current().indexOf('scale(') >= 0 && (current().indexOf('"' + name + '"') >= 0 || current().indexOf("'" + name + "'") >= 0)) {
@@ -24,10 +24,8 @@ function parse(path) {
       scales.push(...aliases)
     }
     return {
+      ...def,
       name,
-      link,
-      summary,
-      description,
       units: scales,
       code,
     }
@@ -37,7 +35,8 @@ function parse(path) {
   while (lines.length) {
     r.push(parseOne());
   }
-  return r;
+
+  return ['SI', 'fundamentals'].every(p => path.indexOf(p) < 0) ? r.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())) : r
 }
 
 function gen(group) {
@@ -45,29 +44,32 @@ function gen(group) {
 
   const blocks = [`Units of ${group}\n===`];
   for(let {name, summary, description, link, units, code} of defs) {
-    blocks.push(`${name}
----
+    const block = [name + `\n---\n`]
+    if (description) {
+      block.push('> ' + (description ?? '').replaceAll('<b>', '**').replaceAll('</b>', '**').replaceAll('<i>', '_').replaceAll('</i>', '_') + '\n');
+    }
+    if (link) {
+      block.push(`[Source](${link})\n`);
+    }
 
-> ${(description ?? '').replaceAll('<b>', '**').replaceAll('</b>', '**').replaceAll('<i>', '_').replaceAll('</i>', '_')}
+    block.push(`##### Units:\n`);
+    for(let unit of units) {
+      block.push('- ```[' + unit + ']```\n');
+    }
 
-[Source](${link}) 
+    if (summary) {
+      block.push(`##### Summary:\n`);
+      block.push('```LaTeX');
+      block.push(summary);
+      block.push('```\n');
+    }
 
-##### Symbols:
-- \`\`\`[${units.join(']\`\`\`\n- \`\`\`[')}]\`\`\`
+    block.push(`##### Code:\n`);
+    block.push('```ts');
+    block.push((code.endsWith('{') ? `${code} /* definition */ });` : code).replace(/^export /, ''));
+    block.push('```\n');
 
-##### Definition:
-\`\`\`LaTex
-${summary ?? ''}
-\`\`\`
-
-##### Code:
-\`\`\`ts
-${code}
-\`\`\`
-
-
-`
-    );
+    blocks.push(block.join('\n'));
   }
 
   require('fs').writeFileSync(`../docs/${group}-units.md`, blocks.join('\n\n'));

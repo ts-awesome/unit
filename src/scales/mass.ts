@@ -57,11 +57,11 @@ export const Decagram = scale("Decagram", "dag", mul(unit(1, kilogram), 0.01));
 export const Gram = scale("Gram", "g", mul(unit(1, kilogram), 0.001));
 
 /** 
- * @summary 1 gv. = 1 kg
- * @description <b>Grave</b> is  <i>mass</i> unit, symbol: [gv.]. Definition of 1 grave ≡ 1 kg. grave was the original name of the kilogram .
+ * @summary 1 gv = 1 kg
+ * @description <b>Grave</b> is  <i>mass</i> unit, symbol: [gv]. Definition of 1 grave ≡ 1 kg. grave was the original name of the kilogram .
  * @link http://conversion.org/mass/grave/
  */
-export const Grave = scale("Grave", "gv.", mul(unit(1, kilogram), 1));
+export const Grave = scale("Grave", "gv", mul(unit(1, kilogram), 1));
 
 /** 
  * @summary 1 hg = 1e-1 kg
