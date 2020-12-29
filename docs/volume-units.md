@@ -82,9 +82,8 @@ Barrel (petroleum); archaic blue-barrel
 
 ##### Units:
 
-- ```[bl]```
-
-- ```[bbl]```
+- ```bl```
+- ```bbl```
 
 ##### Summary:
 
@@ -156,7 +155,7 @@ Board-foot
 
 ##### Units:
 
-- ```[fbm]```
+- ```fbm```
 
 ##### Summary:
 
@@ -180,7 +179,7 @@ Bucket (imperial)
 
 ##### Units:
 
-- ```[bkt]```
+- ```bkt```
 
 ##### Summary:
 
@@ -324,7 +323,7 @@ Coomb
 
 ##### Units:
 
-- ```[coomb]```
+- ```coomb```
 
 ##### Summary:
 
@@ -372,7 +371,7 @@ Cord-foot
 
 ##### Units:
 
-- ```[cord-foot]```
+- ```cord-foot```
 
 ##### Summary:
 
@@ -780,7 +779,7 @@ Cup (metric)
 
 ##### Units:
 
-- ```[c]```
+- ```c```
 
 ##### Summary:
 
@@ -900,9 +899,8 @@ Decilitre
 
 ##### Units:
 
-- ```[dL]```
-
-- ```[dl]```
+- ```dL```
+- ```dl```
 
 ##### Summary:
 
@@ -926,9 +924,8 @@ Dekalitre
 
 ##### Units:
 
-- ```[daL]```
-
-- ```[dal]```
+- ```daL```
+- ```dal```
 
 ##### Summary:
 
@@ -1072,7 +1069,7 @@ Fifth
 
 ##### Units:
 
-- ```[fifth]```
+- ```fifth```
 
 ##### Summary:
 
@@ -1096,7 +1093,7 @@ Firkin
 
 ##### Units:
 
-- ```[firkin]```
+- ```firkin```
 
 ##### Summary:
 
@@ -1289,8 +1286,7 @@ Gill (imperial); Noggin
 ##### Units:
 
 - ```[gi (imp)]```
-
-- ```[nog]```
+- ```nog```
 
 ##### Summary:
 
@@ -1338,9 +1334,8 @@ Hectolitre
 
 ##### Units:
 
-- ```[hL]```
-
-- ```[hl]```
+- ```hL```
+- ```hl```
 
 ##### Summary:
 
@@ -1436,7 +1431,7 @@ Kilderkin
 
 ##### Units:
 
-- ```[kilderkin]```
+- ```kilderkin```
 
 ##### Summary:
 
@@ -1460,7 +1455,7 @@ Lambda
 
 ##### Units:
 
-- ```[λ]```
+- ```λ```
 
 ##### Summary:
 
@@ -1484,7 +1479,7 @@ Last
 
 ##### Units:
 
-- ```[last]```
+- ```last```
 
 ##### Summary:
 
@@ -1508,9 +1503,8 @@ Litre
 
 ##### Units:
 
-- ```[L]```
-
-- ```[l]```
+- ```L```
+- ```l```
 
 ##### Summary:
 
@@ -1534,7 +1528,7 @@ Load
 
 ##### Units:
 
-- ```[load]```
+- ```load```
 
 ##### Summary:
 
@@ -1558,9 +1552,8 @@ Microlitre
 
 ##### Units:
 
-- ```[µL]```
-
-- ```[µl]```
+- ```µL```
+- ```µl```
 
 ##### Summary:
 
@@ -1584,9 +1577,8 @@ Millilitre
 
 ##### Units:
 
-- ```[mL]```
-
-- ```[ml]```
+- ```mL```
+- ```ml```
 
 ##### Summary:
 
@@ -1683,7 +1675,6 @@ Ounce (fluid US customary)
 ##### Units:
 
 - ```[US fl oz]```
-
 - ```[fl oz (US)]```
 
 ##### Summary:
@@ -1709,7 +1700,6 @@ Ounce (fluid US food nutrition labeling)
 ##### Units:
 
 - ```[US fl oz (food)]```
-
 - ```[fl oz (US food)]```
 
 ##### Summary:
@@ -1782,7 +1772,7 @@ Perch
 
 ##### Units:
 
-- ```[per]```
+- ```per```
 
 ##### Summary:
 
@@ -1806,9 +1796,8 @@ Picolitre
 
 ##### Units:
 
-- ```[pL]```
-
-- ```[pl]```
+- ```pL```
+- ```pl```
 
 ##### Summary:
 
@@ -1952,7 +1941,7 @@ Pony
 
 ##### Units:
 
-- ```[pony]```
+- ```pony```
 
 ##### Summary:
 
@@ -1976,9 +1965,8 @@ Pottle; quartern
 
 ##### Units:
 
-- ```[pottle]```
-
-- ```[quartern]```
+- ```pottle```
+- ```quartern```
 
 ##### Summary:
 
@@ -2074,7 +2062,7 @@ Quarter; pail
 
 ##### Units:
 
-- ```[pail]```
+- ```pail```
 
 ##### Summary:
 
@@ -2123,8 +2111,7 @@ Sack (imperial); bag
 ##### Units:
 
 - ```[sack (imperial)]```
-
-- ```[bag]```
+- ```bag```
 
 ##### Summary:
 
@@ -2172,7 +2159,7 @@ Seam
 
 ##### Units:
 
-- ```[seam]```
+- ```seam```
 
 ##### Summary:
 
@@ -2292,7 +2279,7 @@ Tablespoon (Canadian)
 
 ##### Units:
 
-- ```[tbsp]```
+- ```tbsp```
 
 ##### Summary:
 
@@ -2412,7 +2399,7 @@ Teaspoon (Canadian)
 
 ##### Units:
 
-- ```[tsp]```
+- ```tsp```
 
 ##### Summary:
 
@@ -2556,7 +2543,7 @@ Ton (displacement)
 
 ##### Units:
 
-- ```[DT]```
+- ```DT```
 
 ##### Summary:
 
@@ -2628,7 +2615,7 @@ Tun
 
 ##### Units:
 
-- ```[tun]```
+- ```tun```
 
 ##### Summary:
 

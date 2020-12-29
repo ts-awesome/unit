@@ -10,7 +10,7 @@ Acre
 
 ##### Units:
 
-- ```[ac]```
+- ```ac```
 
 ##### Summary:
 
@@ -34,7 +34,7 @@ Are
 
 ##### Units:
 
-- ```[a]```
+- ```a```
 
 ##### Summary:
 
@@ -58,7 +58,7 @@ Barn
 
 ##### Units:
 
-- ```[b]```
+- ```b```
 
 ##### Summary:
 
@@ -82,7 +82,7 @@ Barony
 
 ##### Units:
 
-- ```[barony]```
+- ```barony```
 
 ##### Summary:
 
@@ -106,7 +106,7 @@ Board
 
 ##### Units:
 
-- ```[bd]```
+- ```bd```
 
 ##### Summary:
 
@@ -178,7 +178,7 @@ Cord
 
 ##### Units:
 
-- ```[cord]```
+- ```cord```
 
 ##### Summary:
 
@@ -202,7 +202,7 @@ Cuerda (PR Survey)
 
 ##### Units:
 
-- ```[cda]```
+- ```cda```
 
 ##### Summary:
 
@@ -226,7 +226,7 @@ Dunam
 
 ##### Units:
 
-- ```[dunam]```
+- ```dunam```
 
 ##### Summary:
 
@@ -274,7 +274,7 @@ Hectare
 
 ##### Units:
 
-- ```[ha]```
+- ```ha```
 
 ##### Summary:
 
@@ -298,7 +298,7 @@ Hide
 
 ##### Units:
 
-- ```[hide]```
+- ```hide```
 
 ##### Summary:
 
@@ -322,7 +322,7 @@ Rood
 
 ##### Units:
 
-- ```[ro]```
+- ```ro```
 
 ##### Summary:
 
@@ -346,7 +346,7 @@ Section
 
 ##### Units:
 
-- ```[section]```
+- ```section```
 
 ##### Summary:
 
@@ -370,7 +370,7 @@ Shed
 
 ##### Units:
 
-- ```[shed]```
+- ```shed```
 
 ##### Summary:
 
@@ -778,7 +778,7 @@ Stremma
 
 ##### Units:
 
-- ```[stremma]```
+- ```stremma```
 
 ##### Summary:
 
@@ -802,7 +802,7 @@ Township
 
 ##### Units:
 
-- ```[township]```
+- ```township```
 
 ##### Summary:
 
@@ -826,7 +826,7 @@ Yardland
 
 ##### Units:
 
-- ```[yardland]```
+- ```yardland```
 
 ##### Summary:
 

@@ -182,6 +182,12 @@ describe('non latin scale names', () => {
     expect(scalar).toBe(1);
     expect(definition).toStrictEqual({'Δ°F': 1});
   })
+
+  it('1 [with.dot]', () => {
+    const {scalar, definition} = parse(`1 [with.dot]`);
+    expect(scalar).toBe(1);
+    expect(definition).toStrictEqual({'with.dot': 1});
+  })
 })
 
 describe('scalar fractions', () => {

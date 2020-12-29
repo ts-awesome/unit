@@ -10,7 +10,7 @@ Units of length
 
 ##### Units:
 
-- ```[Å]```
+- ```Å```
 
 ##### Summary:
 
@@ -34,7 +34,7 @@ Astronomical unit
 
 ##### Units:
 
-- ```[AU]```
+- ```AU```
 
 ##### Summary:
 
@@ -58,7 +58,7 @@ Bohr, atomic unit of length
 
 ##### Units:
 
-- ```[a₀]```
+- ```a₀```
 
 ##### Summary:
 
@@ -106,7 +106,7 @@ Cable length (International)
 
 ##### Units:
 
-- ```[cable]```
+- ```cable```
 
 ##### Summary:
 
@@ -154,7 +154,7 @@ Centimetre
 
 ##### Units:
 
-- ```[cm]```
+- ```cm```
 
 ##### Summary:
 
@@ -178,7 +178,7 @@ Chain
 
 ##### Units:
 
-- ```[ch]```
+- ```ch```
 
 ##### Summary:
 
@@ -202,7 +202,7 @@ Decimetre
 
 ##### Units:
 
-- ```[dm]```
+- ```dm```
 
 ##### Summary:
 
@@ -226,7 +226,7 @@ Dekametre
 
 ##### Units:
 
-- ```[dam]```
+- ```dam```
 
 ##### Summary:
 
@@ -250,7 +250,7 @@ Fathom
 
 ##### Units:
 
-- ```[ftm]```
+- ```ftm```
 
 ##### Summary:
 
@@ -274,7 +274,7 @@ Fermi
 
 ##### Units:
 
-- ```[fm]```
+- ```fm```
 
 ##### Summary:
 
@@ -298,7 +298,7 @@ Finger
 
 ##### Units:
 
-- ```[finger]```
+- ```finger```
 
 ##### Summary:
 
@@ -346,7 +346,7 @@ Foot (International)
 
 ##### Units:
 
-- ```[ft]```
+- ```ft```
 
 ##### Summary:
 
@@ -394,7 +394,7 @@ Foot, metric
 
 ##### Units:
 
-- ```[mf]```
+- ```mf```
 
 ##### Summary:
 
@@ -418,7 +418,7 @@ Foot, metric (long)
 
 ##### Units:
 
-- ```[lmf]```
+- ```lmf```
 
 ##### Summary:
 
@@ -442,7 +442,7 @@ Foot, metric (short)
 
 ##### Units:
 
-- ```[smf]```
+- ```smf```
 
 ##### Summary:
 
@@ -466,7 +466,7 @@ Furlong
 
 ##### Units:
 
-- ```[fur]```
+- ```fur```
 
 ##### Summary:
 
@@ -490,7 +490,7 @@ Hand
 
 ##### Units:
 
-- ```[hand]```
+- ```hand```
 
 ##### Summary:
 
@@ -514,7 +514,7 @@ Hectometre
 
 ##### Units:
 
-- ```[hm]```
+- ```hm```
 
 ##### Summary:
 
@@ -538,7 +538,7 @@ Inch (International)
 
 ##### Units:
 
-- ```[in]```
+- ```in```
 
 ##### Summary:
 
@@ -562,7 +562,7 @@ Kilometre
 
 ##### Units:
 
-- ```[km]```
+- ```km```
 
 ##### Summary:
 
@@ -586,7 +586,7 @@ League (land)
 
 ##### Units:
 
-- ```[lea]```
+- ```lea```
 
 ##### Summary:
 
@@ -610,7 +610,7 @@ Light-day
 
 ##### Units:
 
-- ```[light-day]```
+- ```light-day```
 
 ##### Summary:
 
@@ -634,7 +634,7 @@ Light-hour
 
 ##### Units:
 
-- ```[light-hour]```
+- ```light-hour```
 
 ##### Summary:
 
@@ -658,7 +658,7 @@ Light-minute
 
 ##### Units:
 
-- ```[light-minute]```
+- ```light-minute```
 
 ##### Summary:
 
@@ -682,7 +682,7 @@ Light-second
 
 ##### Units:
 
-- ```[light-second]```
+- ```light-second```
 
 ##### Summary:
 
@@ -706,7 +706,7 @@ Light-year
 
 ##### Units:
 
-- ```[ly]```
+- ```ly```
 
 ##### Summary:
 
@@ -730,7 +730,7 @@ Line
 
 ##### Units:
 
-- ```[ln]```
+- ```ln```
 
 ##### Summary:
 
@@ -754,7 +754,7 @@ Link (Gunters; Surveyors)
 
 ##### Units:
 
-- ```[lnk]```
+- ```lnk```
 
 ##### Summary:
 
@@ -802,7 +802,7 @@ Mickey
 
 ##### Units:
 
-- ```[mickey]```
+- ```mickey```
 
 ##### Summary:
 
@@ -826,7 +826,7 @@ Micrometre
 
 ##### Units:
 
-- ```[µm]```
+- ```µm```
 
 ##### Summary:
 
@@ -850,7 +850,7 @@ Micron
 
 ##### Units:
 
-- ```[µ]```
+- ```µ```
 
 ##### Summary:
 
@@ -898,7 +898,7 @@ Mil; thou
 
 ##### Units:
 
-- ```[mil]```
+- ```mil```
 
 ##### Summary:
 
@@ -922,7 +922,7 @@ Mile (international)
 
 ##### Units:
 
-- ```[mi]```
+- ```mi```
 
 ##### Summary:
 
@@ -994,7 +994,7 @@ Millimetre
 
 ##### Units:
 
-- ```[mm]```
+- ```mm```
 
 ##### Summary:
 
@@ -1042,7 +1042,7 @@ Nanometre
 
 ##### Units:
 
-- ```[nm]```
+- ```nm```
 
 ##### Summary:
 
@@ -1066,9 +1066,8 @@ Nautical league
 
 ##### Units:
 
-- ```[NL]```
-
-- ```[nl]```
+- ```NL```
+- ```nl```
 
 ##### Summary:
 
@@ -1093,7 +1092,6 @@ Nautical mile (Admiralty)
 ##### Units:
 
 - ```[NM (Adm)]```
-
 - ```[nmi (Adm)]```
 
 ##### Summary:
@@ -1118,9 +1116,8 @@ Nautical mile (international)
 
 ##### Units:
 
-- ```[NM]```
-
-- ```[nmi]```
+- ```NM```
+- ```nmi```
 
 ##### Summary:
 
@@ -1144,7 +1141,7 @@ Pace
 
 ##### Units:
 
-- ```[pace]```
+- ```pace```
 
 ##### Summary:
 
@@ -1168,7 +1165,7 @@ Palm
 
 ##### Units:
 
-- ```[palm]```
+- ```palm```
 
 ##### Summary:
 
@@ -1192,7 +1189,7 @@ Parsec
 
 ##### Units:
 
-- ```[pc]```
+- ```pc```
 
 ##### Summary:
 
@@ -1264,7 +1261,7 @@ Pikometre
 
 ##### Units:
 
-- ```[pm]```
+- ```pm```
 
 ##### Summary:
 
@@ -1336,7 +1333,7 @@ Point (PostScript)
 
 ##### Units:
 
-- ```[pt]```
+- ```pt```
 
 ##### Summary:
 
@@ -1384,7 +1381,7 @@ Quarter
 
 ##### Units:
 
-- ```[quarter]```
+- ```quarter```
 
 ##### Summary:
 
@@ -1432,7 +1429,7 @@ Spat
 
 ##### Units:
 
-- ```[spat]```
+- ```spat```
 
 ##### Summary:
 
@@ -1456,7 +1453,7 @@ Twip
 
 ##### Units:
 
-- ```[twp]```
+- ```twp```
 
 ##### Summary:
 
@@ -1480,7 +1477,7 @@ X unit; siegbahn
 
 ##### Units:
 
-- ```[xu]```
+- ```xu```
 
 ##### Summary:
 
@@ -1504,7 +1501,7 @@ Yard (International)
 
 ##### Units:
 
-- ```[yd]```
+- ```yd```
 
 ##### Summary:
 
@@ -1528,7 +1525,7 @@ Zoll
 
 ##### Units:
 
-- ```[zoll]```
+- ```zoll```
 
 ##### Summary:
 

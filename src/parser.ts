@@ -88,6 +88,20 @@ export function parse(str: string): ParsedExpression {
   function readIdentifier() {
     skipSpaces();
 
+    if (match('[')) {
+      let start = i;
+      while (!eol() && !test(']')) {
+        next();
+      }
+
+      if (!test(']')) {
+        error('expected closing ]');
+      }
+      next();
+
+      return str.substring(start, i - 1).trim();
+    }
+
     if (test('0123456789')) {
       error('unexpected scalar')
     }

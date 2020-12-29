@@ -10,9 +10,8 @@ Atomic mass unit, unified
 
 ##### Units:
 
-- ```[u]```
-
-- ```[AMU]```
+- ```u```
+- ```AMU```
 
 ##### Summary:
 
@@ -36,7 +35,7 @@ Atomic unit of mass, electron rest mass
 
 ##### Units:
 
-- ```[me]```
+- ```me```
 
 ##### Summary:
 
@@ -108,7 +107,7 @@ Barge
 
 ##### Units:
 
-- ```[barge]```
+- ```barge```
 
 ##### Summary:
 
@@ -132,7 +131,7 @@ Carat
 
 ##### Units:
 
-- ```[kt]```
+- ```kt```
 
 ##### Summary:
 
@@ -156,7 +155,7 @@ Carat (metric)
 
 ##### Units:
 
-- ```[ct]```
+- ```ct```
 
 ##### Summary:
 
@@ -180,7 +179,7 @@ Centigram
 
 ##### Units:
 
-- ```[cg]```
+- ```cg```
 
 ##### Summary:
 
@@ -204,7 +203,7 @@ Clove
 
 ##### Units:
 
-- ```[clove]```
+- ```clove```
 
 ##### Summary:
 
@@ -228,7 +227,7 @@ Crith
 
 ##### Units:
 
-- ```[crith]```
+- ```crith```
 
 ##### Summary:
 
@@ -252,7 +251,7 @@ Dalton
 
 ##### Units:
 
-- ```[Da]```
+- ```Da```
 
 ##### Summary:
 
@@ -276,7 +275,7 @@ Decagram
 
 ##### Units:
 
-- ```[dag]```
+- ```dag```
 
 ##### Summary:
 
@@ -325,8 +324,7 @@ Dram (avoirdupois)
 ##### Units:
 
 - ```[dr av]```
-
-- ```[dr]```
+- ```dr```
 
 ##### Summary:
 
@@ -350,7 +348,7 @@ Gamma
 
 ##### Units:
 
-- ```[γ]```
+- ```γ```
 
 ##### Summary:
 
@@ -374,7 +372,7 @@ Grain
 
 ##### Units:
 
-- ```[gr]```
+- ```gr```
 
 ##### Summary:
 
@@ -398,7 +396,7 @@ Gram
 
 ##### Units:
 
-- ```[g]```
+- ```g```
 
 ##### Summary:
 
@@ -422,7 +420,7 @@ Grave
 
 ##### Units:
 
-- ```[gv]```
+- ```gv```
 
 ##### Summary:
 
@@ -446,7 +444,7 @@ Hectogram
 
 ##### Units:
 
-- ```[hg]```
+- ```hg```
 
 ##### Summary:
 
@@ -471,8 +469,7 @@ Hundredweight (long)
 ##### Units:
 
 - ```[long cwt]```
-
-- ```[cwt]```
+- ```cwt```
 
 ##### Summary:
 
@@ -520,7 +517,7 @@ Kip
 
 ##### Units:
 
-- ```[kip]```
+- ```kip```
 
 ##### Summary:
 
@@ -544,7 +541,7 @@ Mark
 
 ##### Units:
 
-- ```[mark]```
+- ```mark```
 
 ##### Summary:
 
@@ -568,7 +565,7 @@ Microgram
 
 ##### Units:
 
-- ```[µg]```
+- ```µg```
 
 ##### Summary:
 
@@ -592,7 +589,7 @@ Milligram
 
 ##### Units:
 
-- ```[mg]```
+- ```mg```
 
 ##### Summary:
 
@@ -616,7 +613,7 @@ Mite
 
 ##### Units:
 
-- ```[mite]```
+- ```mite```
 
 ##### Summary:
 
@@ -664,7 +661,7 @@ Nanogram
 
 ##### Units:
 
-- ```[ng]```
+- ```ng```
 
 ##### Summary:
 
@@ -713,8 +710,7 @@ Ounce (avoirdupois)
 ##### Units:
 
 - ```[oz av]```
-
-- ```[oz]```
+- ```oz```
 
 ##### Summary:
 
@@ -762,9 +758,8 @@ Pennyweight
 
 ##### Units:
 
-- ```[dwt]```
-
-- ```[pwt]```
+- ```dwt```
+- ```pwt```
 
 ##### Summary:
 
@@ -788,7 +783,7 @@ Point
 
 ##### Units:
 
-- ```[point]```
+- ```point```
 
 ##### Summary:
 
@@ -813,10 +808,8 @@ Pound (avoirdupois)
 ##### Units:
 
 - ```[lb av]```
-
-- ```[lb]```
-
-- ```[lbs]```
+- ```lb```
+- ```lbs```
 
 ##### Summary:
 
@@ -960,7 +953,7 @@ Quintal (metric)
 
 ##### Units:
 
-- ```[q]```
+- ```q```
 
 ##### Summary:
 
@@ -1008,7 +1001,7 @@ Sheet
 
 ##### Units:
 
-- ```[sheet]```
+- ```sheet```
 
 ##### Summary:
 
@@ -1032,7 +1025,7 @@ Slug; geepound; hyl
 
 ##### Units:
 
-- ```[slug]```
+- ```slug```
 
 ##### Summary:
 
@@ -1056,7 +1049,7 @@ Stone
 
 ##### Units:
 
-- ```[st]```
+- ```st```
 
 ##### Summary:
 
@@ -1080,8 +1073,7 @@ Ton, assay (long)
 
 ##### Units:
 
-- ```[AT]```
-
+- ```AT```
 - ```[ln AT]```
 
 ##### Summary:
@@ -1130,8 +1122,7 @@ Ton, long
 
 ##### Units:
 
-- ```[ton]```
-
+- ```ton```
 - ```[long tn]```
 
 ##### Summary:
@@ -1180,7 +1171,7 @@ Tonne
 
 ##### Units:
 
-- ```[t]```
+- ```t```
 
 ##### Summary:
 
@@ -1204,7 +1195,7 @@ Wey
 
 ##### Units:
 
-- ```[wey]```
+- ```wey```
 
 ##### Summary:
 

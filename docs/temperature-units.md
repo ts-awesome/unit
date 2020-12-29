@@ -6,7 +6,7 @@ degree Celsius
 
 ##### Units:
 
-- ```[°C]```
+- ```°C```
 
 ##### Code:
 
@@ -20,7 +20,7 @@ degree Fahrenheit
 
 ##### Units:
 
-- ```[°F]```
+- ```°F```
 
 ##### Code:
 
@@ -34,9 +34,8 @@ delta degree Celsius
 
 ##### Units:
 
-- ```[Δ°C]```
-
-- ```[d°C]```
+- ```Δ°C```
+- ```d°C```
 
 ##### Code:
 
@@ -50,9 +49,8 @@ delta degree Fahrenheit
 
 ##### Units:
 
-- ```[Δ°F]```
-
-- ```[d°F]```
+- ```Δ°F```
+- ```d°F```
 
 ##### Code:
 

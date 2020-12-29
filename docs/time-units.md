@@ -10,7 +10,7 @@ Blink
 
 ##### Units:
 
-- ```[blink]```
+- ```blink```
 
 ##### Summary:
 
@@ -34,7 +34,7 @@ Century
 
 ##### Units:
 
-- ```[century]```
+- ```century```
 
 ##### Summary:
 
@@ -58,7 +58,7 @@ Day
 
 ##### Units:
 
-- ```[day]```
+- ```day```
 
 ##### Summary:
 
@@ -82,7 +82,7 @@ Decade
 
 ##### Units:
 
-- ```[decade]```
+- ```decade```
 
 ##### Summary:
 
@@ -102,7 +102,7 @@ hour
 
 ##### Units:
 
-- ```[h]```
+- ```h```
 
 ##### Code:
 
@@ -116,7 +116,7 @@ millisecond
 
 ##### Units:
 
-- ```[ms]```
+- ```ms```
 
 ##### Code:
 
@@ -130,7 +130,7 @@ minute
 
 ##### Units:
 
-- ```[min]```
+- ```min```
 
 ##### Code:
 

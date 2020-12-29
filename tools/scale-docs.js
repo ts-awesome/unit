@@ -39,6 +39,10 @@ function parse(path) {
   return ['SI', 'fundamentals'].every(p => path.indexOf(p) < 0) ? r.sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase())) : r
 }
 
+function escapeUnit(x) {
+  return '^¹²³⁻*×.·/ '.split('').some(c => x.indexOf(c) >= 0) || /^\d/.test(x) ? `[${x}]` : x
+}
+
 function gen(group) {
   const defs = parse(`../src/scales/${group}.ts`);
 
@@ -54,8 +58,9 @@ function gen(group) {
 
     block.push(`##### Units:\n`);
     for(let unit of units) {
-      block.push('- ```[' + unit + ']```\n');
+      block.push('- ```' + escapeUnit(unit) + '```');
     }
+    block.push('')
 
     if (summary) {
       block.push(`##### Summary:\n`);
