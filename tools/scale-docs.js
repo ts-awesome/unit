@@ -81,7 +81,7 @@ function gen(group) {
 }
 
 async function main() {
-  const groups = 'fundamentals SI length area volume mass time temperature'.split(' ');
+  const groups = 'fundamentals SI length area volume mass time temperature energy'.split(' ');
   for(let group of groups) {
     gen(group);
   }
