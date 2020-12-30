@@ -9,6 +9,7 @@ import VOLUME_UNITS from "./volume";
 import MASS_UNITS from "./mass";
 import TEMPERATURE_UNITS from "./temperature";
 import TIME_UNITS from "./time";
+import ENERGY_UNITS from "./energy";
 
 export const ALL: ScaleSystem = {
   ...FUNDAMENTALS,
@@ -19,6 +20,7 @@ export const ALL: ScaleSystem = {
   ...MASS_UNITS,
   ...TEMPERATURE_UNITS,
   ...TIME_UNITS,
+  ...ENERGY_UNITS,
 
   [scaleSystemNameSymbol]: 'ALL',
 }

@@ -14,6 +14,7 @@ Library provides simple math for measuring units
 * [Mass](./docs/mass-units.md)
 * [Time](./docs/time-units.md)
 * [Temperature](./docs/temperature-units.md)
+* [Energy](./docs/energy-units.md)
 
 ### Example
 
