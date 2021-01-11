@@ -196,7 +196,7 @@ export function parse(str: string): ParsedExpression {
   const definition = parseScale();
 
   if (!eol()) {
-    error('expected end of definition definition');
+    error('expected end of definition');
   }
 
   return {

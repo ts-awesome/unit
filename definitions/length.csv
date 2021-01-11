@@ -1,4 +1,4 @@
-@title; @kind; @symbols; @abbr; @group; @parent; @link; @definition; @description
+@title; @kind; @symbols; @prefixes; @group; @parent; @link; @definition; @description
 ångström; length; Å; ; metric; ; http://conversion.org/length/angstrom/; 1e-10 m; <b>ångström</b> is metric <i>length</i> unit, symbol: [Å]. Definition of 1 ångström ≡ 1×10^-10 m . ≡ 0.1 nm.
 Astronomical unit; length; AU; ; ; ; http://conversion.org/length/astronomical-unit/; 149597870700 m; <b>Astronomical unit</b> is  <i>length</i> unit, symbol: [AU]. Definition of 1 astronomical unit ≡ 149597870700 m. ≡ Distance from Earth to Sun .
 Bohr, atomic unit of length; length; a₀; ; ; ; http://conversion.org/length/bohr-atomic-unit-of-length/; Bohr radius of hydrogen; <b>Bohr, atomic unit of length</b> is  <i>length</i> unit, symbol: [a_0_]. Definition of 1 bohr, atomic unit of length ≡ Bohr radius of hydrogen . .
