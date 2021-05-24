@@ -1,4 +1,4 @@
-const {parse} = require('../dist/parser');
+const {parse} = require('../src/parser');
 
 describe('parse', () => {
   it('scalar', () => {

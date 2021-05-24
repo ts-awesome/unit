@@ -1,7 +1,7 @@
-const {scale} = require('../dist/scale');
-const {unit} = require('../dist/unit');
-const {compile} = require('../dist/calculator');
-const {add, sub, mul, div, pow} = require('../dist/operators');
+const {scale} = require('../src/scale');
+const {unit} = require('../src/unit');
+const {compile} = require('../src/calculator');
+const {add, sub, mul, div, pow} = require('../src/operators');
 
 const length = scale('length', true);
 const time = scale('time', true);
@@ -50,7 +50,51 @@ describe('compile unit expression', () => {
     );
 
     const test = calc(div(unit`2000 b`, unit`.4 kb`), '', 2);
-
     expect(test).toBe(5);
+  })
+
+  it('scale errors', () => {
+    const calc = compile(
+        base,
+        kilobase,
+        tick,
+        hypertick,
+        kbpht
+    );
+    const test = () => {
+      calc(add(unit`2000 b`, unit`200 t`), '', 1);
+      throw new TypeError("Can not add units of 'length' to 'time'")
+    }
+    expect(test).toThrow("Can not add units of 'length' to 'time'")
+  })
+  it('undefined scales', () => {
+    const calc = compile(
+        base,
+        kilobase,
+        tick,
+        hypertick,
+        kbpht
+    );
+    const test = () =>  {
+      calc(add(unit`2000 b`, unit`22 CM`), '', 1)
+      throw new TypeError('Undefined scale "CM"')
+    }
+    expect(test).toThrow('Undefined scale "CM"')
+
+  })
+  it('scales not match', () => {
+    const calc = compile(
+        base,
+        kilobase,
+        tick,
+        hypertick,
+        kbpht
+    );
+    const test = () => {
+      calc(div(unit`2000 b`, unit`.4 kb / t`), `b`, 2);
+      throw new TypeError("Calculation expected 'length' and resulting 'time' scales not match")
+    }
+    expect(test).toThrow("Calculation expected 'length' and resulting 'time' scales not match")
+
   })
 });

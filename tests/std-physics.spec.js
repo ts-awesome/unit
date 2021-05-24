@@ -1,4 +1,4 @@
-const {calculate, unit} = require('../dist');
+const {calculate, unit} = require('../src');
 
 describe('physics', () => {
   it('Ohm', () => {

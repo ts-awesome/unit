@@ -1,5 +1,5 @@
-const {scale} = require('../dist/scale');
-const {unit} = require('../dist/unit');
+const {scale} = require('../src/scale');
+const {unit} = require('../src/unit');
 
 describe('definition names', () => {
   it('named', async () => {
@@ -95,5 +95,22 @@ describe('definition based on unit', () => {
     expect(test.definition).toStrictEqual({'base': 1});
     expect(test.to(1)).toBe(0.1);
     expect(test.from(1)).toBe(10);
+  })
+})
+
+describe('errors in scale', () => {
+  it('should be non-zero', () => {
+    const test = () => {
+      scale('test', 0, 0, 0);
+      throw new TypeError('Scale scalar should be non-zero')
+    }
+    expect(test).toThrow('Scale scalar should be non-zero');
+  })
+  it('expr should be defined', () => {
+    const test = () => {
+      scale('1', '1', '1', '1');
+      throw new TypeError('Param expr expected, received undefined');
+    }
+    expect(test).toThrow('Param expr expected, received undefined')
   })
 })
