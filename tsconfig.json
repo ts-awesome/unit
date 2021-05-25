@@ -61,6 +61,9 @@
     "emitDecoratorMetadata": true,            /* Enables experimental support for emitting type metadata for decorators. */
 
     "lib": [
+      "es5",
+      "es6",
+      "es7",
       "es2015",
       "es2016",
       "es2017",
@@ -69,16 +72,6 @@
       "es2020"
     ],
 
-    "plugins": [
-      {
-        "transform": "typescript-plugin-styled-components",
-        "type": "config",
-
-        // other typescript-plugin-styled-components options can be added here
-        "minify": true,
-        "ssr": true
-      }
-    ]
   },
-  "exclude": ["./bin", "./dist", "./node_modules/**", "./test", "./tests", "./index.js", "./gulpfile.js", "ecosystem.config.js", "tools"]
+  "exclude": ["bin", "dist", "**/node_modules/**", "tests", "tmp"]
 }
