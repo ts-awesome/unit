@@ -1,12 +1,14 @@
 import {Scale, ScaleId, Unit, UnresolvedScale} from "./interfaces";
 import {Expression, OperatorExpression, UnitExpression} from "./expression";
 
-//@ts-ignore
-declare class UnitWrapper<T> implements Unit, UnitExpression {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+declare class UnitWrapper implements Unit, UnitExpression {
   constructor(scalar: number, scale: Scale|ScaleId|UnresolvedScale);
 }
-//@ts-ignore
-declare class Operandable<T> implements Unit, OperatorExpression {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+declare class Operandable implements Unit, OperatorExpression {
   constructor(operator: '+'|'-'|'*'|'/'|'^', operands: Expression[]);
 }
 

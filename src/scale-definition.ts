@@ -3,7 +3,7 @@ import {clone} from "./utils";
 
 export function simplify<T=ScaleDefinition>(def: T): T {
   const x = clone(def);
-  for (let key of Object.keys(x)) {
+  for (const key of Object.keys(x)) {
     if (x[key] === 0) {
       delete x[key];
     }
@@ -17,7 +17,7 @@ export function equal<T=ScaleDefinition>(a: T, b: T): boolean {
     return false;
   }
 
-  for (let key of keys) {
+  for (const key of keys) {
     if (a[key] !== b[key]) {
       return false;
     }
@@ -26,7 +26,7 @@ export function equal<T=ScaleDefinition>(a: T, b: T): boolean {
   return true;
 }
 
-export function powerToString(x: Power) {
+export function powerToString(x: Power): string {
   switch (x) {
     case -3:
       return '⁻³';
@@ -47,7 +47,7 @@ export function powerToString(x: Power) {
   }
 }
 
-function asc(a, b) {
+function asc(a, b): -1|0|1 {
   return a < b ? -1 : a > b ? 1 : 0;
 }
 
@@ -58,7 +58,7 @@ export function stringify(x: ScaleDefinition): string {
 
 export function pow<T=ScaleDefinition>(def: T, power: Power): T {
   const x = clone(def);
-  for (let key of Object.keys(x)) {
+  for (const key of Object.keys(x)) {
     x[key] *= power;
   }
   return simplify(x);
@@ -66,8 +66,8 @@ export function pow<T=ScaleDefinition>(def: T, power: Power): T {
 
 export function mul<T=ScaleDefinition>(...multipliers: T[]): T {
   const x: T  = {} as T;
-  for (let multiplier of multipliers) {
-    for (let key of Object.keys(multiplier)) {
+  for (const multiplier of multipliers) {
+    for (const key of Object.keys(multiplier)) {
       x[key] = (x[key] ?? 0) + (multiplier[key] ?? 0);
     }
   }
