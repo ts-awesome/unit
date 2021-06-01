@@ -73,5 +73,10 @@
     ],
 
   },
-  "exclude": ["bin", "dist", "**/node_modules/**", "tests", "tmp"]
+  "exclude": ["bin", "dist", "**/node_modules/**", "tests", "tmp", "tools", "docs", "definitions"],
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "excludeNotDocumented": true,
+    "out": "public"
+  }
 }

@@ -18,19 +18,19 @@ export function compile(...scales: (Scale | ScaleSystem)[]): Calculator {
 
   function use(scale: Scale, scaleSystem: string): void {
     const {aliases} = scale;
-    for (let alias of aliases) {
+    for (const alias of aliases) {
       define(alias, scale, scaleSystem);
     }
   }
 
   let idx = 0;
-  for(let scaleOrSystem of scales) {
+  for (const scaleOrSystem of scales) {
     idx++;
     if (isScale(scaleOrSystem)) {
       use(scaleOrSystem, `@${idx - 1}`);
     } else {
       const scaleSystemName: string = (scaleOrSystem as any)[scaleSystemNameSymbol];
-      for(let key of Object.keys(scaleOrSystem)) {
+      for(const key of Object.keys(scaleOrSystem)) {
         const scale = scaleOrSystem[key];
         use(scale, `${scaleSystemName ?? 'Unknown'}.${key}`);
       }
@@ -56,7 +56,7 @@ export function compile(...scales: (Scale | ScaleSystem)[]): Calculator {
   return (expr, scale, precision = 3) => {
     const e = compileExpr(expr as any as Expression, resolver);
 
-    let res = scale === '' ? {definition: {}, ...fromLinear(1)} : typeof scale === 'string' ? resolver(scale) : scale;
+    const res = scale === '' ? {definition: {}, ...fromLinear(1)} : typeof scale === 'string' ? resolver(scale) : scale;
 
     if (!equal(e.definition, res.definition)) {
       throw new Error(`Calculation expected '${stringify(res.definition)}' and resulting '${stringify(e.definition)}' scales not match`);

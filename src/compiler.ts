@@ -16,7 +16,7 @@ function compileAdd(expr: Expression[], resolver?: Resolver): CompiledExpression
   const [first, ...operands] = expr.map(x => compile(x, resolver));
 
   const {definition} = first;
-  for (let {definition: _} of operands) {
+  for (const {definition: _} of operands) {
     if (!equal(_, definition)) {
       throw new Error(`Can not add units of '${stringify(definition)}' to '${stringify(_)}'`)
     }
@@ -32,7 +32,7 @@ function compileSub(expr: Expression[], resolver?: Resolver): CompiledExpression
   const [first, ...operands] = expr.map(x => compile(x, resolver));
 
   const {definition} = first;
-  for (let {definition: _} of operands) {
+  for (const {definition: _} of operands) {
     if (!equal(_, definition)) {
       throw new Error(`Can not sub units of '${stringify(definition)}' to '${stringify(_)}'`)
     }

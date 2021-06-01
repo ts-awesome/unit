@@ -9,6 +9,7 @@ export interface ParsedExpression {
 
 export function parse(str: string): ParsedExpression {
   // noinspection ES6ConvertVarToLetConst
+  // eslint-disable-next-line no-var
   var i = 0; // WARN: MUST be var to be captured by reference
 
   function current() { return str.charAt(i); }
@@ -16,7 +17,7 @@ export function parse(str: string): ParsedExpression {
   function eol() { return i >= str.length; }
   function next() { ++i; return current(); }
   function match(...args: string[]): string | false {
-    for(let arg of args) {
+    for(const arg of args) {
       if (str.substr(i, arg.length) === arg) {
         i += arg.length;
         return arg;
@@ -85,11 +86,11 @@ export function parse(str: string): ParsedExpression {
     return parseFloat(str.substring(start, i));
   }
 
-  function readIdentifier() {
+  function readIdentifier(): string {
     skipSpaces();
 
     if (match('[')) {
-      let start = i;
+      const start = i;
       while (!eol() && !test(']')) {
         next();
       }
@@ -106,7 +107,7 @@ export function parse(str: string): ParsedExpression {
       error('unexpected scalar')
     }
 
-    let start = i;
+    const start = i;
     while (!eol() && !test('^¹²³⁻*×.·/')) {
       next();
     }
@@ -114,19 +115,19 @@ export function parse(str: string): ParsedExpression {
     return str.substring(start, i).trim();
   }
 
-  function readInteger() {
-    let start = i;
+  function readInteger(): number {
+    const start = i;
     skipSign();
     skipDigits();
     return parseInt(str.substring(start, i + 1), 10);
   }
 
-  function readFloat() {
+  function readFloat(): number {
     if (match('PI', 'π')) {
       return Math.PI;
     }
 
-    let start = i;
+    const start = i;
     if (test('-+')) {
       error('unexpected ' + current());
     }
@@ -139,7 +140,7 @@ export function parse(str: string): ParsedExpression {
   }
 
   function parsePower(mul = 1): [string, number] {
-    let term: any = readIdentifier();
+    const term: string = readIdentifier();
     skipSpaces();
     let power = 1;
     if (test('^¹²³⁻')) {
@@ -192,7 +193,7 @@ export function parse(str: string): ParsedExpression {
   }
 
   const scalar = match('√') ? Math.sqrt(parseScalar()) : parseScalar();
-  let defStart = i;
+  const defStart = i;
   const definition = parseScale();
 
   if (!eol()) {
