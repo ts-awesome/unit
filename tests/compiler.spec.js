@@ -1,7 +1,7 @@
-const {scale} = require('../dist/scale');
-const {unit} = require('../dist/unit');
-const {compile} = require('../dist/compiler');
-const {add, sub, mul, div, pow} = require('../dist/operators');
+const {scale} = require('../src/scale');
+const {unit} = require('../src/unit');
+const {compile} = require('../src/compiler');
+const {add, sub, mul, div, pow} = require('../src/operators');
 
 const ephimeral = scale('ephimeral', true);
 
