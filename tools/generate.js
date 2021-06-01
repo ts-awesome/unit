@@ -207,10 +207,6 @@ async function main() {
       .map(x => x.trim())
       .filter(x => x);
     for(let line of lines) {
-      if (line.indexOf('of chiefly historical interest.') >= 0) {
-        continue;
-      }
-
       defs.push(parseDef(line));
     }
 

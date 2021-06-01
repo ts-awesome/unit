@@ -1,0 +1,9 @@
+@title; @kind; @symbols; @prefixes; @group; @parent; @link; @definition; @description
+Pascal; pressure; Pa; m,k,M;;; https://en.wikipedia.org/wiki/Pascal_(unit); 1 N/m²; The pascal (symbol: Pa) is the SI derived unit of pressure used to quantify internal pressure, stress, Young's modulus and ultimate tensile strength. The unit, named after Blaise Pascal, is defined as one newton per square metre and is equivalent to 10 barye (Ba) in the CGS system. The unit of measurement called standard atmosphere (atm) is defined as 101325 Pa.
+Bar; pressure; bar; m,c;
+Atmosphere; pressure; atm;
+Millimeters of Hg; pressure; mmHg;
+Pièze; pressure; pz;;;; https://en.wikipedia.org/wiki/Pi%C3%A8ze; 1kPa;
+Torr; pressure;torr;;;; https://en.wikipedia.org/wiki/Torr; 1/760 atm;
+Barye; pressure; Ba;;;; https://en.wikipedia.org/wiki/Barye; 0.1 Pa;
+Pounds per square inch; pressure; psi;;;; https://en.wikipedia.org/wiki/Pounds_per_square_inch; 6.894757 kPa;

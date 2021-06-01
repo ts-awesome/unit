@@ -1,0 +1,7 @@
+@title; @kind; @symbols; @prefixes; @group; @parent; @link; @definition; @description
+Joule; energy; J; p,n,,m,k,M,G,T; ;; https://en.wikipedia.org/wiki/Joule; 1 kg⋅m2⋅s−2; "The joule (/dʒaʊl, dʒuːl/ jowl, jool; symbol: J) is a derived unit of energy in the International System of Units. It is equal to the energy transferred to (or work done on) an object when a force of one newton acts on that object in the direction of the force's motion through a distance of one metre (1 newton metre or N⋅m). It is also the energy dissipated as heat when an electric current of one ampere passes through a resistance of one ohm for one second. It is named after the English physicist James Prescott Joule (1818–1889)."
+erg; energy;
+Watt hours; energy; Wh; k,M,G,T;
+BTU; energy;
+Electronvolt; energy;
+Calorie; energy;
