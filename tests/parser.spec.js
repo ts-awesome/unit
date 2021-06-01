@@ -149,7 +149,7 @@ describe('invalid syntax', () => {
       parse('6.6743e-11 m ^ 3 / kg / s ^ 2');
       fail('expected to throw');
     } catch (e) {
-      expect(e.message).toBe('ParseError @22: expected end of definition definition')
+      expect(e.message).toBe('ParseError @22: expected end of definition')
     }
   })
   it('unexpected number', () => {
