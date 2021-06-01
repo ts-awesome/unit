@@ -1,5 +1,5 @@
-const {scale} = require('../src/scale');
-const {unit} = require('../src/unit');
+const {scale} = require('../dist/scale');
+const {unit} = require('../dist/unit');
 
 describe('definition names', () => {
   it('named', async () => {

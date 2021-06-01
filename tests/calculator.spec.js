@@ -1,7 +1,7 @@
-const {scale} = require('../src/scale');
-const {unit} = require('../src/unit');
-const {compile} = require('../src/calculator');
-const {add, sub, mul, div, pow} = require('../src/operators');
+const {scale} = require('../dist/scale');
+const {unit} = require('../dist/unit');
+const {compile} = require('../dist/calculator');
+const {add, sub, mul, div, pow} = require('../dist/operators');
 
 const length = scale('length', true);
 const time = scale('time', true);

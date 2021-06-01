@@ -1,6 +1,6 @@
-const { degreeCelsius } =require('../src/scales/temperature');
+const { degreeCelsius } =require('../dist/scales/temperature');
 
-const {calculate, unit, add} = require('../src');
+const {calculate, unit, add} = require('../dist');
 
 describe('temperature', () => {
   it('°C -> K', () => {
