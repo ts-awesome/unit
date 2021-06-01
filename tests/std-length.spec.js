@@ -18,15 +18,19 @@ describe('metric', () => {
     expect(calculate(unit`.1 km`, 'm', 2)).toBe(100);
   })
   it('error', () => {
-    const test = () => {
+    try {
       calculate(unit`fake 123`, `fake`, 1);
-      throw new TypeError("Undefined scale \"fake 123\".")
+      fail("Undefined scale \"fake 123\".")
+    } catch (e) {
+      expect(e.message).toBe("Undefined scale \"fake 123\".");
     }
-    const test2 = () => {
+  })
+  it('test error scales', () => {
+    try {
       calculate(unit(false), 1, 0);
-      throw new TypeError('Unsupported params [false]')
+      fail('Unsupported params [false]')
+    } catch (e) {
+      expect(e.message).toBe('Unsupported params [false]');
     }
-    expect(test).toThrow("Undefined scale \"fake 123\".")
-    expect(test2).toThrow('Unsupported params [false]')
   })
 })

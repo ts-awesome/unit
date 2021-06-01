@@ -61,11 +61,12 @@ describe('compile unit expression', () => {
         hypertick,
         kbpht
     );
-    const test = () => {
+    try {
       calc(add(unit`2000 b`, unit`200 t`), '', 1);
-      throw new TypeError("Can not add units of 'length' to 'time'")
+      fail("Can not add units of 'length' to 'time'");
+    } catch (e) {
+      expect(e.message).toBe("Can not add units of 'length' to 'time'");
     }
-    expect(test).toThrow("Can not add units of 'length' to 'time'")
   })
   it('undefined scales', () => {
     const calc = compile(
@@ -75,12 +76,12 @@ describe('compile unit expression', () => {
         hypertick,
         kbpht
     );
-    const test = () =>  {
+    try {
       calc(add(unit`2000 b`, unit`22 CM`), '', 1)
-      throw new TypeError('Undefined scale "CM"')
+      fail('Undefined scale "CM"');
+    } catch (e) {
+      expect(e.message).toBe("Undefined scale \"CM\".");
     }
-    expect(test).toThrow('Undefined scale "CM"')
-
   })
   it('scales not match', () => {
     const calc = compile(
@@ -90,11 +91,11 @@ describe('compile unit expression', () => {
         hypertick,
         kbpht
     );
-    const test = () => {
+    try {
       calc(div(unit`2000 b`, unit`.4 kb / t`), `b`, 2);
-      throw new TypeError("Calculation expected 'length' and resulting 'time' scales not match")
+      fail('Calculation expected \'length\' and resulting \'time\' scales not match');
+    } catch (e) {
+     expect(e.message).toBe('Calculation expected \'length\' and resulting \'time\' scales not match');
     }
-    expect(test).toThrow("Calculation expected 'length' and resulting 'time' scales not match")
-
   })
 });

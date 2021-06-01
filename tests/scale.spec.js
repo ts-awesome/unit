@@ -100,17 +100,19 @@ describe('definition based on unit', () => {
 
 describe('errors in scale', () => {
   it('should be non-zero', () => {
-    const test = () => {
+    try {
       scale('test', 0, 0, 0);
-      throw new TypeError('Scale scalar should be non-zero')
+      fail('Scale scalar should be non-zero')
+    } catch (e) {
+      expect(e.message).toBe('Scale scalar should be non-zero');
     }
-    expect(test).toThrow('Scale scalar should be non-zero');
   })
   it('expr should be defined', () => {
-    const test = () => {
+    try {
       scale('1', '1', '1', '1');
-      throw new TypeError('Param expr expected, received undefined');
+      fail('Param expr expected, received undefined')
+    } catch (e) {
+      expect(e.message).toBe('Param expr expected, received undefined');
     }
-    expect(test).toThrow('Param expr expected, received undefined')
   })
 })
