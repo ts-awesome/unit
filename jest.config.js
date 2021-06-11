@@ -6,5 +6,5 @@ module.exports = {
         "^.+\\.(ts|tsx)$": "ts-jest"
     },
     coverageReporters: ['html', 'text', 'text-summary'],
-    collectCoverageFrom: ['src/**/*.ts', '!**/node_modules/**'],
+    collectCoverageFrom: ['src/**/*.ts', '!src/scales/**/*.ts', '!**/node_modules/**'],
 }
