@@ -1,8 +1,8 @@
 @title; @kind; @symbols; @prefixes; @group; @parent; @link; @definition; @description
 Newton; force; N; m; ;; https://en.wikipedia.org/wiki/Newton_(unit); 1 kg⋅m⁄s²; The newton (symbol: N) is the International System of Units (SI) derived unit of force. It is named after Isaac Newton in recognition of his work on classical mechanics, specifically Newton's second law of motion.
-Pound of force; force; lbf
+Pound of force; force; lbf;
 Poundal; force; pdl;;;; https://en.wikipedia.org/wiki/Poundal; 0.1382550 N,1 lb⋅ft/s2; The poundal (symbol: pdl) is a unit of force that is part of the foot–pound–second system of units, in Imperial units introduced in 1877, and is from the specialized subsystem of English absolute (a coherent system).
 Dyne; force; dyn;;;; https://en.wikipedia.org/wiki/Dyne; 1e−5 N; The dyne (symbol dyn, from Ancient Greek: δύναμις, romanized: dynamis, lit. 'power, force') is a derived unit of force specified in the centimetre–gram–second (CGS) system of units, a predecessor of the modern SI.
-Kilogram-force; kgf;;;;; https://en.wikipedia.org/wiki/Kilogram-force
-Kilopond; kp;;;;; https://en.wikipedia.org/wiki/Kilogram-force
+Kilogram-force; kgf;;;;;https://en.wikipedia.org/wiki/Kilogram-force;;The kilogram-force (kgf or kgF), or kilopond (kp, from Latin: pondus, lit. 'weight'), is a non-standard gravitational metric unit of force. It is equal to the magnitude of the force exerted on one kilogram of mass in a 9.80665 m/s2 gravitational field (standard gravity, a conventional value approximating the average magnitude of gravity on Earth).[1] That is, it is the weight of a kilogram under standard gravity. Therefore, one kilogram-force is by definition equal to 9.80665 N.[2][3] Similarly, a gram-force is 9.80665 mN, and a milligram-force is 9.80665 μN.
+Kilopond; kp;;;;; https://en.wikipedia.org/wiki/Kilogram-force; gn ⋅ (1 kg)
 Sthène; sn; ;;;; https://en.wikipedia.org/wiki/Sth%C3%A8ne; 1kN;
